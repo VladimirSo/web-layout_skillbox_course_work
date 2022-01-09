@@ -1,0 +1,104 @@
+@import "src/styles/normalize.css"
+@import "src/sass/fonts.sass"
+@import "src/sass/container.sass"
+@import "src/sass/header.sass"
+// @import "src/sass/main.sass"
+// @import "src/sass/footer.sass"
+
+
+html
+    box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+body
+ background-color: #FFF
+ font-family: "Open Sans", "Arial", sans-serif
+ // font-family: "Playfair Display", serif
+ font-size: 16px
+ line-height: 16px
+
+a
+ text-decoration: none
+ color: inherit
+
+ul
+ list-style: none
+ margin: 0
+ padding: 0
+
+img
+ max-width: 100%
+
+h1, h2, h3, p
+ margin: 0
+
+*:focus
+ outline: none !important
+
+*::-moz-focus-inner
+ border: 0 !important
+
+button
+ cursor: pointer
+
+.visually-hidden
+ position: absolute !important
+ clip: rect(1px 1px 1px 1px)
+ padding: 0 !important
+ border: 0 !important
+ height: 1px !important
+ width: 1px !important
+ overflow: hidden
+
+// .orange-btn
+//  display: inline-block
+//  padding: 9px 19px
+//  font-family: inherit
+//  font-size: 14px
+//  font-style: normal
+//  font-weight: 700
+//  line-height: 16px
+//  letter-spacing: 0.015em
+//  text-align: left
+//  color: #FFF
+//  background-color: #FF6E30
+//  border: 3px solid #FF6E30
+//  transition-property: background-color,border-color
+//  transition-duration: 0.25s
+//  transition-timing-function: ease-in-out
+//  &:hover
+//   background-color: #BC572B
+//   border-color: #BC572B
+//  &:focus
+//   border-color: #CE4307
+//  &:active
+//   background-color: #CE4307
+//   border-color: #CE4307
+//  @media (min-width: 768px)
+//   padding: 13px 19px
+//   font-size: 16px
+//   line-height: 19px
+//   letter-spacing: 0
+//  @media (min-width: 1290px)
+//   padding: 12px 19px
+
+
+// .social-link
+//  svg
+//   color: #CACACA
+//   transition-property: color
+//   transition-duration: 0.25s
+//   transition-timing-function: ease-in-out
+//  &:hover
+//   svg
+//    color: #FF6E30
+//  &:focus
+//   svg
+//    color: #BC572B
+//  &:active
+//   svg
+//    color: #CE4307

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Магазин SitDownPls</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+	<header class="header">
+		<!-- <div class="fixed-container"> -->
+			<div class="header__region region-wrapper">
+				<div class="region">
+					<div class="region__select region-select">
+						<p class="region-select__desc">Ваш регион:</p>
+
+						<select name="regionOfSearch" form="searchForm" class="region-select__list region-list">
+							<option class="region-list__item" value="Moscow">Москва</option>
+							<option class="region-list__item" value="Kazan">Казань</option>
+							<option class="region-list__item" value="Ufa">Уфа</option>
+							<option class="region-list__item" value="Perm">Пермь</option>
+						</select>
+					</div>
+
+					<div class="region__contact-phone">
+						<a class="contact-phone" href="tel:+74958854547">+7 (495) 885-45-47</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="header__additional-menu add-menu-wrapper">
+				<ul class="add-menu">
+					<li class="add-menu__item">
+						<a href="#" class="add-menu__link">О компании</a>
+					</li>
+					<li class="add-menu__item">
+						<a href="#" class="add-menu__link">Гарантия и возврат</a>
+					</li>
+					<li class="add-menu__item">
+						<a href="#" class="add-menu__link">Корпоративным клиентам</a>
+					</li>
+					<li class="add-menu__item">
+						<a href="#" class="add-menu__link">Дизайн-решение</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="header__logo logo">
+				<img class="logo__img" src="../images/logo.png" alt="Логотип компании">
+			</div>
+
+			<nav class="header__main-nav main-nav">
+				<button type="button" class="main-nav__btn nav-btn">
+					<span class="nav-btn-line"></span>
+					<span class="nav-btn-line"></span>
+					<span class="nav-btn-line"></span>
+				</button>
+
+				<ul class="main-nav__list">
+					<li class="main-nav__item">
+						<a href="#" class="main-nav__link">Каталог</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#" class="main-nav__link">Магазины</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#" class="main-nav__link">Шоу-рум</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#" class="main-nav__link">Доставка и оплата</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#" class="main-nav__link">Дисконт</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#" class="main-nav__link">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- <form class="header__search-form search-form" name="searchForm" id="searchForm" action="https://echo.htmlacademy.ru"> -->
+			<div class="header__search-form search-form">
+				<form class="search-field" name="searchForm" id="searchForm" action="https://echo.htmlacademy.ru">
+				<!-- <div class="search-field"> -->
+					<input type="search" class="search-field__input" name="indexOfSearch" placeholder="Я хочу купить...">
+
+					<!-- <input type="submit" class="search-field__submit" value=""> -->
+					<button type="submit" class="search-field__submit" value=""></button>
+				</form>
+				<!-- </div> -->
+
+				<div class="search-area">
+					<button type="button" class="search-area__btn srch-area-btn">
+						<span class="srch-area-btn__desc">Категория</span>
+						<span class="srch-area-btn__arrow"></span>
+					</button>
+
+					<fieldset class="search-area__list" form="searchForm">
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="sofas">
+							<span>Диваны</span>
+						</label>
+
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="dressers">
+							<span>Комоды</span>
+						</label>
+
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="chairs">
+							<span>Кресла</span>
+						</label>
+
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="chairs">
+							<span>Стулья</span>
+						</label>
+
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="poufs">
+							<span>Пуфы</span>
+						</label>
+
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="tables">
+							<span>Столы</span>
+						</label>
+
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="beds">
+							<span>Кровати</span>
+						</label>
+
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="accessories">
+							<span>Аксесуары</span>
+						</label>
+
+						<label class="search-area__item">
+							<input type="radio" name="areaOfSearch" value="curbstones">
+							<span>Тумбы</span>
+						</label>
+					</fieldset>
+				</div>
+			<!-- </form> -->
+			</div>
+
+			<div class="header__users-data users-data">
+				<a class="users-cabinet" href="#"></a>
+
+				<a class="users-basket" href="#">
+					<span class="users-basket__content">0</span>
+				</a>
+			</div>
+		<!-- </div> -->
+	</header>
+
+	<main>
+		<div class="fixed-container">
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing, elit. Vero quia odio atque reiciendis mollitia voluptates eaque sint ad. Inventore nesciunt quisquam doloribus optio laudantium id reprehenderit ipsa suscipit sunt quia.
+		<p>
+		</div>
+	</main>
+
+	<!-- <script src="js/app.js"></script> -->
+</body>
+
+</html>

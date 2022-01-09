@@ -1,0 +1,40 @@
+{
+  "name": "weblayout-advanced-coursework",
+  "version": "1.0.0",
+  "description": "Курсовой проект \\\"Веб-верстка. Продвинутый уровень\\\"",
+  "main": "index.js",
+  "scripts": {
+    "gulp-dev": "./node_modules/.bin/gulp",
+    "gulp-prod": "./node_modules/.bin/gulp --prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.skillbox.ru:vladimir_solomonov/weblayout-advanced-coursework.git"
+  },
+  "author": "Vladimir Solomonov",
+  "license": "ISC",
+"devDependencies": {
+        "@babel/core": "^7.13.16",
+        "@babel/preset-env": "^7.13.15",
+        "babel-loader": "^8.2.2",
+        "browser-sync": "^2.26.14",
+        "del": "^6.0.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-babel": "^8.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-cli": "^2.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-if": "^3.0.0",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-notify": "^4.0.0",
+        "gulp-sass": "^5.0.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-svg-sprite": "^1.5.0",
+        "gulp-uglify-es": "^2.0.0",
+        "sass": "^1.35.2",
+        "yargs": "^7.1.2"
+    }
+}
