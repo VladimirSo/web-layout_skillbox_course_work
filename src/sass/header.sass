@@ -1,12 +1,18 @@
 $light-grey: #F7F7F7
 $md-grey: #EAEAEA
 $grey: #999
+
 $purple-main: #A65CF0
 $purple-shade: #7033AC
+$purple-light: #C998FB
+
 $pink-light: #F8EFFF
 $pink-violet: #EBD1FF
-$orange: #FF862F
 
+$orange: #FF862F
+$orange-light: #FFBD59
+$orange-shade: #BB370E
+$orange-light-bgr :#FFF5D1
 
 .header
   display: grid
@@ -16,11 +22,9 @@ $orange: #FF862F
     grid-template-columns: 200px auto 200px
     grid-template-rows: repeat(4, auto)
   @media (min-width: 1024px)
-    // grid-template-columns: repeat(4, auto)
     grid-template-columns: auto auto auto 208px
-  @media (min-width: 1280px)
-    // grid-template-columns: auto 200px 600px auto
-    grid-template-columns: auto 325px 240px 600px 125px auto
+  @media (min-width: 1290px)
+    grid-template-columns: auto 320px 240px 600px 120px auto
   &__logo
     grid-column-start: 1
     grid-column-end: 3
@@ -34,7 +38,7 @@ $orange: #FF862F
     @media (min-width: 1024px)
       grid-column-start: 1
       grid-column-end: 2
-    @media (min-width: 1280px)
+    @media (min-width: 1290px)
       grid-column-start: 2
       grid-column-end: 3
       grid-row-start: 2
@@ -52,7 +56,7 @@ $orange: #FF862F
     @media (min-width: 1024px)
       grid-column-start: 1
       grid-column-end: -1
-    @media (min-width: 1280px)
+    @media (min-width: 1290px)
       grid-column-start: 1
       grid-column-end: 4
   &__main-nav
@@ -68,7 +72,7 @@ $orange: #FF862F
     @media (min-width: 1024px)
       grid-column-start: 2
       grid-column-end: -1
-    @media (min-width: 1280px)
+    @media (min-width: 1290px)
       grid-column-start: 3
       grid-column-end: -2
       grid-row-start: 2
@@ -89,7 +93,7 @@ $orange: #FF862F
       grid-column-end: -1
       grid-row-start: 2
       grid-row-end: 3
-    @media (min-width: 1280px)
+    @media (min-width: 1290px)
       grid-column-start: -3
       grid-column-end: -2
       grid-row-start: -2
@@ -104,7 +108,7 @@ $orange: #FF862F
       grid-column-end: -1
       grid-row-start: -2
       grid-row-end: -1
-    @media (min-width: 1280px)
+    @media (min-width: 1290px)
       grid-column-start: 2
       grid-column-end: -3
       grid-row-start: -2
@@ -118,7 +122,7 @@ $orange: #FF862F
     @media (min-width: 1024px)
       grid-column-start: 1
       grid-column-end: -2
-    @media (min-width: 1280px)
+    @media (min-width: 1290px)
       grid-column-start: -4
       grid-column-end: -1
       grid-row-start: 1
@@ -130,47 +134,50 @@ $orange: #FF862F
     background-color: $light-grey
     @media (min-width: 768px)
       background-color: transparent
-    @media (min-width: 1280px)
+    @media (min-width: 1290px)
       justify-content: flex-start
     &__img
       width: 187px
-      height: auto
+      height: 27px
       margin: 12px 0 11px 0
       @media (min-width: 768px)
         margin: 32px 0 12px 0
       @media (min-width: 1024px)
-        margin: 30px 0 12px 5px
-      @media (min-width: 1280px)
-        margin-left: 10px
+        margin: 32px 0 12px 15px
+      @media (min-width: 1290px)
+        margin-left: 0
   .region
     display: flex
     flex-direction: column
-    padding: 18px 12px
+    padding: 18px 12px 15px 12px
     border-bottom: 1px solid $light-grey
     @media (min-width: 768px)
       flex-direction: row
       justify-content: space-between
-      padding: 20px 72px
+      padding: 18px 72px
       border-bottom: none
     @media (min-width: 1024px)
-      padding: 20px 36px
-    @media (min-width: 1280px)
-      padding: 18px 0 14px 0
+      padding: 18px 36px
+    @media (min-width: 1290px)
+      padding: 14px 0 14px 0
       justify-content: flex-end
-      margin-right: 200px
+      margin-right: 210px
     &-select
       display: flex
       align-items: center
       &__desc
-        margin-right: 5px
+        // margin-right: 5px
     &-wrapper
-      @media (min-width: 1280px)
+      @media (min-width: 1290px)
         background-color: $light-grey
     .region-list
       -webkit-appearance: none
       -moz-appearance: none
       -ms-appearance: none
-      width: 76px
+      width: max-content
+      min-width: 80px
+      line-height: 18px
+      padding: 2px 20px 2px 3px
       background: url("../images/arrow-down-purple.png")
       background-repeat: no-repeat
       background-position: right 8px
@@ -183,57 +190,72 @@ $orange: #FF862F
         background-color: $pink-violet
         color: $purple-shade
     &__contact-phone
-      margin-top: 20px
+      margin-top: 15px
       @media (min-width: 768px)
         margin-top: 0
-      @media (min-width: 1280px)
+      @media (min-width: 1290px)
         margin-left: 30px
+        // margin-left: 24px
 
   .contact-phone
     display: block
     padding-left: 22px
     font-size: 14px
-    line-height: 16px
+    line-height: 22px
     color: $orange
-    background-image: url("../images/phone-orange.svg")
-    // background-image: url("../images/sprite.svg#phone-orange")
-    background-position: left
+    // background-image: url("../images/phone_orange.png")
+    background-image: url("../images/sprite.svg#phone-orange")
+    background-position: 2px center
     background-repeat: no-repeat
     background-size: 18px 18px
-    // @media (min-width: 768px)
-    // @media (min-width: 1290px)
+    &:hover
+      color: $orange-light
+      // background-image: url("../images/phone_orange_hover.png")
+      background-image: url("../images/sprite.svg#phone-orange-hover")
+    &:focus
+      color: $orange
+      // background-image: url("../images/phone_orange.png")
+      background-image: url("../images/sprite.svg#phone-orange")
+      background-color: $orange-light-bgr
+    &:active
+      color: $orange-shade
+      // background-image: url("../images/phone_orange_active.png")
+      background-image: url("../images/sprite.svg#phone-orange-active")
 
   .add-menu
     display: none
     @media (min-width: 768px)
       display: flex
       justify-content: space-between
-      padding: 18px 72px 15px 72px
+      padding: 18px 72px 16px 72px
       font-size:14px
       color: $grey
       background-color: $light-grey
     @media (min-width: 1024px)
       padding: 18px 72px 15px 36px
-    @media (min-width: 1280px)
+    @media (min-width: 1290px)
       padding: 18px 0 15px 0
-      margin-left: 15px
+      margin-left: 10px
       width: 710px
       background-color: transparent
+    &__item:first-child
+      margin-left: -10px
+    &__item:last-child
+      margin-right: -10px
     &-wrapper
-      @media (min-width: 1280px)
+      @media (min-width: 1290px)
         background-color: $light-grey
 
   .main-nav
-    padding: 12px 0 12px 12px
+    padding: 10px 0 10px 12px
     @media (min-width: 768px)
       padding: 30px 0 12px 72px
     @media (min-width: 1024px)
-      // padding: 12px 36px 12px 32px
-      padding: 18px 36px 0px 32px
+      padding: 18px 36px 0px 40px
       align-self: center
-    @media (min-width: 1280px)
-      padding: 28px 0 0 0
-      margin-left: 15px
+    @media (min-width: 1290px)
+      padding: 22px 0 0 0
+      margin-left: 5px
     &__list
       display: none
       @media (min-width: 1024px)
@@ -242,7 +264,7 @@ $orange: #FF862F
     .nav-btn
       width: 32px
       height: 30px
-      padding: 4px
+      padding: 3px 4px
       border: none
       background-color: transparent
       @media (min-width: 768px)
@@ -254,24 +276,38 @@ $orange: #FF862F
         width: 24px
         height: 3px
         background-color: $purple-main
+        transition: all 0.3s ease-in-out
         &:nth-child(2)
           margin: 7px auto
+      &.nav-btn-active
+        .nav-btn-line:nth-child(2)
+          opacity: 0
+      &.nav-btn-active
+        .nav-btn-line:nth-child(1)
+          transform: translateY(10px) rotate(45deg)
+      &.nav-btn-active
+        .nav-btn-line:nth-child(3)
+          transform: translateY(-10px) rotate(-45deg)
+    &__item:first-child
+      margin-left: -10px
+    &__item:last-child
+      margin-right: -10px
 
   .search-form
     border-top: 1px solid $light-grey
     padding: 15px 12px 32px 12px
     @media (min-width: 768px)
       border-top: none
-      padding: 20px 72px 30px 72px
+      padding: 15px 72px 30px 72px
       display: flex
       flex-direction: row
     @media (min-width: 1024px)
       padding: 22px 36px 32px 36px
-    @media (min-width: 1280px)
-      padding: 22px 90px 32px 12px
+    @media (min-width: 1290px)
+      padding: 22px 90px 32px 0px
 
     .search-field
-      border: 1px solid $light-grey
+      border: 2px solid $light-grey
       background-color: $light-grey
       border-radius: 10px
       display: flex
@@ -283,23 +319,29 @@ $orange: #FF862F
         border-radius: 10px 0 0 10px
       @media (min-width: 1024px)
         width: 68.5%
-      @media (min-width: 1280px)
-        width: 80%
+      @media (min-width: 1290px)
+        width: 78%
       &:hover
         background-color: $md-grey
+        border-color: $md-grey
       &:focus
         background-color: $pink-light
+        border-color: $purple-main
+      &:active
+        background-color: $light-grey
       &__input
         width: 85%
         background-color: inherit
         border: none
         padding: 0 9px 0 25px
-        background-image: url("../images/search.svg")
+        // background-image: url("../images/search.png")
+        background-image: url("../images/sprite.svg#search")
         background-repeat: no-repeat
         background-position: center left
         background-size: 16px
         &:active
-          background-image: url("../images/search-purple.svg")
+          // background-image: url("../images/search-purple.png")
+          background-image: url("../images/sprite.svg#search-purple")
       &__input::placeholder
         color: $grey
       &__input::-webkit-input-placeholder
@@ -316,9 +358,13 @@ $orange: #FF862F
         background-position: center
         background-color: inherit
         cursor: pointer
+        &:focus
+          background-color: $pink-light
 
     .search-area
       margin-top: 15px
+      position: relative
+      background-color: #fff
       @media (min-width: 768px)
         width: 40%
         margin-top: 0
@@ -327,16 +373,21 @@ $orange: #FF862F
       &__list
         display: none
         // display: flex
+        position: absolute
         flex-wrap: wrap
-        padding: 22px 30px 12px 30px
+        padding: 22px 10% 12px 10%
         border: 2px solid $light-grey
         border-radius: 0 0 10px 10px
+        z-index: 15
+        background-color: inherit
       &__item
         width: 50%
         display: block
         margin-bottom: 10px
         cursor: pointer
         caret-color: transparent
+        overflow: hidden
+        text-overflow: ellipsis
         input[type="radio"]
           display: none
           &:checked+span
@@ -349,14 +400,19 @@ $orange: #FF862F
         background-color: transparent
         border: 2px solid $light-grey
         border-radius: 10px
-        padding: 19px 28px
+        padding: 19px 36px 19px 28px
         color: $purple-main
         line-height: 18px
         text-align: left
         @media (min-width: 768px)
           border-radius: 0 10px 10px 0
-        &:active
+        &:hover
           border-color: $purple-main
+        &:active
+          border-color: $purple-shade
+        &:focus
+          border-color: $purple-main
+          background-color: $pink-light
         &__arrow
           display: block
           width: 18px
@@ -368,47 +424,122 @@ $orange: #FF862F
   .users-data
     display: flex
     justify-content: space-between
-    width: 112px
-    padding: 12px 12px 12px 0
+    width: 115px
+    // padding: 12px 12px 12px 0
+    padding: 5px 10px 5px 0
     @media (min-width: 768px)
-      width: 171px
-      padding: 32px 72px 12px 0
+      width: 174px
+      padding: 30px 68px 12px 0
     @media (min-width: 1024px)
       background-color: $light-grey
       width: 100%
-      padding: 12px 36px 12px 72px
-    @media (min-width: 1280px)
+      padding: 7px 32px 6px 70px
+    @media (min-width: 1290px)
       align-self: center
-      padding: 12px 0 15px 0
+      margin-right: -10px
+      padding: 5px 8px 15px 0
       justify-content: flex-end
       background-color: transparent
     .users-cabinet
       display: block
-      width: 28px
-      height: 28px
-      background-image: url("../images/users-cabinet.png")
+      width: 34px
+      height: 36px
+      // background-image: url("../images/users-cabinet.png")
+      background-image: url("../images/sprite.svg#users-cabinet")
       background-repeat: no-repeat
       background-position: center
-      @media (min-width: 1280px)
-        margin-right: 40px
+      background-size: 26px 28px
+      @media (min-width: 1290px)
+        margin-right: 20px
+      &:hover
+        // background-image: url("../images/users-cabinet-hover.png")
+        background-image: url("../images/sprite.svg#users-cabinet-hover")
+      &:active
+        // background-image: url("../images/users-cabinet-active.png")
+        background-image: url("../images/sprite.svg#users-cabinet-active")
+      &:focus
+        // background-image: url("../images/users-cabinet-focus.png")
+        background-image: url("../images/sprite.svg#users-cabinet-focus")
+        background-color: $purple-light
     .users-basket
       display: block
-      width: 30px
-      height: 28px
-      background-image: url("../images/users-basket.png")
+      width: 50px
+      height: 36px
+      // background-image: url("../images/users-basket.png")
+      background-image: url("../images/sprite.svg#users-basket")
       background-repeat: no-repeat
-      background-position: center
+      background-position: 16px center
+      background-size: 30px 28px
       position: relative
+      &:hover
+        // background-image: url("../images/users-basket-hover.png")
+        background-image: url("../images/sprite.svg#users-basket-hover")
+      &:active
+        // background-image: url("../images/users-basket-active.png")
+        background-image: url("../images/sprite.svg#users-basket-active")
+      &:focus
+        // background-image: url("../images/users-basket-focus.png")
+        background-image: url("../images/sprite.svg#users-basket-focus")
+        background-color: $purple-light
       &__content
         display: block
         width: 15px
         height: 15px
+        position: absolute
+        top: 10px
+        left: 6px
         border-radius: 50%
         background-color: $orange
         font-size: 10px
         color: #fff
         text-align: center
-        position: absolute
-        top: 6px
-        left: -12px
+
+  .search-area-open
+    .srch-area-btn__arrow
+      transform: rotateX(180deg)
+      transition: transform 0.5s ease-in-out
+    .search-area__list
+      display: flex
+      animation: open-srch-list 0.5s ease-in-out 1
+      animation-fill-mode: forwards
+      transform-origin: center top
+
+  @keyframes open-srch-list
+    from
+      transform: scaleY(0)
+    to
+      transform: scaleY(1)
+
+  .main-nav-open
+    width: 100vw
+    height: 100vh
+    padding: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 16
+    .main-nav-container
+      width: 90vw
+      height: 100%
+      padding: 20px
+      background-color: #FFF
+      overflow-x: hidden
+      overflow-Y: auto
+      animation: move-popup 0.5s ease-in-out 1
+      .main-nav__list
+        display: block
+        .main-nav__item
+          margin: 20px 0
+        .main-nav__link
+          padding: 0 10px
+
+  @keyframes move-popup
+    from
+      width: 0
+      opacity: 0
+    to
+      width: 90vw
+      opacity: 1
+      
 

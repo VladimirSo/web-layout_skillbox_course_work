@@ -1,10 +1,12 @@
-@import "src/styles/normalize.css"
 @import "src/sass/fonts.sass"
 @import "src/sass/container.sass"
 @import "src/sass/header.sass"
-// @import "src/sass/main.sass"
+@import "src/sass/main.sass"
 // @import "src/sass/footer.sass"
 
+$purple-main: #A65CF0
+$pink-violet: #EBD1FF
+$purple-shade: #7033AC
 
 html
     box-sizing: border-box
@@ -54,39 +56,6 @@ button
  width: 1px !important
  overflow: hidden
 
-// .orange-btn
-//  display: inline-block
-//  padding: 9px 19px
-//  font-family: inherit
-//  font-size: 14px
-//  font-style: normal
-//  font-weight: 700
-//  line-height: 16px
-//  letter-spacing: 0.015em
-//  text-align: left
-//  color: #FFF
-//  background-color: #FF6E30
-//  border: 3px solid #FF6E30
-//  transition-property: background-color,border-color
-//  transition-duration: 0.25s
-//  transition-timing-function: ease-in-out
-//  &:hover
-//   background-color: #BC572B
-//   border-color: #BC572B
-//  &:focus
-//   border-color: #CE4307
-//  &:active
-//   background-color: #CE4307
-//   border-color: #CE4307
-//  @media (min-width: 768px)
-//   padding: 13px 19px
-//   font-size: 16px
-//   line-height: 19px
-//   letter-spacing: 0
-//  @media (min-width: 1290px)
-//   padding: 12px 19px
-
-
 // .social-link
 //  svg
 //   color: #CACACA
@@ -102,3 +71,21 @@ button
 //  &:active
 //   svg
 //    color: #CE4307
+
+.menu-link
+  padding-left: 10px
+  padding-right: 10px
+  transition-property: background-color, color
+  transition-duration: 0.25s
+  transition-timing-function: ease-in-out
+  &:hover
+    color: $purple-main
+  &:focus
+    background-color: $pink-violet
+  &:active
+    color: $purple-shade
+
+.animated-btn
+  transition-property: background-color, border-color, color, background-image
+  transition-duration: 0.25s
+  transition-timing-function: ease-in-out
