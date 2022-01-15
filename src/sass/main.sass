@@ -16,12 +16,16 @@ $orange-light-bgr :#FFF5D1
 
 .main
   .hero
-    height: 400px
-    padding: 48px 0
-    background-color: $light-grey
-    &__btn
-      width: 296px
-      margin: 32px auto 0 auto
-      background-color: $purple-main
-      color: #fff
+    height: 300px
+    @media (min-width: 768px)
+      height: 400px
+    &-content
+      &__banner
+        height: 210px
+        background-color: $light-grey
+      &__btn
+        width: 296px
+        margin: 32px auto 0 auto
+        background-color: $purple-main
+        
 

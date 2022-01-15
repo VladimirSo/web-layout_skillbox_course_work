@@ -339,7 +339,7 @@ $orange-light-bgr :#FFF5D1
         background-repeat: no-repeat
         background-position: center left
         background-size: 16px
-        &:active
+        &:focus
           // background-image: url("../images/search-purple.png")
           background-image: url("../images/sprite.svg#search-purple")
       &__input::placeholder
@@ -425,7 +425,6 @@ $orange-light-bgr :#FFF5D1
     display: flex
     justify-content: space-between
     width: 115px
-    // padding: 12px 12px 12px 0
     padding: 5px 10px 5px 0
     @media (min-width: 768px)
       width: 174px
@@ -537,9 +536,11 @@ $orange-light-bgr :#FFF5D1
   @keyframes move-popup
     from
       width: 0
+      height: 0
       opacity: 0
     to
       width: 90vw
+      height: 100%
       opacity: 1
       
 

@@ -19,49 +19,48 @@
 
 <body>
 	<header class="header">
-		<!-- <div class="fixed-container"> -->
-			<div class="header__region region-wrapper">
-				<div class="region">
-					<div class="region__select region-select">
-						<p class="region-select__desc">Ваш регион:</p>
+		<div class="header__region region-wrapper">
+			<div class="region">
+				<div class="region__select region-select">
+					<p class="region-select__desc">Ваш регион:</p>
 
-						<select name="regionOfSearch" form="searchForm" class="region-select__list region-list animated-btn">
-							<option class="region-list__item" value="Moscow">Москва</option>
-							<option class="region-list__item" value="Kazan">Казань</option>
-							<option class="region-list__item" value="Ufa">Уфа</option>
-							<option class="region-list__item" value="Perm">Пермь</option>
-						</select>
-					</div>
+					<select name="regionOfSearch" form="searchForm" class="region-select__list region-list animated-btn">
+						<option class="region-list__item" value="Moscow">Москва</option>
+						<option class="region-list__item" value="Kazan">Казань</option>
+						<option class="region-list__item" value="Ufa">Уфа</option>
+						<option class="region-list__item" value="Perm">Пермь</option>
+					</select>
+				</div>
 
-					<div class="region__contact-phone">
-						<a class="contact-phone animated-btn" href="tel:+74958854547">+7&nbsp;(495)&nbsp;885-45-47</a>
-					</div>
+				<div class="region__contact-phone">
+					<a class="contact-phone animated-btn" href="tel:+74958854547">+7&nbsp;(495)&nbsp;885-45-47</a>
 				</div>
 			</div>
+		</div>
 
-			<div class="header__additional-menu add-menu-wrapper">
-				<ul class="add-menu">
-					<li class="add-menu__item">
-						<a href="#" class="add-menu__link menu-link">О компании</a>
-					</li>
-					<li class="add-menu__item">
-						<a href="#" class="add-menu__link menu-link">Гарантия и возврат</a>
-					</li>
-					<li class="add-menu__item">
-						<a href="#" class="add-menu__link menu-link">Корпоративным клиентам</a>
-					</li>
-					<li class="add-menu__item">
-						<a href="#" class="add-menu__link menu-link">Дизайн-решение</a>
-					</li>
-				</ul>
-			</div>
+		<div class="header__additional-menu add-menu-wrapper">
+			<ul class="add-menu">
+				<li class="add-menu__item">
+					<a href="#" class="add-menu__link menu-link">О компании</a>
+				</li>
+				<li class="add-menu__item">
+					<a href="#" class="add-menu__link menu-link">Гарантия и возврат</a>
+				</li>
+				<li class="add-menu__item">
+					<a href="#" class="add-menu__link menu-link">Корпоративным клиентам</a>
+				</li>
+				<li class="add-menu__item">
+					<a href="#" class="add-menu__link menu-link">Дизайн-решение</a>
+				</li>
+			</ul>
+		</div>
 
-			<div class="header__logo logo">
-				<img class="logo__img" src="../images/logo.png" alt="Логотип компании">
-			</div>
+		<div class="header__logo logo">
+			<img class="logo__img" src="../images/logo.png" alt="Логотип компании">
+		</div>
 
-			<nav class="header__main-nav main-nav js-main-nav">
-				<div class="main-nav-container">
+		<nav class="header__main-nav main-nav js-main-nav">
+			<div class="main-nav-container">
 				<button type="button" class="main-nav__btn nav-btn js-nav-btn" aria-label="Меню">
 					<span class="nav-btn-line"></span>
 					<span class="nav-btn-line"></span>
@@ -88,87 +87,89 @@
 						<a href="#" class="main-nav__link menu-link">Контакты</a>
 					</li>
 				</ul>
-				</div>
-			</nav>
-
-			<div class="header__search-form search-form">
-				<form class="search-field" name="searchForm" id="searchForm" action="https://echo.htmlacademy.ru">
-					<input type="search" class="search-field__input" name="indexOfSearch" placeholder="Я хочу купить...">
-
-					<button type="submit" class="search-field__submit" aria-label="поиск"></button>
-				</form>
-
-
-				<div class="search-area js-search-area">
-					<button type="button" class="search-area__btn srch-area-btn animated-btn js-srch-area-btn">
-						<span class="srch-area-btn__desc">Категория</span>
-						<span class="srch-area-btn__arrow"></span>
-					</button>
-
-					<fieldset class="search-area__list js-srch-area-list">
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="sofas" form="searchForm">
-							<span>Диваны</span>
-						</label>
-
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="dressers" form="searchForm">
-							<span>Комоды</span>
-						</label>
-
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="chairs" form="searchForm">
-							<span>Кресла</span>
-						</label>
-
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="chairs" form="searchForm">
-							<span>Стулья</span>
-						</label>
-
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="poufs" form="searchForm">
-							<span>Пуфы</span>
-						</label>
-
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="tables" form="searchForm">
-							<span>Столы</span>
-						</label>
-
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="beds"form="searchForm">
-							<span>Кровати</span>
-						</label>
-
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="accessories"form="searchForm">
-							<span>Аксесуары</span>
-						</label>
-
-						<label class="search-area__item">
-							<input type="radio" name="areaOfSearch" value="curbstones" form="searchForm">
-							<span>Тумбы</span>
-						</label>
-					</fieldset>
-				</div>
 			</div>
+		</nav>
 
-			<div class="header__users-data users-data">
-				<a class="users-cabinet animated-btn" href="#" aria-label="личный кабинет"></a>
+		<div class="header__search-form search-form">
+			<form class="search-field" name="searchForm" id="searchForm" action="https://echo.htmlacademy.ru">
+				<input type="search" class="search-field__input" name="indexOfSearch" placeholder="Я хочу купить...">
 
-				<a class="users-basket animated-btn" href="#" aria-label="корзина">
-					<span class="users-basket__content">0</span>
-				</a>
+				<button type="submit" class="search-field__submit" aria-label="поиск"></button>
+			</form>
+
+
+			<div class="search-area js-search-area">
+				<button type="button" class="search-area__btn srch-area-btn animated-btn js-srch-area-btn">
+					<span class="srch-area-btn__desc">Категория</span>
+					<span class="srch-area-btn__arrow"></span>
+				</button>
+
+				<fieldset class="search-area__list js-srch-area-list">
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="sofas" form="searchForm">
+						<span>Диваны</span>
+					</label>
+
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="dressers" form="searchForm">
+						<span>Комоды</span>
+					</label>
+
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="chairs" form="searchForm">
+						<span>Кресла</span>
+					</label>
+
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="chairs" form="searchForm">
+						<span>Стулья</span>
+					</label>
+
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="poufs" form="searchForm">
+						<span>Пуфы</span>
+					</label>
+
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="tables" form="searchForm">
+						<span>Столы</span>
+					</label>
+
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="beds" form="searchForm">
+						<span>Кровати</span>
+					</label>
+
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="accessories" form="searchForm">
+						<span>Аксесуары</span>
+					</label>
+
+					<label class="search-area__item">
+						<input type="radio" name="areaOfSearch" value="curbstones" form="searchForm">
+						<span>Тумбы</span>
+					</label>
+				</fieldset>
 			</div>
-		<!-- </div> -->
+		</div>
+
+		<div class="header__users-data users-data">
+			<a class="users-cabinet animated-btn" href="#" aria-label="личный кабинет"></a>
+
+			<a class="users-basket animated-btn" href="#" aria-label="корзина">
+				<span class="users-basket__content">0</span>
+			</a>
+		</div>
 	</header>
 
 	<main class="main">
+		<h1 class="visually-hidden">Магазин SitDownPls</h1>
+
 		<div class="hero">
-			<div class="hero__content">
-				<h2 class="hero__title">Скидка 15% на первую покупку</h2>
-				<button class="hero__btn" alria-label="получить">Получить</button>
+			<div class="hero__content hero-content">
+				<div class="hero-content__banner">Скидка 15% на первую покупку</div>
+
+				<button class="hero-content__btn purple-btn animated-btn">Получить</button>
 			</div>
 		</div>
 		

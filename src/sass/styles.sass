@@ -5,8 +5,10 @@
 // @import "src/sass/footer.sass"
 
 $purple-main: #A65CF0
-$pink-violet: #EBD1FF
 $purple-shade: #7033AC
+$purple-light: #C998FB
+
+$pink-violet: #EBD1FF
 
 html
     box-sizing: border-box
@@ -89,3 +91,23 @@ button
   transition-property: background-color, border-color, color, background-image
   transition-duration: 0.25s
   transition-timing-function: ease-in-out
+
+.purple-btn
+  display: block
+  border: 2px solid $purple-main
+  color: #FFF
+  background-color: $purple-main
+  font-size: 16px
+  font-weight: 700
+  line-height: 16px
+  padding-top: 20px
+  padding-bottom: 20px
+  border-radius: 10px
+  &:hover
+    background-color: $purple-light
+  &:focus
+    background-color: $purple-light
+    border-color: $purple-shade
+  &:active
+    background-color: $purple-shade
+    border-color: $purple-shade
