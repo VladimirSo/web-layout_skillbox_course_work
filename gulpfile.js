@@ -92,20 +92,20 @@ const svgSprites = () => {
             },
         },
         mode: {
-                //                view: {
-                //                    view: true, // «view» sprite
-                //                    sprite: '../view/stack-sprite.svg'
-                //                },
-                stack: {
-                    stack: true, // «stack» sprite
-                    // sprite: '../stack/stack-sprite.svg'
-                    sprite: '../sprite.svg'
-                },
-                // symbol: {
-                //     symbol: true, // «symbol» sprite
-                //     inline: false,
-                //     sprite: '../sprite.svg'
-                // }
+            // view: {
+            //     view: true, // «view» sprite 
+            //     sprite: '../view/stack-sprite.svg'
+            // },
+            stack: {
+                stack: true, // «stack» sprite
+                // sprite: '../stack/stack-sprite.svg'
+                sprite: '../sprite.svg'
+            },
+            // symbol: {
+            //     symbol: true, // «symbol» sprite
+            //     inline: false,
+            //     sprite: '../sprite.svg'
+            // }
             }
         }))
     .pipe(dest('dist/images'))

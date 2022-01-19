@@ -14,7 +14,8 @@
 	<meta name="msapplication-TileColor" content="#2d89ef">
 	<meta name="theme-color" content="#ffffff">
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="resources/third-party/choices/choices.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
@@ -56,7 +57,11 @@
 		</div>
 
 		<div class="header__logo logo">
-			<img class="logo__img" src="../images/logo.png" alt="Логотип компании">
+			<!-- <img class="logo__img" src="../images/logo.png" alt="Логотип компании"> -->
+
+      <svg class="logo__img" width="187" height="27">
+        <use xlink:href="images/sprite.svg#logo"></use>
+      </svg>
 		</div>
 
 		<nav class="header__main-nav main-nav js-main-nav">
@@ -178,7 +183,9 @@
 		</div>
 	</main>
 
-	<script src="js/app.js"></script>
+	<script src="resources/third-party/choices/choices.min.js"></script>
+  <script src="js/app.js"></script>
+  
 </body>
 
 </html>

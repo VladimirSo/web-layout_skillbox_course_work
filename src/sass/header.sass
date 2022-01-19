@@ -1,3 +1,5 @@
+@import "src/sass/choices.sass"
+
 $light-grey: #F7F7F7
 $md-grey: #EAEAEA
 $grey: #999
@@ -137,8 +139,8 @@ $orange-light-bgr :#FFF5D1
     @media (min-width: 1290px)
       justify-content: flex-start
     &__img
-      width: 187px
-      height: 27px
+      // width: 187px
+      // height: 27px
       margin: 12px 0 11px 0
       @media (min-width: 768px)
         margin: 32px 0 12px 0
@@ -166,29 +168,29 @@ $orange-light-bgr :#FFF5D1
       display: flex
       align-items: center
       &__desc
-        // margin-right: 5px
+        margin: 0
     &-wrapper
       @media (min-width: 1290px)
         background-color: $light-grey
     .region-list
-      -webkit-appearance: none
-      -moz-appearance: none
-      -ms-appearance: none
-      width: max-content
-      min-width: 80px
-      line-height: 18px
-      padding: 2px 20px 2px 3px
-      background: url("../images/arrow-down-purple.png")
-      background-repeat: no-repeat
-      background-position: right 8px
-      border: none
-      color: $purple-main
-      cursor: pointer
-      &:active
-        color: $purple-shade
-      &:focus
-        background-color: $pink-violet
-        color: $purple-shade
+      // -webkit-appearance: none
+      // -moz-appearance: none
+      // -ms-appearance: none
+      // width: max-content
+      // min-width: 80px
+      // line-height: 18px
+      // padding: 2px 20px 2px 3px
+      // background: url("../images/arrow-down-purple.png")
+      // background-repeat: no-repeat
+      // background-position: right 8px
+      // border: none
+      // color: $purple-main
+      // cursor: pointer
+      // &:active
+      //   color: $purple-shade
+      // &:focus
+      //   background-color: $pink-violet
+      //   color: $purple-shade
     &__contact-phone
       margin-top: 15px
       @media (min-width: 768px)
@@ -205,9 +207,9 @@ $orange-light-bgr :#FFF5D1
     color: $orange
     // background-image: url("../images/phone_orange.png")
     background-image: url("../images/sprite.svg#phone-orange")
-    background-position: 2px center
     background-repeat: no-repeat
-    background-size: 18px 18px
+    background-position: -45px 3px
+    background-size: auto 18px
     &:hover
       color: $orange-light
       // background-image: url("../images/phone_orange_hover.png")
@@ -337,8 +339,8 @@ $orange-light-bgr :#FFF5D1
         // background-image: url("../images/search.png")
         background-image: url("../images/sprite.svg#search")
         background-repeat: no-repeat
-        background-position: center left
-        background-size: 16px
+        background-position: -40px center
+        background-size: auto 16px
         &:focus
           // background-image: url("../images/search-purple.png")
           background-image: url("../images/sprite.svg#search-purple")
@@ -447,7 +449,8 @@ $orange-light-bgr :#FFF5D1
       background-image: url("../images/sprite.svg#users-cabinet")
       background-repeat: no-repeat
       background-position: center
-      background-size: 26px 28px
+      // background-size: 26px 28px
+      background-size: 187px 30px
       @media (min-width: 1290px)
         margin-right: 20px
       &:hover
@@ -467,8 +470,8 @@ $orange-light-bgr :#FFF5D1
       // background-image: url("../images/users-basket.png")
       background-image: url("../images/sprite.svg#users-basket")
       background-repeat: no-repeat
-      background-position: 16px center
-      background-size: 30px 28px
+      background-position: -62px center
+      background-size: 187px 30px
       position: relative
       &:hover
         // background-image: url("../images/users-basket-hover.png")
@@ -511,10 +514,10 @@ $orange-light-bgr :#FFF5D1
 
   .main-nav-open
     width: 100vw
-    height: 100vh
+    height: 100%
     padding: 0
     background-color: rgba(0, 0, 0, 0.5)
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     z-index: 16
@@ -523,11 +526,14 @@ $orange-light-bgr :#FFF5D1
       height: 100%
       padding: 20px
       background-color: #FFF
-      overflow-x: hidden
-      overflow-Y: auto
       animation: move-popup 0.5s ease-in-out 1
+      position: absolute
+      top: 0
+      left: 0
       .main-nav__list
         display: block
+        overflow-x: hidden
+        overflow-Y: auto
         .main-nav__item
           margin: 20px 0
         .main-nav__link
@@ -535,12 +541,14 @@ $orange-light-bgr :#FFF5D1
 
   @keyframes move-popup
     from
-      width: 0
+      // width: 0
       height: 0
+      left: -90vw
       opacity: 0
     to
-      width: 90vw
+      // width: 90vw
       height: 100%
+      left: 0
       opacity: 1
       
 

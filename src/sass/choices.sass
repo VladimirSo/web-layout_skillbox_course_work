@@ -1,0 +1,66 @@
+$light-grey: #F7F7F7
+
+$purple-main: #A65CF0
+$purple-shade: #7033AC
+$purple-light: #C998FB
+
+$pink-violet: #EBD1FF
+
+
+
+.choices
+  width: max-content
+  min-width: 80px
+  line-height: 18px
+  border: none
+  
+.choices__inner
+  padding: 0
+  border: none
+  color: $purple-main
+  background-color: #FFF
+  min-height: auto
+  &:hover
+    color: $purple-light
+.is-active .choices__inner
+  color: $purple-shade
+.is-focused .choices__inner
+  background-color: $pink-violet
+  color: $purple-shade
+.is-open .choices__inner
+  background-color: #FFF
+  color: $purple-main
+.choices[data-type*="select-one"] .choices__inner
+  padding-bottom: 0
+
+.choices__list--single
+  display: inline-block
+  padding: 2px 5px
+  width: 100%
+/**/
+.is-open .choices__list--dropdown
+  border: 2px solid $light-grey
+  background-color: #FFF
+  width: max-content
+  padding: 16px 19px 9px 16px
+.choices__list--dropdown .choices__item--selectable
+  padding: 0
+  margin-bottom: 10px
+  font-size: 14px
+.choices__list--dropdown .choices__item--selectable.is-highlighted
+  background-color: #FFF
+  color: $purple-main
+/**/
+.choices[data-type*=select-one]:after
+  height: 8px
+  width: 8px
+  border-width: 0px
+  border-right: 1px solid $purple-main
+  border-top: 1px solid $purple-main
+  transform: rotate(135deg)
+  margin-top: -4px
+.choices[data-type*=select-one].is-open:after
+  border-width: 0px
+  border-left: 1px solid $purple-main
+  border-bottom: 1px solid $purple-main
+  margin-top: -2px
