@@ -10,7 +10,7 @@ $pink-violet: #EBD1FF
 
 .choices
   width: max-content
-  min-width: 80px
+  min-width: 90px
   line-height: 18px
   border: none
   
@@ -18,8 +18,9 @@ $pink-violet: #EBD1FF
   padding: 0
   border: none
   color: $purple-main
-  background-color: #FFF
+  background-color: transparent
   min-height: auto
+  font-size: 16px
   &:hover
     color: $purple-light
 .is-active .choices__inner
@@ -28,7 +29,7 @@ $pink-violet: #EBD1FF
   background-color: $pink-violet
   color: $purple-shade
 .is-open .choices__inner
-  background-color: #FFF
+  background-color: transparent
   color: $purple-main
 .choices[data-type*="select-one"] .choices__inner
   padding-bottom: 0

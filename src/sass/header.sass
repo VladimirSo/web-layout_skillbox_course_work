@@ -17,81 +17,109 @@ $orange-shade: #BB370E
 $orange-light-bgr :#FFF5D1
 
 .header
-  display: grid
-  grid-template-columns: auto auto
-  grid-template-rows: repeat(5, auto)
-  @media (min-width: 768px)
-    grid-template-columns: 200px auto 200px
-    grid-template-rows: repeat(4, auto)
-  @media (min-width: 1024px)
-    grid-template-columns: auto auto auto 208px
-  @media (min-width: 1290px)
-    grid-template-columns: auto 320px 240px 600px 120px auto
+  &-container
+    display: grid
+    // grid-template-columns: auto auto
+    grid-template-columns: auto 12px 186px 110px 12px auto
+    grid-template-rows: repeat(5, auto)
+    @media (min-width: 768px)
+      // grid-template-columns: 200px auto 200px
+      grid-template-columns: auto 72px 200px 224px 200px 72px auto
+      grid-template-rows: repeat(4, auto)
+    @media (min-width: 1024px)
+      // grid-template-columns: auto auto auto 208px
+      grid-template-columns: auto 36px 200px 645px 107px 36px auto
+    @media (min-width: 1290px)
+      // grid-template-columns: auto 320px 240px 600px 120px auto
+      grid-template-columns: auto 325px 240px 600px 125px auto
   &__logo
     grid-column-start: 1
-    grid-column-end: 3
+    // grid-column-end: 3
+    grid-column-end: -1
     grid-row-start: 1
     grid-row-end: 2
     @media (min-width: 768px)
-      grid-column-start: 2
-      grid-column-end: 3
+      // grid-column-start: 2
+      // grid-column-end: 3
+      grid-column-start: 4
+      grid-column-end: 5
       grid-row-start: 3
       grid-row-end: 4
     @media (min-width: 1024px)
-      grid-column-start: 1
-      grid-column-end: 2
+      // grid-column-start: 1
+      // grid-column-end: 2
+      grid-column-start: 3
+      grid-column-end: 4
     @media (min-width: 1290px)
       grid-column-start: 2
       grid-column-end: 3
       grid-row-start: 2
       grid-row-end: 3
   &__region
-    grid-column-start: 1
-    grid-column-end: 3
+    // grid-column-start: 1
+    // grid-column-end: 3
+    grid-column-start: 3
+    grid-column-end: -3
     grid-row-start: 2
     grid-row-end: 3
     @media (min-width: 768px)
-      grid-column-start: 1
-      grid-column-end: 4
+      // grid-column-start: 1
+      // grid-column-end: 4
+      grid-column-start: 3
+      grid-column-end: -3
       grid-row-start: 1
       grid-row-end: 2
     @media (min-width: 1024px)
-      grid-column-start: 1
-      grid-column-end: -1
+      // grid-column-start: 1
+      // grid-column-end: -1
+      grid-column-start: 3
+      grid-column-end: -3
     @media (min-width: 1290px)
       grid-column-start: 1
       grid-column-end: 4
   &__main-nav
-    grid-column-start: 1
-    grid-column-end: 2
+    // grid-column-start: 1
+    // grid-column-end: 2
+    grid-column-start: 3
+    grid-column-end: 4
     grid-row-start: 3
     grid-row-end: 4
     @media (min-width: 768px)
-      grid-column-start: 1
-      grid-column-end: 2
+      // grid-column-start: 1
+      // grid-column-end: 2
+      grid-column-start: 3
+      grid-column-end: 4
       grid-row-start: 3
       grid-row-end: 4
     @media (min-width: 1024px)
-      grid-column-start: 2
-      grid-column-end: -1
+      // grid-column-start: 2
+      // grid-column-end: -1
+      grid-column-start: 4
+      grid-column-end: -3
     @media (min-width: 1290px)
       grid-column-start: 3
       grid-column-end: -2
       grid-row-start: 2
       grid-row-end: 3
   &__users-data
-    grid-column-start: 2
-    grid-column-end: 3
+    // grid-column-start: 2
+    // grid-column-end: 3
+    grid-column-start: -4
+    grid-column-end: -3
     grid-row-start: 3
     grid-row-end: 4
     justify-self: end
     @media (min-width: 768px)
-      grid-column-start: -2
-      grid-column-end: -1
+      // grid-column-start: -2
+      // grid-column-end: -1
+      grid-column-start: -3
+      grid-column-end: -4
       grid-row-start: 3
       grid-row-end: 4
     @media (min-width: 1024px)
-      grid-column-start: -2
+      // grid-column-start: -2
+      // grid-column-end: -1
+      grid-column-start: -4
       grid-column-end: -1
       grid-row-start: 2
       grid-row-end: 3
@@ -101,13 +129,17 @@ $orange-light-bgr :#FFF5D1
       grid-row-start: -2
       grid-row-end: -1
   &__search-form
-    grid-column-start: 1
-    grid-column-end: 3
+    // grid-column-start: 1
+    // grid-column-end: 3
+    grid-column-start: 3
+    grid-column-end: -3
     grid-row-start: 4
     grid-row-end: 5
     @media (min-width: 768px)
-      grid-column-start: 1
-      grid-column-end: -1
+      // grid-column-start: 1
+      // grid-column-end: -1
+      grid-column-start: 3
+      grid-column-end: -3
       grid-row-start: -2
       grid-row-end: -1
     @media (min-width: 1290px)
@@ -119,11 +151,14 @@ $orange-light-bgr :#FFF5D1
     @media (min-width: 768px)
       grid-column-start: 1
       grid-column-end: -1
+      // grid-column-start: 3
+      // grid-column-end: -3
       grid-row-start: 2
       grid-row-end: 3
     @media (min-width: 1024px)
       grid-column-start: 1
-      grid-column-end: -2
+      // grid-column-end: -2
+      grid-column-end: -4
     @media (min-width: 1290px)
       grid-column-start: -4
       grid-column-end: -1
@@ -145,28 +180,40 @@ $orange-light-bgr :#FFF5D1
       @media (min-width: 768px)
         margin: 32px 0 12px 0
       @media (min-width: 1024px)
-        margin: 32px 0 12px 15px
+        margin: 32px auto 12px 0
       @media (min-width: 1290px)
-        margin-left: 0
+        margin-bottom: 20px
   .region
     display: flex
     flex-direction: column
-    padding: 18px 12px 15px 12px
+    // padding: 18px 12px 15px 12px
+    padding: 18px 0 15px 0
     border-bottom: 1px solid $light-grey
     @media (min-width: 768px)
       flex-direction: row
       justify-content: space-between
-      padding: 18px 72px
+      // padding: 18px 72px
+      padding: 18px 0
       border-bottom: none
     @media (min-width: 1024px)
-      padding: 18px 36px
+      // padding: 18px 36px
+      padding: 18px 0
     @media (min-width: 1290px)
-      padding: 14px 0 14px 0
       justify-content: flex-end
-      margin-right: 210px
+      width: 360px
+      padding: 14px 0 14px 0
+      // justify-content: flex-end
+      // margin-right: 210px
+      margin: 0 215px 0 auto
+    
     &-select
       display: flex
       align-items: center
+      margin-bottom: 15px
+      @media (min-width: 768px)
+        margin-bottom: 0
+      @media (min-width: 1290px)
+        margin-right: 20px
       &__desc
         margin: 0
     &-wrapper
@@ -191,13 +238,13 @@ $orange-light-bgr :#FFF5D1
       // &:focus
       //   background-color: $pink-violet
       //   color: $purple-shade
-    &__contact-phone
-      margin-top: 15px
-      @media (min-width: 768px)
-        margin-top: 0
-      @media (min-width: 1290px)
-        margin-left: 30px
-        // margin-left: 24px
+    // &__contact-phone
+    //   margin-top: 15px
+    //   @media (min-width: 768px)
+    //     margin-top: 0
+      // @media (min-width: 1290px)
+      //   // margin-left: 30px
+      //   margin-left: 20px
 
   .contact-phone
     display: block
@@ -228,41 +275,78 @@ $orange-light-bgr :#FFF5D1
     display: none
     @media (min-width: 768px)
       display: flex
-      justify-content: space-between
-      padding: 18px 72px 16px 72px
+      // justify-content: space-between
+      justify-content: flex-start
+      flex-wrap: wrap
+      // padding: 18px 72px 16px 72px
+      padding: 18px 0 10px 0
+      margin: 0 auto
+      max-width: 624px
       font-size:14px
       color: $grey
-      background-color: $light-grey
+      // background-color: $light-grey
     @media (min-width: 1024px)
-      padding: 18px 72px 15px 36px
+      max-width: 710px
+      margin: 0 135px 0 auto
+      // padding: 18px 72px 15px 36px
+      // padding: 18px 0 15px 0
     @media (min-width: 1290px)
-      padding: 18px 0 15px 0
-      margin-left: 10px
-      width: 710px
+      padding: 18px 0 12px 5px
+      margin: 0 auto 0 0
+      max-width: 725px
       background-color: transparent
+    &__item
+      margin-bottom: 5px
+      margin-right: 15px
+      @media (min-width: 1024px)
+        margin-right: 44px
     &__item:first-child
       margin-left: -10px
     &__item:last-child
       margin-right: -10px
     &-wrapper
+      @media (min-width: 768px)
+        background-color: $light-grey
       @media (min-width: 1290px)
         background-color: $light-grey
 
   .main-nav
-    padding: 10px 0 10px 12px
+    // padding: 10px 0 10px 12px
+    padding: 10px 0 10px 0
     @media (min-width: 768px)
-      padding: 30px 0 12px 72px
+      // padding: 30px 0 12px 72px
+      padding: 30px 0 12px 0
     @media (min-width: 1024px)
-      padding: 18px 36px 0px 40px
+      // width: 700px
+      width: 725px
+      // padding: 18px 36px 0px 40px
+      padding: 30px 0 0 0 
+      margin-right: -10px
       align-self: center
+      justify-self: flex-end
     @media (min-width: 1290px)
       padding: 22px 0 0 0
-      margin-left: 5px
+      // width: 100%
+      width: 990px
+      // margin-left: 5px
     &__list
       display: none
       @media (min-width: 1024px)
         display: flex
-        justify-content: space-between
+        // justify-content: space-between
+        justify-content: center
+        flex-wrap: wrap
+    &__item
+      @media (min-width: 1024px)
+        margin-bottom: 10px
+        margin-right:22px
+      @media (min-width: 1290px)
+        margin-right: 72px
+    &__item:last-child
+      @media (min-width: 1024px)
+        margin-right: 0
+      @media (min-width: 1290px)
+        margin-right: 10px
     .nav-btn
       width: 32px
       height: 30px
@@ -290,23 +374,26 @@ $orange-light-bgr :#FFF5D1
       &.nav-btn-active
         .nav-btn-line:nth-child(3)
           transform: translateY(-10px) rotate(-45deg)
-    &__item:first-child
-      margin-left: -10px
-    &__item:last-child
-      margin-right: -10px
+    // &__item:first-child
+    //   margin-left: -10px
+    // &__item:last-child
+    //   margin-right: -10px
 
   .search-form
     border-top: 1px solid $light-grey
-    padding: 15px 12px 32px 12px
+    // padding: 15px 12px 32px 12px
+    padding: 15px 0 32px 0
     @media (min-width: 768px)
       border-top: none
-      padding: 15px 72px 30px 72px
+      // padding: 15px 72px 30px 72px
+      padding: 15px 0 30px 0
       display: flex
       flex-direction: row
     @media (min-width: 1024px)
-      padding: 22px 36px 32px 36px
+      // padding: 22px 36px 32px 36px
+      padding: 22px 0 32px 0
     @media (min-width: 1290px)
-      padding: 22px 90px 32px 0px
+      padding: 12px 90px 32px 0px
 
     .search-field
       border: 2px solid $light-grey
@@ -316,13 +403,15 @@ $orange-light-bgr :#FFF5D1
       align-items: center
       justify-content: space-between
       padding: 12px 32px
+      margin-bottom: 15px
       @media (min-width: 768px)
         width: 90%
         border-radius: 10px 0 0 10px
+        margin-bottom: 0
       @media (min-width: 1024px)
         width: 68.5%
       @media (min-width: 1290px)
-        width: 78%
+        width: 77%
       &:hover
         background-color: $md-grey
         border-color: $md-grey
@@ -364,12 +453,12 @@ $orange-light-bgr :#FFF5D1
           background-color: $pink-light
 
     .search-area
-      margin-top: 15px
+      // margin-top: 15px
       position: relative
       background-color: #fff
       @media (min-width: 768px)
         width: 40%
-        margin-top: 0
+        // margin-top: 0
       @media (min-width: 1024px)
         width: 31.5%
       &__list
@@ -402,12 +491,15 @@ $orange-light-bgr :#FFF5D1
         background-color: transparent
         border: 2px solid $light-grey
         border-radius: 10px
-        padding: 19px 36px 19px 28px
+        // padding: 19px 36px 19px 28px
+        padding: 19px 28px 19px 28px
         color: $purple-main
         line-height: 18px
         text-align: left
         @media (min-width: 768px)
           border-radius: 0 10px 10px 0
+        @media (min-width: 1290px)
+          padding-right: 40px
         &:hover
           border-color: $purple-main
         &:active
@@ -424,23 +516,39 @@ $orange-light-bgr :#FFF5D1
           background-position: bottom center
 
   .users-data
-    display: flex
-    justify-content: space-between
-    width: 115px
-    padding: 5px 10px 5px 0
-    @media (min-width: 768px)
-      width: 174px
-      padding: 30px 68px 12px 0
     @media (min-width: 1024px)
-      background-color: $light-grey
       width: 100%
-      padding: 7px 32px 6px 70px
+      justify-self: start
+      background-color: $light-grey
     @media (min-width: 1290px)
+      width: auto
+      justify-self: end
       align-self: center
-      margin-right: -10px
-      padding: 5px 8px 15px 0
-      justify-content: flex-end
       background-color: transparent
+    &-container
+      display: flex
+      justify-content: space-between
+      // width: 115px
+      width: 103px
+      // padding: 5px 10px 5px 0
+      padding: 5px 0 5px 0
+      @media (min-width: 768px)
+        // width: 174px
+        // padding: 30px 68px 12px 0
+        width: 105px
+        padding: 30px 0 12px 0
+      @media (min-width: 1024px)
+        // background-color: $light-grey
+        // width: 100%
+        width: 110px
+        padding: 7px 0 6px 5px
+      @media (min-width: 1290px)
+        // align-self: center
+        // margin-right: -10px
+        // padding: 5px 8px 15px 0
+        padding: 0 5px 15px 0
+        justify-content: flex-end
+        
     .users-cabinet
       display: block
       width: 34px
