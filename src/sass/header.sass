@@ -1,53 +1,44 @@
 @import "src/sass/choices.sass"
 
-$light-grey: #F7F7F7
-$md-grey: #EAEAEA
+$light-grey: #f7f7f7
+$md-grey: #eaeaea
 $grey: #999
 
-$purple-main: #A65CF0
-$purple-shade: #7033AC
-$purple-light: #C998FB
+$purple-main: #a65cf0
+$purple-shade: #7033ac
+$purple-light: #c998fb
 
-$pink-light: #F8EFFF
-$pink-violet: #EBD1FF
+$pink-light: #f8efff
+$pink-violet: #ebd1ff
 
-$orange: #FF862F
-$orange-light: #FFBD59
-$orange-shade: #BB370E
-$orange-light-bgr :#FFF5D1
+$orange: #ff862f
+$orange-light: #ffbd59
+$orange-shade: #bb370e
+$orange-light-bgr :#fff5d1
 
 .header
   &-container
     display: grid
-    // grid-template-columns: auto auto
     grid-template-columns: auto 12px 186px 110px 12px auto
     grid-template-rows: repeat(5, auto)
     @media (min-width: 768px)
-      // grid-template-columns: 200px auto 200px
       grid-template-columns: auto 72px 200px 224px 200px 72px auto
       grid-template-rows: repeat(4, auto)
     @media (min-width: 1024px)
-      // grid-template-columns: auto auto auto 208px
       grid-template-columns: auto 36px 200px 645px 107px 36px auto
     @media (min-width: 1290px)
-      // grid-template-columns: auto 320px 240px 600px 120px auto
       grid-template-columns: auto 325px 240px 600px 125px auto
   &__logo
     grid-column-start: 1
-    // grid-column-end: 3
     grid-column-end: -1
     grid-row-start: 1
     grid-row-end: 2
     @media (min-width: 768px)
-      // grid-column-start: 2
-      // grid-column-end: 3
       grid-column-start: 4
       grid-column-end: 5
       grid-row-start: 3
       grid-row-end: 4
     @media (min-width: 1024px)
-      // grid-column-start: 1
-      // grid-column-end: 2
       grid-column-start: 3
       grid-column-end: 4
     @media (min-width: 1290px)
@@ -56,44 +47,32 @@ $orange-light-bgr :#FFF5D1
       grid-row-start: 2
       grid-row-end: 3
   &__region
-    // grid-column-start: 1
-    // grid-column-end: 3
     grid-column-start: 3
     grid-column-end: -3
     grid-row-start: 2
     grid-row-end: 3
     @media (min-width: 768px)
-      // grid-column-start: 1
-      // grid-column-end: 4
       grid-column-start: 3
       grid-column-end: -3
       grid-row-start: 1
       grid-row-end: 2
     @media (min-width: 1024px)
-      // grid-column-start: 1
-      // grid-column-end: -1
       grid-column-start: 3
       grid-column-end: -3
     @media (min-width: 1290px)
       grid-column-start: 1
       grid-column-end: 4
   &__main-nav
-    // grid-column-start: 1
-    // grid-column-end: 2
     grid-column-start: 3
     grid-column-end: 4
     grid-row-start: 3
     grid-row-end: 4
     @media (min-width: 768px)
-      // grid-column-start: 1
-      // grid-column-end: 2
       grid-column-start: 3
       grid-column-end: 4
       grid-row-start: 3
       grid-row-end: 4
     @media (min-width: 1024px)
-      // grid-column-start: 2
-      // grid-column-end: -1
       grid-column-start: 4
       grid-column-end: -3
     @media (min-width: 1290px)
@@ -102,23 +81,17 @@ $orange-light-bgr :#FFF5D1
       grid-row-start: 2
       grid-row-end: 3
   &__users-data
-    // grid-column-start: 2
-    // grid-column-end: 3
     grid-column-start: -4
     grid-column-end: -3
     grid-row-start: 3
     grid-row-end: 4
     justify-self: end
     @media (min-width: 768px)
-      // grid-column-start: -2
-      // grid-column-end: -1
       grid-column-start: -3
       grid-column-end: -4
       grid-row-start: 3
       grid-row-end: 4
     @media (min-width: 1024px)
-      // grid-column-start: -2
-      // grid-column-end: -1
       grid-column-start: -4
       grid-column-end: -1
       grid-row-start: 2
@@ -129,15 +102,11 @@ $orange-light-bgr :#FFF5D1
       grid-row-start: -2
       grid-row-end: -1
   &__search-form
-    // grid-column-start: 1
-    // grid-column-end: 3
     grid-column-start: 3
     grid-column-end: -3
     grid-row-start: 4
     grid-row-end: 5
     @media (min-width: 768px)
-      // grid-column-start: 1
-      // grid-column-end: -1
       grid-column-start: 3
       grid-column-end: -3
       grid-row-start: -2
@@ -151,13 +120,10 @@ $orange-light-bgr :#FFF5D1
     @media (min-width: 768px)
       grid-column-start: 1
       grid-column-end: -1
-      // grid-column-start: 3
-      // grid-column-end: -3
       grid-row-start: 2
       grid-row-end: 3
     @media (min-width: 1024px)
       grid-column-start: 1
-      // grid-column-end: -2
       grid-column-end: -4
     @media (min-width: 1290px)
       grid-column-start: -4
@@ -174,8 +140,6 @@ $orange-light-bgr :#FFF5D1
     @media (min-width: 1290px)
       justify-content: flex-start
     &__img
-      // width: 187px
-      // height: 27px
       margin: 12px 0 11px 0
       @media (min-width: 768px)
         margin: 32px 0 12px 0
@@ -186,26 +150,20 @@ $orange-light-bgr :#FFF5D1
   .region
     display: flex
     flex-direction: column
-    // padding: 18px 12px 15px 12px
     padding: 18px 0 15px 0
     border-bottom: 1px solid $light-grey
     @media (min-width: 768px)
       flex-direction: row
       justify-content: space-between
-      // padding: 18px 72px
       padding: 18px 0
       border-bottom: none
     @media (min-width: 1024px)
-      // padding: 18px 36px
       padding: 18px 0
     @media (min-width: 1290px)
       justify-content: flex-end
       width: 360px
       padding: 14px 0 14px 0
-      // justify-content: flex-end
-      // margin-right: 210px
       margin: 0 215px 0 auto
-    
     &-select
       display: flex
       align-items: center
@@ -238,13 +196,6 @@ $orange-light-bgr :#FFF5D1
       // &:focus
       //   background-color: $pink-violet
       //   color: $purple-shade
-    // &__contact-phone
-    //   margin-top: 15px
-    //   @media (min-width: 768px)
-    //     margin-top: 0
-      // @media (min-width: 1290px)
-      //   // margin-left: 30px
-      //   margin-left: 20px
 
   .contact-phone
     display: block
@@ -252,44 +203,35 @@ $orange-light-bgr :#FFF5D1
     font-size: 14px
     line-height: 22px
     color: $orange
-    // background-image: url("../images/phone_orange.png")
     background-image: url("../images/sprite.svg#phone-orange")
     background-repeat: no-repeat
     background-position: -45px 3px
     background-size: auto 18px
     &:hover
       color: $orange-light
-      // background-image: url("../images/phone_orange_hover.png")
       background-image: url("../images/sprite.svg#phone-orange-hover")
     &:focus
       color: $orange
-      // background-image: url("../images/phone_orange.png")
       background-image: url("../images/sprite.svg#phone-orange")
       background-color: $orange-light-bgr
     &:active
       color: $orange-shade
-      // background-image: url("../images/phone_orange_active.png")
       background-image: url("../images/sprite.svg#phone-orange-active")
 
   .add-menu
     display: none
     @media (min-width: 768px)
       display: flex
-      // justify-content: space-between
       justify-content: flex-start
       flex-wrap: wrap
-      // padding: 18px 72px 16px 72px
       padding: 18px 0 10px 0
       margin: 0 auto
       max-width: 624px
       font-size:14px
       color: $grey
-      // background-color: $light-grey
     @media (min-width: 1024px)
       max-width: 710px
       margin: 0 135px 0 auto
-      // padding: 18px 72px 15px 36px
-      // padding: 18px 0 15px 0
     @media (min-width: 1290px)
       padding: 18px 0 12px 5px
       margin: 0 auto 0 0
@@ -311,29 +253,22 @@ $orange-light-bgr :#FFF5D1
         background-color: $light-grey
 
   .main-nav
-    // padding: 10px 0 10px 12px
     padding: 10px 0 10px 0
     @media (min-width: 768px)
-      // padding: 30px 0 12px 72px
       padding: 30px 0 12px 0
     @media (min-width: 1024px)
-      // width: 700px
       width: 725px
-      // padding: 18px 36px 0px 40px
       padding: 30px 0 0 0 
       margin-right: -10px
       align-self: center
       justify-self: flex-end
     @media (min-width: 1290px)
-      padding: 22px 0 0 0
-      // width: 100%
       width: 990px
-      // margin-left: 5px
+      padding: 22px 0 0 0
     &__list
       display: none
       @media (min-width: 1024px)
         display: flex
-        // justify-content: space-between
         justify-content: center
         flex-wrap: wrap
     &__item
@@ -374,23 +309,16 @@ $orange-light-bgr :#FFF5D1
       &.nav-btn-active
         .nav-btn-line:nth-child(3)
           transform: translateY(-10px) rotate(-45deg)
-    // &__item:first-child
-    //   margin-left: -10px
-    // &__item:last-child
-    //   margin-right: -10px
 
   .search-form
     border-top: 1px solid $light-grey
-    // padding: 15px 12px 32px 12px
     padding: 15px 0 32px 0
     @media (min-width: 768px)
       border-top: none
-      // padding: 15px 72px 30px 72px
       padding: 15px 0 30px 0
       display: flex
       flex-direction: row
     @media (min-width: 1024px)
-      // padding: 22px 36px 32px 36px
       padding: 22px 0 32px 0
     @media (min-width: 1290px)
       padding: 12px 90px 32px 0px
@@ -425,13 +353,11 @@ $orange-light-bgr :#FFF5D1
         background-color: inherit
         border: none
         padding: 0 9px 0 25px
-        // background-image: url("../images/search.png")
         background-image: url("../images/sprite.svg#search")
         background-repeat: no-repeat
         background-position: -40px center
         background-size: auto 16px
         &:focus
-          // background-image: url("../images/search-purple.png")
           background-image: url("../images/sprite.svg#search-purple")
       &__input::placeholder
         color: $grey
@@ -453,12 +379,10 @@ $orange-light-bgr :#FFF5D1
           background-color: $pink-light
 
     .search-area
-      // margin-top: 15px
       position: relative
       background-color: #fff
       @media (min-width: 768px)
         width: 40%
-        // margin-top: 0
       @media (min-width: 1024px)
         width: 31.5%
       &__list
@@ -491,7 +415,6 @@ $orange-light-bgr :#FFF5D1
         background-color: transparent
         border: 2px solid $light-grey
         border-radius: 10px
-        // padding: 19px 36px 19px 28px
         padding: 19px 28px 19px 28px
         color: $purple-main
         line-height: 18px
@@ -528,24 +451,15 @@ $orange-light-bgr :#FFF5D1
     &-container
       display: flex
       justify-content: space-between
-      // width: 115px
       width: 103px
-      // padding: 5px 10px 5px 0
       padding: 5px 0 5px 0
       @media (min-width: 768px)
-        // width: 174px
-        // padding: 30px 68px 12px 0
         width: 105px
         padding: 30px 0 12px 0
       @media (min-width: 1024px)
-        // background-color: $light-grey
-        // width: 100%
         width: 110px
         padding: 7px 0 6px 5px
       @media (min-width: 1290px)
-        // align-self: center
-        // margin-right: -10px
-        // padding: 5px 8px 15px 0
         padding: 0 5px 15px 0
         justify-content: flex-end
         
@@ -553,42 +467,33 @@ $orange-light-bgr :#FFF5D1
       display: block
       width: 34px
       height: 36px
-      // background-image: url("../images/users-cabinet.png")
       background-image: url("../images/sprite.svg#users-cabinet")
       background-repeat: no-repeat
       background-position: center
-      // background-size: 26px 28px
       background-size: 187px 30px
       @media (min-width: 1290px)
         margin-right: 20px
       &:hover
-        // background-image: url("../images/users-cabinet-hover.png")
         background-image: url("../images/sprite.svg#users-cabinet-hover")
       &:active
-        // background-image: url("../images/users-cabinet-active.png")
         background-image: url("../images/sprite.svg#users-cabinet-active")
       &:focus
-        // background-image: url("../images/users-cabinet-focus.png")
         background-image: url("../images/sprite.svg#users-cabinet-focus")
         background-color: $purple-light
     .users-basket
       display: block
       width: 50px
       height: 36px
-      // background-image: url("../images/users-basket.png")
       background-image: url("../images/sprite.svg#users-basket")
       background-repeat: no-repeat
       background-position: -62px center
       background-size: 187px 30px
       position: relative
       &:hover
-        // background-image: url("../images/users-basket-hover.png")
         background-image: url("../images/sprite.svg#users-basket-hover")
       &:active
-        // background-image: url("../images/users-basket-active.png")
         background-image: url("../images/sprite.svg#users-basket-active")
       &:focus
-        // background-image: url("../images/users-basket-focus.png")
         background-image: url("../images/sprite.svg#users-basket-focus")
         background-color: $purple-light
       &__content
@@ -633,7 +538,7 @@ $orange-light-bgr :#FFF5D1
       width: 90vw
       height: 100%
       padding: 20px
-      background-color: #FFF
+      background-color: #fff
       animation: move-popup 0.5s ease-in-out 1
       position: absolute
       top: 0
@@ -649,12 +554,10 @@ $orange-light-bgr :#FFF5D1
 
   @keyframes move-popup
     from
-      // width: 0
       height: 0
       left: -90vw
       opacity: 0
     to
-      // width: 90vw
       height: 100%
       left: 0
       opacity: 1
