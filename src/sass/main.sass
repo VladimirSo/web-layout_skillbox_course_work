@@ -1,6 +1,11 @@
+@import "src/sass/swiper.sass"
+
 $light-grey: #f7f7f7
 $md-grey: #eaeaea
 $grey: #999
+$grey-light: #f6f6f6
+$grey-shade: #666
+
 
 $purple-main: #a65cf0
 $purple-shade: #7033ac
@@ -14,18 +19,310 @@ $orange-light: #ffbd59
 $orange-shade: #bb370e
 $orange-light-bgr :#fff5d1
 
-.main
-  .hero
-    height: 300px
-    @media (min-width: 768px)
-      height: 400px
-    &-content
-      &__banner
-        height: 210px
-        background-color: $light-grey
-      &__btn
-        width: 296px
-        margin: 32px auto 0 auto
-        background-color: $purple-main
-        
+=main-title()
+  margin: 0
+  font-size: 24px
+  line-height: 24px
+  font-weight: 400
+  @media (min-width: 768px)
+    font-size: 32px
+    line-height: 32px
 
+
+.hero
+  // height: 300px
+  margin-bottom: 70px
+  // @media (min-width: 768px)
+    // height: 400px
+  &-content
+    position: relative
+    &__banner
+      height: 210px
+      width: 100%
+      background-color: $light-grey
+      @media (min-width: 768px)
+        height: 400px
+    &__desc
+      position: absolute
+      top: 30px
+      // left: 30px
+      left: calc(50vw - 130px)
+      margin: 0
+      width: 202px
+      // color: $grey
+      font-size: 20px
+      font-weight: 700
+      line-height: 27px
+      text-align: left
+      @media (min-width: 768px)
+        top: 80px
+        left: calc(50vw - 312px)
+        width: 560px
+        font-size: 48px
+        line-height: 65px
+      @media (min-width: 1024px)
+        left: calc(50vw - 476px)
+      @media (min-width: 1290px)
+        left: calc(50vw - 640px)
+      &.desc-dark
+        color: $grey
+      &.desc-light
+        color: #fff
+
+    &__btn
+      width: 284px
+      margin: 32px auto 0 auto
+      @media (min-width: 768px)
+        width: 170px
+        position: absolute
+        left: calc(50vw - 312px)
+        bottom: 80px
+      @media (min-width: 1024px)
+        left: calc(50vw - 476px)
+      @media (min-width: 1290px)
+        left: calc(50vw - 640px)
+
+.offers
+  padding-bottom: 70px
+  .spec-offers
+    margin-bottom: 70px
+    @media (min-width: 768px)
+      margin-bottom: 20px
+    &__title
+      +main-title()
+      margin-bottom: 25px
+
+  .offers-swiper
+    padding-bottom: 50px
+
+  .spec-item
+    position: relative
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: flex-end
+    align-items: center
+    // height: 415px
+    height: 420px
+    width: 296px
+    background-color: $grey-light
+    border-radius: 10px
+    padding: 60px 0 30px 0
+    // margin-bottom: 12px
+    &__discount
+      position: absolute
+      top: 30px
+      left: 0
+    .discount-tag
+      display: flex
+      flex-wrap: nowrap
+      align-items: center
+      width: max-content
+      // min-width: 80px
+      &__text
+        padding: 10px 15px 10px 15px
+        background-color: $orange
+        font-weight: bold
+        font-size: 14px
+        line-height: 14px
+        color: #fff
+        min-width: 55px
+        text-align: center
+      &__arrow
+        width: 0
+        height: 0
+        border-top: 17px solid transparent
+        border-bottom: 17px solid transparent
+        border-left: 8px solid #ff862f
+    &-img-wrapper
+      flex-grow: 1
+      align-items: center
+      justify-content: center
+      display: flex
+    &__img
+      // margin-bottom: 15px
+      margin-bottom: 10px
+      @media (min-width: 768px)
+        margin-bottom: 0
+    &-details
+      width: 236px
+    &__desc
+      margin: 0
+      // margin-bottom: 5px
+      margin-bottom: 20px
+      font-size: 24px
+      line-height: 31px
+      @media (min-width: 768px)
+        margin-bottom: 25px
+    &__price
+      display: flex
+      align-items: center
+      // margin-bottom: 20px
+      margin-bottom: 25px
+      .item-new-price
+        width: 50%
+        color: $orange
+        font-size: 18px
+      .item-old-price
+        width: 50%
+        color: $grey
+        text-decoration: line-through
+
+  .spec-item-adv
+    .spec-item__img
+      @media (min-width: 1290px)
+        margin-bottom: 15px
+    .spec-item-details
+      @media (min-width: 1290px)
+        display: grid
+        grid-template-columns: 1fr 1fr
+        width: 564px
+        grid-template-rows: auto auto 55px
+        // height: 178px
+        height: 245px
+        grid-column-gap: 110px
+    .spec-item__desc
+      @media (min-width: 1290px)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 1
+        grid-row-end: 2
+    .spec-item__price
+      @media (min-width: 1290px)
+        grid-column-start: 1
+        grid-column-end: 2
+    .spec-item__link
+      @media (min-width: 1290px)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: -2
+        grid-row-end: -1
+    .spec-item__scheme
+      display: none
+      @media (min-width: 1290px)
+        display: block
+        grid-column-start: -2
+        grid-column-end: -1
+        grid-row-start: 1
+        grid-row-end: -1
+        align-self: end
+
+.rating
+  // margin-bottom: 70px
+  &__title
+    +main-title()
+    margin-bottom: 25px
+    @media (min-width: 768px)
+      margin-bottom: 28px
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(3, 278px)
+    grid-gap: 16px
+    // margin-bottom: 32px
+    margin-bottom: 25px
+    max-height: 872px
+    overflow: hidden
+    @media (min-width: 768px)
+      grid-template-rows: repeat(3, 420px)
+      grid-gap: 32px
+      max-height: 1330px
+    @media (min-width: 1024px)
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(2, 420px)
+      max-height: 878px
+    @media (min-width: 1290px)
+      grid-template-columns: repeat(4, 1fr)
+      margin-bottom: 30px
+  &-item
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 16px 77px auto
+    justify-items: center
+    padding: 16px
+    background-color: $grey-light
+    border-radius: 10px
+    overflow-y: hidden
+    @media (min-width: 768px)
+      grid-template-rows: auto 1fr auto
+      padding: 30px 0
+    .rating-img-wrapper
+      flex-grow: 1
+      display: flex
+      justify-content: center
+      align-items: center
+      @media (min-width: 768px)
+        align-items: end
+        margin-bottom: 15px
+    &__score
+      width: 100%
+      font-size: 12px
+      line-height: 16px
+      color: $orange
+      @media (min-width: 768px)
+        width: 236px
+        font-size: 16px
+        line-height: 20px
+      &::before
+        content: ""
+        display: inline-block
+        width: 13px
+        height: 13px
+        margin-right: 5px
+        background-image: url("../images/star.png")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 13px 12px
+        vertical-align: -10%
+        @media (min-width: 768px)
+          width: 16px
+          height: 16px
+          background-size: 16px 15px
+    &__details
+      @media (min-width: 768px)
+        width: 236px
+    &__desc
+      line-height: 21px
+      margin: 0
+      margin-bottom: 16px
+      @media (min-width: 768px)
+        font-size: 24px
+        line-height: 31px
+        margin-bottom: 20px
+    &__price
+      color: $grey-shade
+      margin-bottom: 16px
+      @media (min-width: 768px)
+        line-height: 21px
+        margin-bottom: 25px
+    .transp-btn
+      width: 108px
+      padding-top: 10px
+      padding-bottom: 10px
+      @media (min-width: 768px)
+        // width: 128px
+        // padding-top: 18px
+        // padding-bottom: 20px
+        width: 125px
+        padding-top: 16px
+        padding-bottom: 18px
+  &__btn.purple-btn
+    width: 100%
+    @media (min-width: 768px)
+      width: 296px
+      margin: 0 auto
+
+.baner-main
+  background-image: url("../images/baner-main-s.jpg")
+
+
+.no-js
+  .hero__content
+    margin-bottom: 30px
+  .spec-offers__list
+    display: flex
+    flex-wrap: wrap
+  .spec-item
+    margin-bottom: 12px
+    @media (min-width: 768px)
+      margin-right: 12px

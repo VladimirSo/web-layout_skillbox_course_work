@@ -15,10 +15,11 @@
 	<meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" type="text/css" href="resources/third-party/choices/choices.min.css">
+  <link rel="stylesheet" type="text/css" href="resources/third-party/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
-<body>
+<body class="no-js">
 	<header class="header">
     <div class="header-container">
   		<div class="header__region region-wrapper">
@@ -172,20 +173,468 @@
 	<main class="main">
 		<h1 class="visually-hidden">Магазин SitDownPls</h1>
 
-		<div class="hero">
-			<div class="hero__content hero-content">
-				<div class="hero-content__banner">Скидка 15% на первую покупку</div>
+		<section class="hero">
+      <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+          <div class="hero__content hero-content swiper-slide">
+            <picture>
+                <source type="image/webp" media="(min-width: 1290px)" srcset="images/baner-1-xl.webp 1x, images/baner-1-xl-2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/baner-1-l.webp 1x, images/baner-1-l-2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/baner-1-m.webp 1x, images/baner-1-m-2x.webp 2x">
+                <source type="image/webp" srcset="images/baner-1-s.webp 1x, images/baner-1-s-2x.webp 2x">
 
-				<button class="hero-content__btn purple-btn animated-btn">Получить</button>
-			</div>
-		</div>
+                <source media="(min-width: 1290px)" srcset="images/baner-1-xl.jpg 1x, images/baner-1-xl-2x.jpg 2x">
+                <source media="(min-width: 1024px)" srcset="images/baner-1-l.jpg 1x, images/baner-1-l-2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="images/baner-1-m.jpg 1x, images/baner-1-m-2x.jpg 2x">
+                <img class="hero-content__banner" src="images/baner-1-s.jpg" srcset="images/baner-1-s-2x.jpg 2x" alt="Банер">
+            </picture>
+
+            <p class="hero-content__desc desc-dark">Скидка 15% на&nbsp;первую покупку</p>
+
+            <button class="hero-content__btn purple-btn animated-btn">Получить!</button>
+          </div>
+
+          <div class="hero__content hero-content swiper-slide">
+            <picture>
+              <source type="image/webp" media="(min-width: 1290px)" srcset="images/baner-2-xl.webp 1x, images/baner-2-xl-2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/baner-2-l.webp 1x, images/baner-2-l-2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/baner-2-m.webp 1x, images/baner-2-m-2x.webp 2x">
+              <source type="image/webp" srcset="images/baner-2-s.webp 1x, images/baner-2-s-2x.webp 2x">
+
+              <source media="(min-width: 1290px)" srcset="images/baner-2-xl.jpg 1x, images/baner-2-xl-2x.jpg 2x">
+              <source media="(min-width: 1024px)" srcset="images/baner-2-l.jpg 1x, images/baner-2-l-2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/baner-2-m.jpg 1x, images/baner-2-m-2x.jpg 2x">
+              <img class="hero-content__banner" src="images/baner-2-s.jpg" srcset="images/baner-2-s-2x.jpg 2x" alt="Банер">
+            </picture>
+
+            <p class="hero-content__desc desc-dark">1000+ аксессуаров для дома</p>
+
+            <button class="hero-content__btn purple-btn animated-btn">Получить</button>
+          </div>
+
+          <div class="hero__content hero-content swiper-slide">
+            <picture>
+              <source type="image/webp" media="(min-width: 1290px)" srcset="images/baner-3-xl.webp 1x, images/baner-3-xl-2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/baner-3-l.webp 1x, images/baner-3-l-2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/baner-3-m.webp 1x, images/baner-3-m-2x.webp 2x">
+              <source type="image/webp" srcset="images/baner-3-s.webp 1x, images/baner-3-s-2x.webp 2x">
+
+              <source media="(min-width: 1290px)" srcset="images/baner-3-xl.jpg 1x, images/baner-3-xl-2x.jpg 2x">
+              <source media="(min-width: 1024px)" srcset="images/baner-3-l.jpg 1x, images/baner-3-l-2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/baner-3-m.jpg 1x, images/baner-3-m-2x.jpg 2x">
+              <img class="hero-content__banner" src="images/baner-3-s.jpg" srcset="images/baner-3-s-2x.jpg 2x" alt="Банер">
+            </picture>
+
+            <p class="hero-content__desc desc-light">Коллекция стильного и&nbsp;яркого текстиля</p>
+
+            <button class="hero-content__btn purple-btn animated-btn">Получить</button>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+		</section>
+
+    <section class="offers">
+      <div class="fixed-container">
+        <section class="offers__special spec-offers">
+          
+
+          <div class="swiper offers-swiper">
+            <h2 class="spec-offers__title">Специальные предложения</h2>
+
+            <ul class="spec-offers__list swiper-wrapper">
+              <li class="spec-offers__item spec-item swiper-slide">
+                <div class="spec-item__discount discount-tag">
+                  <div class="discount-tag__text">- 9 000</div>
+                  <div class="discount-tag__arrow"></div>
+                </div>
+
+                <div class="spec-item-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1290px)" srcset="images/spec-offer-1-xl.webp 1x, images/spec-offer-1-xl-2x.webp 2x">
+                    <source type="image/webp" srcset="images/spec-offer-1-s.webp 1x, images/spec-offer-1-s-2x.webp 2x">
+
+                    <source media="(min-width: 1290px)" srcset="images/spec-offer-1-s-2x.png">
+                    <img class="spec-item__img" src="images/spec-offer-1-s.png" srcset="images/spec-offer-1-s-2x.png 2x" alt="Товар по специальному предложению">
+                  </picture>
+                </div>
+
+                <div class="spec-item-details">
+                  <p class="spec-item__desc">Кресло велюровое <nobr>“X-24”</nobr></p>
+
+                  <div class="spec-item__price">
+                    <div class="item-new-price">15 990 руб</div>
+
+                    <div class="item-old-price">24 990 руб</div>
+                  </div>
+
+                  <a href="#" class="spec-item__link transp-btn animated-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="spec-offers__item spec-item spec-item-adv swiper-slide">
+                <div class="spec-item__discount discount-tag">
+                  <div class="discount-tag__text">- 10 000</div>
+                  <div class="discount-tag__arrow"></div>
+                </div>
+
+                <div class="spec-item-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1290px)" srcset="images/spec-offer-2-xl.webp 1x, images/spec-offer-2-xl-2x.webp 2x">
+                    <source type="image/webp" srcset="images/spec-offer-2-s.webp 1x, images/spec-offer-2-s-2x.webp 2x">
+
+                    <source media="(min-width: 1290px)" srcset="images/spec-offer-2-s-2x.png">
+                    <img class="spec-item__img" src="images/spec-offer-2-s.png" srcset="images/spec-offer-2-s-2x.png 2x" alt="Товар по специальному предложению">
+                  </picture>
+                </div>
+
+                <div class="spec-item-details">
+                  <p class="spec-item__desc">Диван тканевый <nobr>“Z-44”</nobr></p>
+
+                  <div class="spec-item__price">
+                    <div class="item-new-price">22 990 руб</div>
+
+                    <div class="item-old-price">32 990 руб</div>
+                  </div>
+                  
+                  <a href="#" class="spec-item__link transp-btn animated-btn">Купить</a>
+
+                  <div class="spec-item__scheme">
+                    <picture>
+                      <source type="image/webp" srcset="images/spec-offer-2-add-xl.webp 1x, images/spec-offer-2-add-xl-2x.webp 2x">
+
+                      <img src="images/spec-offer-2-add-xl.png" srcset="images/spec-offer-2-add-xl-2x.png 2x" alt="Схема изделия">
+                    </picture>
+                  </div>
+                </div>
+              </li>
+
+              <li class="spec-offers__item spec-item swiper-slide">
+                <div class="spec-item__discount discount-tag">
+                  <div class="discount-tag__text">- 600</div>
+                  <div class="discount-tag__arrow"></div>
+                </div>
+
+                <div class="spec-item-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1290px)" srcset="images/spec-offer-3-xl.webp 1x, images/spec-offer-3-xl-2x.webp 2x">
+                    <source type="image/webp" srcset="images/spec-offer-3-s.webp 1x, images/spec-offer-3-s-2x.webp 2x">
+
+                    <source media="(min-width: 1290px)" srcset="images/spec-offer-3-s-2x.png">
+                    <img class="spec-item__img" src="images/spec-offer-3-s.png" srcset="images/spec-offer-3-s-2x.png 2x" alt="Товар по специальному предложению">
+                  </picture>
+                </div>
+
+                <div class="spec-item-details">
+                  <p class="spec-item__desc">Будильник  <nobr>“Quartz-23”</nobr></p>
+
+                  <div class="spec-item__price">
+                    <div class="item-new-price">1 290 руб</div>
+
+                    <div class="item-old-price">1 890 руб</div>
+                  </div>
+                  
+                  <a href="#" class="spec-item__link transp-btn animated-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="spec-offers__item spec-item swiper-slide">
+                <div class="spec-item__discount discount-tag">
+                  <div class="discount-tag__text">- 300</div>
+                  <div class="discount-tag__arrow"></div>
+                </div>
+
+                <div class="spec-item-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1290px)" srcset="images/spec-offer-4-xl.webp 1x, images/spec-offer-4-xl-2x.webp 2x">
+                    <source type="image/webp" srcset="images/spec-offer-4-s.webp 1x, images/spec-offer-4-s-2x.webp 2x">
+
+                    <source media="(min-width: 1290px)" srcset="images/spec-offer-4-s-2x.png">
+                    <img class="spec-item__img" src="images/spec-offer-4-s.png" srcset="images/spec-offer-4-s-2x.png 2x" alt="Товар по специальному предложению">
+                  </picture>
+                </div>
+
+                <div class="spec-item-details">
+                  <p class="spec-item__desc">Мини-скульптура “Oh&nbsp;my deer”</p>
+
+                  <div class="spec-item__price">
+                    <div class="item-new-price">690 руб</div>
+
+                    <div class="item-old-price">990 руб</div>
+                  </div>
+                  
+                  <a href="#" class="spec-item__link transp-btn animated-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="spec-offers__item spec-item spec-item-adv swiper-slide">
+                <div class="spec-item__discount discount-tag">
+                  <div class="discount-tag__text">- 10 000</div>
+                  <div class="discount-tag__arrow"></div>
+                </div>
+
+                <div class="spec-item-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1290px)" srcset="images/spec-offer-5-xl.webp 1x, images/spec-offer-5-xl-2x.webp 2x">
+                    <source type="image/webp" srcset="images/spec-offer-5-s.webp 1x, images/spec-offer-5-s-2x.webp 2x">
+
+                    <source media="(min-width: 1290px)" srcset="images/spec-offer-5-s-2x.png">
+                    <img class="spec-item__img" src="images/spec-offer-5-s.png" srcset="images/spec-offer-5-s-2x.png 2x" alt="Товар по специальному предложению">
+                  </picture>
+                </div>
+
+                <div class="spec-item-details">
+                  <p class="spec-item__desc">Диван вел-флок <nobr>“Z-85”</nobr></p>
+
+                  <div class="spec-item__price">
+                    <div class="item-new-price">22 990 руб</div>
+
+                    <div class="item-old-price">32 990 руб</div>
+                  </div>
+                  
+                  <a href="#" class="spec-item__link transp-btn animated-btn">Купить</a>
+
+                  <div class="spec-item__scheme">
+                    <picture>
+                      <source type="image/webp" srcset="images/spec-offer-5-add-xl.webp 1x, images/spec-offer-5-add-xl-2x.webp 2x">
+
+                      <img src="images/spec-offer-5-add-xl.png" srcset="images/spec-offer-5-add-xl-2x.png 2x" alt="Схема изделия">
+                    </picture>
+                  </div>
+                </div>
+              </li>
+
+              <li class="spec-offers__item spec-item swiper-slide">
+                <div class="spec-item__discount discount-tag">
+                  <div class="discount-tag__text">- 700</div>
+                  <div class="discount-tag__arrow"></div>
+                </div>
+
+                <div class="spec-item-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1290px)" srcset="images/spec-offer-6-xl.webp 1x, images/spec-offer-6-xl-2x.webp 2x">
+                    <source type="image/webp" srcset="images/spec-offer-6-s.webp 1x, images/spec-offer-6-s-2x.webp 2x">
+
+                    <source media="(min-width: 1290px)" srcset="images/spec-offer-6-s-2x.png">
+                    <img class="spec-item__img" src="images/spec-offer-6-s.png" srcset="images/spec-offer-6-s-2x.png 2x" alt="Товар по специальному предложению">
+                  </picture>
+                </div>
+
+                <div class="spec-item-details">
+                  <p class="spec-item__desc">Термометр + гидрометр <nobr>“H-18”</nobr></p>
+
+                  <div class="spec-item__price">
+                    <div class="item-new-price">1 390 руб</div>
+
+                    <div class="item-old-price">2 090 руб</div>
+                  </div>
+                  
+                  <a href="#" class="spec-item__link transp-btn animated-btn">Купить</a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="offers-btn-prev swiper-button-prev"></div>
+            <div class="offers-btn-next swiper-button-next"></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="rating">
+        <div class="fixed-container">
+          <h2 class="rating__title">Высокий рейтинг</h2>
+
+          <ul class="rating__list">
+            <li class="rating__item rating-item">
+              <div class="rating-item__score">5,0</div>
+
+              <div class="rating-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-1.webp 1x, images/product-1-2x.webp 2x">
+                  <source type="image/webp" srcset="images/product-1.webp 1x, images/product-1.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="images/product-1.png 1x, images/product-1-2x.png 2x">
+                  <img class="rating-item__img" src="images/product-1.png" srcset="images/product-1-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="rating-item__details">
+                <p class="rating-item__desc">Диван кожаный <nobr>“R-94“</nobr></p>
+
+                <div class="rating-item__price">94 990 руб</div>
+
+                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item rating-item">
+              <div class="rating-item__score">4,9</div>
+
+              <div class="rating-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-2.webp 1x, images/product-2-2x.webp 2x">
+                  <source type="image/webp" srcset="images/product-2.webp 1x, images/product-2.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="images/product-2.png 1x, images/product-2-2x.png 2x">
+                  <img class="rating-item__img" src="images/product-2.png" srcset="images/product-2-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="rating-item__details">
+                <p class="rating-item__desc">Диван апартековый <nobr>“T-75”</nobr></p>
+
+                <div class="rating-item__price">69 990 руб</div>
+
+                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item rating-item">
+              <div class="rating-item__score">4,8</div>
+
+              <div class="rating-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-3.webp 1x, images/product-3-2x.webp 2x">
+                  <source type="image/webp" srcset="images/product-3.webp 1x, images/product-3.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="images/product-3.png 1x, images/product-3-2x.png 2x">
+                  <img class="rating-item__img" src="images/product-3.png" srcset="images/product-3-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="rating-item__details">
+                <p class="rating-item__desc">Диван тканевый <nobr>“D-31”</nobr></p>
+
+                <div class="rating-item__price">28 490 руб</div>
+
+                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item rating-item">
+              <div class="rating-item__score">4,8</div>
+
+              <div class="rating-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-4.webp 1x, images/product-4-2x.webp 2x">
+                  <source type="image/webp" srcset="images/product-4.webp 1x, images/product-4.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="images/product-4.png 1x, images/product-4-2x.png 2x">
+                  <img class="rating-item__img" src="images/product-4.png" srcset="images/product-4-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="rating-item__details">
+                <p class="rating-item__desc">Диван велюровый <nobr>“Y-68”</nobr></p>
+
+                <div class="rating-item__price">22 990 руб</div>
+
+                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item rating-item">
+              <div class="rating-item__score">4,8</div>
+
+              <div class="rating-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-5.webp 1x, images/product-5-2x.webp 2x">
+                  <source type="image/webp" srcset="images/product-5.webp 1x, images/product-5.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="images/product-5.png 1x, images/product-5-2x.png 2x">
+                  <img class="rating-item__img" src="images/product-5.png" srcset="images/product-5-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="rating-item__details">
+                <p class="rating-item__desc">Диван из&nbsp;шинила <nobr>“W-95”</nobr></p>
+
+                <div class="rating-item__price">22 990 руб</div>
+
+                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item rating-item">
+              <div class="rating-item__score">4,8</div>
+
+              <div class="rating-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-6.webp 1x, images/product-6-2x.webp 2x">
+                  <source type="image/webp" srcset="images/product-6.webp 1x, images/product-6.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="images/product-6.png 1x, images/product-6-2x.png 2x">
+                  <img class="rating-item__img" src="images/product-6.png" srcset="images/product-6-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="rating-item__details">
+                <p class="rating-item__desc">Диван флоковый <nobr>“G-41”</nobr></p>
+
+                <div class="rating-item__price">17 990 руб</div>
+
+                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item rating-item">
+              <div class="rating-item__score">4,8</div>
+
+              <div class="rating-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-7.webp 1x, images/product-7-2x.webp 2x">
+                  <source type="image/webp" srcset="images/product-7.webp 1x, images/product-7.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="images/product-7.png 1x, images/product-7-2x.png 2x">
+                  <img class="rating-item__img" src="images/product-7.png" srcset="images/product-7-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="rating-item__details">
+                <p class="rating-item__desc">Диван шиниловый <nobr>“V-43”</nobr></p>
+
+                <div class="rating-item__price">19 990 руб</div>
+
+                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item rating-item">
+              <div class="rating-item__score">4,7</div>
+
+              <div class="rating-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-8.webp 1x, images/product-8-2x.webp 2x">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="images/product-8.webp 1x, images/product-8.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="images/product-8.png 1x, images/product-8-2x.png 2x">
+                  <img class="rating-item__img" src="images/product-8.png" srcset="images/product-8-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="rating-item__details">
+                <p class="rating-item__desc">Диван велюровый <nobr>“S-99”</nobr></p>
+
+                <div class="rating-item__price">17 990 руб</div>
+
+                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>                        
+          </ul>
+
+          <button class="rating__btn purple-btn animated-btn">Смотреть больше товаров</button>
+        </div>
+      </section>
+    </section>
+
+    <p class="baner-main">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Vero quia odio atque reiciendis mollitia voluptates eaque sint ad. Inventore nesciunt quisquam doloribus optio laudantium id reprehenderit ipsa suscipit sunt quia.</p>
 		
-		<div class="fixed-container" style="margin-top: 70px;">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Vero quia odio atque reiciendis mollitia voluptates eaque sint ad. Inventore nesciunt quisquam doloribus optio laudantium id reprehenderit ipsa suscipit sunt quia.</p>
-		</div>
+
 	</main>
 
 	<script src="resources/third-party/choices/choices.min.js"></script>
+  <script src="resources/third-party/swiper/swiper-bundle.min.js"></script>
   <script src="js/app.js"></script>
   
 </body>

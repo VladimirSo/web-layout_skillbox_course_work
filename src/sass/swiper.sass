@@ -1,0 +1,89 @@
+$purple-main: #a65cf0
+$purple-light: #c998fb
+$purple-shade: #7033ac
+$grey: #999
+//
+.hero-swiper.swiper-horizontal > .swiper-pagination-bullets
+  bottom: 102px
+  left: 0
+  width: 100%
+  @media (min-width: 768px)
+    bottom: 22px
+
+.swiper-pagination-bullet
+  width: 6px
+  height: 6px
+  background: #333
+  opacity: 0.3
+  @media (min-width: 768px)
+    width: 14px
+    height: 14px
+
+.swiper-pagination-bullet-active
+  opacity: 1
+  
+.hero-swiper.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+  margin: 0 4px
+  @media (min-width: 768px)
+    margin: 0 8px
+
+//
+// .offers-swiper > .offers-btn-next::after, .offers-btn-prev::after
+.swiper-button-prev::after, .swiper-button-next::after  
+  content: ""  
+// .offers-swiper > .offers-btn-next, .offers-btn-prev
+.swiper-button-prev, .swiper-button-next
+  top: 98%
+  width:  32px
+  height: 32px
+  border: 2px solid $purple-main
+  border-radius: 50%
+  background-position: center
+  background-repeat: no-repeat
+  @media (min-width: 768px)
+    top: 25px
+  @media (min-width: 1024px)
+    top: 22px
+
+// .offers-swiper > .offers-btn-next
+.swiper-button-next
+  right: calc(50% - 40px)
+  background-image: url("../images/arrow-right-purple.png")
+  @media (min-width: 768px)
+    right: 0
+// .offers-swiper > .offers-btn-prev
+.swiper-button-prev
+  left: calc(50% - 40px)
+  background-image: url("../images/arrow-left-purple.png")
+  @media (min-width: 768px)
+    left: 88%
+  @media (min-width: 1024px)
+    left: 92%
+  @media (min-width: 1290px)
+    left: 94%
+
+// .offers-swiper > .offers-btn-prev.swiper-button-disabled, .offers-btn-next.swiper-button-disabled
+.swiper-button-disabled, .swiper-button-disabled
+  border-color: $grey
+  filter: grayscale(100%)
+  opacity: 1
+.swiper-button-prev:active, .swiper-button-prev:focus, .swiper-button-prev:hover
+  background-image: url("../images/arrow-left-white.png")
+.swiper-button-next:active, .swiper-button-next:focus, .swiper-button-next:hover
+  background-image: url("../images/arrow-right-white.png")
+.swiper-button-prev:hover, .swiper-button-next:hover
+  background-color: $purple-main
+.swiper-button-prev:focus, .swiper-button-next:focus
+  background-color: $purple-light
+.swiper-button-prev:active, .swiper-button-next:active
+  background-color: $purple-shade
+  border-color: $purple-shade
+
+.offers-swiper .swiper-slide
+  @media (min-width: 1290px)
+    width: 296px !important
+
+.offers-swiper .swiper-slide
+  &:nth-child(3n-1)
+    @media (min-width: 1290px)
+      width: 624px !important

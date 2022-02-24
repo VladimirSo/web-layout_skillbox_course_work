@@ -10,6 +10,9 @@ $purple-light: #c998fb
 
 $pink-violet: #ebd1ff
 
+$md-grey: #eaeaea
+$grey: #999
+
 html
     box-sizing: border-box
 
@@ -20,6 +23,7 @@ html
 
 body
  background-color: #fff
+ color: #333
  font-family: "Open Sans", "Arial", sans-serif
  // font-family: "Playfair Display", serif
  font-size: 16px
@@ -110,4 +114,32 @@ button
     border-color: $purple-shade
   &:active
     background-color: $purple-shade
+    border-color: $purple-shade
+  &:disabled
+    background: $md-grey
+    color: $grey
+    border-color: $md-grey
+
+.transp-btn
+  display: block
+  width: 125px
+  padding-top: 16px
+  padding-bottom: 18px
+  border-radius: 10px
+  border: 2px solid $purple-main
+  background-color: transparent
+  color: $purple-main
+  font-size: 16px
+  font-weight: 600
+  line-height: 16px
+  text-align: center
+  &:hover
+    background-color: $purple-main
+    color: #fff
+  &:focus
+    background-color: $purple-light
+    color: #fff
+  &:active
+    background-color: $purple-shade
+    color: #fff
     border-color: $purple-shade

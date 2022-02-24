@@ -19,6 +19,8 @@ const del = require('del')
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+// const webpHTML = require('gulp-webp-html-fix');
 
 const clean = () => {
     return del([
@@ -36,10 +38,18 @@ const favicon = () => {
     .pipe(dest('dist/favicon'))
 }
 
+const webpConv = () => {
+    return src('src/images/content/*')
+    .pipe(webp())
+    .pipe(dest('dist/images'))
+    .pipe(browserSync.stream())
+}
+
 const imgMin = () => {
-    return src('src/images/*')
+    return src(['src/images/*', 'src/images/content/*'])
     .pipe(imagemin())
     .pipe(dest('dist/images'))
+    .pipe(browserSync.stream())
 }
 
 const sassStyles = () => {
@@ -71,6 +81,7 @@ const styles = () => {
 
 const htmlMinify = () => {
     return src('src/**/*.html')
+    // .pipe(webpHTML())
     .pipe(gulpif(argv.prod, htmlMin({
         collapseWhitespace: true
     })))
@@ -143,7 +154,8 @@ watch('src/styles/**/*.css', styles);
 watch('src/images/svg/**/*.svg', svgSprites);
 watch('src/js/**/*.js', scripts);
 watch('src/resouces/**', resources);
-watch('src/images/*', imgMin);
+watch('src/images/content/*', webpConv);
+watch('src/images/**/*', imgMin);
 
 exports.clean = clean;
 exports.sassStyles = sassStyles;
@@ -151,11 +163,12 @@ exports.styles = styles;
 exports.htmlMinify = htmlMinify;
 exports.scripts = scripts;
 exports.imgMin = imgMin;
+exports.webpConv = webpConv;
 
 if (argv.prod) {
-    exports.default = series(clean, resources, favicon, imgMin, htmlMinify, scripts, sassStyles, styles, svgSprites);
+    exports.default = series(clean, resources, favicon, webpConv, imgMin, htmlMinify, scripts, sassStyles, styles, svgSprites);
     // exports.default = series(clean, resources, htmlMinify, scripts, sassStyles, svgSprites);
 } else {
-    exports.default = series(clean, resources, favicon,imgMin, htmlMinify, scripts, sassStyles, styles, svgSprites, watchFiles);
+    exports.default = series(clean, resources, favicon,  webpConv, imgMin, htmlMinify, scripts, sassStyles, styles, svgSprites, watchFiles);
     // exports.default = series(clean, resources, htmlMinify, scripts, sassStyles, svgSprites, watchFiles);
 }
