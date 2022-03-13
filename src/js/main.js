@@ -104,3 +104,34 @@ const swiper2 = new Swiper(swiperOffersElem, {
     }
   }
 });
+
+const swiperAdviсesElem = document.querySelector('.adviсes-swiper');
+
+const swiper3 = new Swiper(swiperAdviсesElem, {
+  direction: 'horizontal',
+  // loop: true,
+  // autoplay: true, // <- автопрокрутка
+
+  navigation: {
+    nextEl: '.adviсes-btn-prev',
+    prevEl: '.adviсes-btn-next',
+  },
+
+  breakpoints: {
+    1290: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+      slidesPerGroup: 2
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      slidesPerGroup: 3
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+      slidesPerGroup: 2
+    }
+  }
+});

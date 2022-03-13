@@ -28,7 +28,7 @@ $orange-light-bgr :#fff5d1
     font-size: 32px
     line-height: 32px
 
-
+/**/
 .hero
   // height: 300px
   margin-bottom: 70px
@@ -82,6 +82,7 @@ $orange-light-bgr :#fff5d1
       @media (min-width: 1290px)
         left: calc(50vw - 640px)
 
+/**/
 .offers
   padding-bottom: 70px
   .spec-offers
@@ -207,6 +208,7 @@ $orange-light-bgr :#fff5d1
         grid-row-end: -1
         align-self: end
 
+/**/
 .rating
   // margin-bottom: 70px
   &__title
@@ -312,9 +314,272 @@ $orange-light-bgr :#fff5d1
       width: 296px
       margin: 0 auto
 
+/**/
 .baner-main
-  background-image: url("../images/baner-main-s.jpg")
+  position: relative
+  &__img
+    max-height: 210px
+    width: 100%
+    margin-bottom: 32px
+    @media (min-width: 768px)
+      max-height: 600px
+      margin-bottom: 0
+  &__btn.purple-btn
+    width: 296px
+    margin: 0 auto
+    @media (min-width: 768px)
+      width: 186px
+      margin: 0
+      position: absolute
+      left: calc(50vw - 348px)
+      bottom: 150px
+    @media (min-width: 1024px)
+      left: calc(50vw - 476px)
+    @media (min-width: 1290px)
+      left: calc(50vw - 640px)
+  &__title
+    font-family: "Playfair Display", serif
+    font-size: 24px
+    line-height: 24px
+    color: #d5b986
+    width: 190px
+    margin: 0
+    padding: 0
+    // padding-right: 110px
+    position: absolute
+    top: 30px
+    left: calc(50vw - 148px)
+    @media (min-width: 768px)
+      font-size: 60px
+      line-height: 60px
+      width: 510px
+      top: 150px
+      left: calc(50vw - 348px)
+    @media (min-width: 1024px)
+      left: calc(50vw - 476px)
+    @media (min-width: 1290px)
+      left: calc(50vw - 640px)
+  .baner-title__subtitle
+    font-family: "Open Sans", "Arial", sans-serif
+    font-size: 16px
+    line-height: 16px
+    font-weight: 400
+    color: #fff
+    @media (min-width: 768px)
+      font-size: 48px
+      line-height: 48px
 
+/**/
+.catalog-tops
+  padding-top: 70px
+  margin-bottom: 8px
+  &__title
+    +main-title()
+    margin-bottom: 26px
+  .tops-list
+    display: grid
+    grid-template-columns: repeat(2, auto)
+    grid-template-rows: repeat(3, auto)
+    grid-column-gap: 16px
+    grid-row-gap: 32px
+    @media (min-width: 768px)
+      grid-column-gap: 32px
+    @media (min-width: 1024px)
+      grid-template-columns: repeat(3, auto)
+      grid-template-rows: repeat(2, auto)
+    @media (min-width: 1290px)
+      grid-template-columns: repeat(6, auto)
+  .tops-item
+    width: 140px
+    padding: 16px 0
+    background-color: $light-grey
+    border-radius: 10px
+    display: grid
+    grid-template-columns: auto minmax(50px, 75px)
+    grid-template-rows: repeat(3, auto)
+    @media (min-width: 768px)
+      width: 296px
+      padding: 30px 0
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(4, auto)
+    @media (min-width: 1290px)
+      width: 405px
+    &:first-child
+      padding-top: 30px
+      max-width: 100%
+      width: 100%
+      grid-column-start: 1
+      grid-column-end: -1
+      grid-row-start: 1
+      grid-row-end: 2
+      grid-template-columns: auto minmax(50px, 170px)
+      @media (min-width: 1024px)
+        grid-column-start: 1
+        grid-column-end: 3
+        grid-row-start: 1
+        grid-row-end: 2
+      @media (min-width: 1290px)
+        grid-column-start: 1
+        grid-column-end: 4
+      .types-menu
+        flex-direction: row
+        flex-wrap: wrap
+        padding-left: 20px
+        font-size: 14px
+        line-height: 14px
+      .tops-item__title
+        padding-left: 30px
+        margin: 18px 0
+        font-size: 24px
+        @media (min-width: 768px)
+          margin: 18px 0 34px 0
+    &:nth-child(2)
+      @media (min-width: 1290px)
+        grid-column-start: 1
+        grid-column-end: 3
+        grid-row-start: -2
+        grid-row-end: -1
+    &:nth-child(3)
+      @media (min-width: 1024px)
+        grid-column-start: 2
+        grid-column-end: 3
+        grid-row-start: -2
+        grid-row-end: -1
+      @media (min-width: 1290px)
+        width: 100%
+        grid-column-start: -4
+        grid-column-end: -1
+        grid-row-start: 1
+        grid-row-end: 2
+    &:nth-child(4)
+      @media (min-width: 1290px)
+        grid-column-start: 3
+        grid-column-end: 5
+        grid-row-start: -2
+        grid-row-end: -1
+    &:nth-child(5)
+      @media (min-width: 1290px)
+        grid-column-start: -3
+        grid-column-end: -1      
+        grid-row-start: -2
+        grid-row-end: -1
+    .types-menu
+      padding-left: 6px
+      font-size: 10px
+      line-height: 10px
+      color: $grey
+      display: flex
+      flex-direction: column
+      grid-column-start: 1
+      grid-column-end: -1
+      grid-row-start: 1
+      grid-row-end: 2
+      @media (min-width: 768px)
+        font-size: 14px
+        flex-direction: row
+        padding-left: 20px
+      &__item
+        padding: 1px 10px
+    &__title
+      margin: 12px 0
+      padding-left: 16px
+      padding-right: 5px
+      width: 100%
+      font-size: 16px
+      line-height: 100%
+      font-weight: 400
+      grid-column-start: 1
+      grid-column-end: 2
+      grid-row-start: 2
+      grid-row-end: 3
+      @media (min-width: 768px)
+        font-size: 24px
+        padding-left: 30px
+        margin: 18px 0 40px 0
+    .tops-img-wrapper
+      grid-column-start: 1
+      grid-column-end: -1
+      grid-row-start: -2
+      grid-row-end: -1
+      @media (min-width: 768px)
+        grid-row-start: -3
+        grid-row-end: -2
+        margin-bottom: 35px
+    .tops-link
+      width: max-content
+      grid-column-start: -2
+      grid-column-end: -1
+      grid-row-start: 2
+      grid-row-end: 3
+      align-self: center
+      @media (min-width: 768px)
+        margin-left: 30px
+        grid-column-start: 1
+        grid-column-end: -1
+        grid-row-start: -2
+        grid-row-end: -1
+      &::after
+        content: ""
+        display: inline-block
+        width:  22px
+        height: 22px
+        border: 2px solid $purple-main
+        border-radius: 50%
+        background-position: 45% 45%
+        background-repeat: no-repeat
+        background-image: url("../images/arrow-right-purple.png")
+        background-size: 6px 8px
+        vertical-align: -5px
+      &:hover::after
+        background-color: $purple-main
+        background-image: url("../images/arrow-right-white.png")
+      &:focus::after
+        background-color: $purple-light
+        background-image: url("../images/arrow-right-white.png")
+      &:active::after
+        border-color: $purple-shade
+        background-color: $purple-shade
+        background-image: url("../images/arrow-right-white.png")
+      &__content
+        display: none
+        font-weight: 700
+        color: $purple-main
+        border-bottom: 2px solid $purple-main
+        @media (min-width: 768px)
+          display: inline-block
+        &:active
+          color: $purple-shade
+          border-bottom-color: $purple-shade
+
+/**/
+.adviсes
+  padding-top: 70px
+  &__title
+    +main-title()
+    margin-bottom: 26px
+  &__item
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto 1fr auto
+    width: 296px
+    height: 426px
+    padding-bottom: 30px
+    background-color: $grey-light
+    border-radius: 10px
+    @media (min-width: 1290px)
+      height: 676px
+  &__desc
+    margin: 0
+    padding: 30px
+    line-height: 22px
+    font-weight: 400
+    @media (min-width: 1290px)
+      font-size: 24px
+      line-height: 32px
+  &__btn
+    margin-left: 30px
+  &-swiper
+    padding-bottom: 50px
 
 .no-js
   .hero__content
@@ -325,4 +590,36 @@ $orange-light-bgr :#fff5d1
   .spec-item
     margin-bottom: 12px
     @media (min-width: 768px)
-      margin-right: 12px
+      margin-bottom: 32px
+      margin-right: 32px
+    &:nth-child(2n)
+      @media (min-width: 768px)
+        margin-right: 0
+      @media (min-width: 1024px)
+        margin-right: 32px
+    &:nth-child(3n)
+      @media (min-width: 1024px)
+        margin-right: 0
+  .adviсes__list
+    display: flex
+    flex-wrap: wrap
+  .adviсes__item
+    margin-bottom: 12px
+    @media (min-width: 768px)
+      margin-right: 32px
+      margin-bottom: 32px
+    &:nth-child(2n)
+      @media (min-width: 768px)
+        margin-right: 0
+      @media (min-width: 1024px)
+        margin-right: 32px
+    &:nth-child(3n)
+      @media (min-width: 1024px)
+        margin-right: 0
+      @media (min-width: 1290px)
+        margin-right: 32px
+    &:nth-child(4n)
+      @media (min-width: 1290px)
+        margin-right: 0
+  .adviсes-btn-prev, .adviсes-btn-next, .offers-btn-prev, .offers-btn-next
+    display: none
