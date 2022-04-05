@@ -2,7 +2,7 @@
 @import "src/sass/container.sass"
 @import "src/sass/header.sass"
 @import "src/sass/main.sass"
-// @import "src/sass/footer.sass"
+@import "src/sass/footer.sass"
 
 $purple-main: #a65cf0
 $purple-shade: #7033ac
@@ -25,7 +25,6 @@ body
  background-color: #fff
  color: #333
  font-family: "Open Sans", "Arial", sans-serif
- // font-family: "Playfair Display", serif
  font-size: 16px
  line-height: 16px
 
@@ -146,3 +145,24 @@ button
 
 .no-br
   white-space: nowrap
+
+.social-link
+  display: block
+  width: 36px
+  height: 36px
+  padding: 3px
+  svg
+    color: $grey
+    transition-property: color
+    transition-duration: 0.25s
+    transition-timing-function: ease-in-out
+  &:hover
+    svg
+      color: $purple-main
+  &:focus
+    background-color: $purple-light
+    svg
+      color: #fff
+  &:active
+    svg
+      color: $purple-shade

@@ -1,0 +1,103 @@
+$md-grey: #eaeaea
+$light-grey: #f7f7f7
+$grey: #999
+
+.footer
+	color: $grey
+	&-container
+		padding: 0 2px
+		@media (min-width: 768px)
+			display: grid
+			grid-template-columns: auto 498px 146px auto
+			grid-template-rows: auto auto
+		@media (min-width: 1024px)
+			grid-template-columns: auto 210px 750px auto
+		@media (min-width: 1290px)
+			grid-template-columns: auto 430px 860px auto
+	&__top
+		padding-top: 24px
+		background-color: $md-grey
+		@media (min-width: 768px)
+			padding-top: 20px
+		@media (min-width: 1024px)
+			padding-top: 24px	
+	&__logo
+		margin-bottom: 20px
+		text-align: center
+		@media (min-width: 768px)
+			grid-column-start: 2
+			grid-column-end: 3
+			grid-row-start: 1
+			grid-row-end: 2
+			margin-top: 5px
+			padding-left: 10px
+			text-align: start
+		@media (min-width: 1024px)
+			padding-left: 5px
+			margin-top: 0
+			margin-bottom: 24px
+	.footer-social
+		display: flex
+		flex-wrap: wrap
+		width: max-content
+		margin: 0 auto
+		margin-bottom: 22px
+		@media (min-width: 768px)
+			grid-column-start: -3
+			grid-column-end: -2
+			grid-row-start: 1
+			grid-row-end: 2
+			margin-right: 10px
+		@media (min-width: 1024px)
+			grid-column-start: 2
+			grid-column-end: 3
+			grid-row-start: -2
+			grid-row-end: -1
+			margin-right: auto
+			margin-left: 0
+		&__link
+			&:not(:last-child)
+				margin-right: 15px
+	&-menu
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: auto auto
+		@media (min-width: 768px)
+			grid-template-columns: 105px 175px auto 150px
+			grid-template-rows: auto
+			grid-column-gap: 18px
+			grid-column-start: 2
+			grid-column-end: -2
+			grid-row-start: -2
+			grid-row-end: -1
+		@media (min-width: 1024px)
+			grid-template-columns: 145px 210px auto 145px
+			grid-column-start: 3
+			grid-column-end: -2
+			grid-row-start: 1
+			grid-row-end: -1
+		@media (min-width: 1290px)
+			grid-template-columns: 180px 250px auto 145px
+	.menu-group
+		margin-bottom: 14px
+		&__title
+			margin: 0
+			margin-bottom: 5px
+			padding-left: 10px
+			color: #333
+	.menu-subgroup__item
+		margin: 0
+		margin-bottom: 9px
+	.menu-subgroup__link
+		font-size: 14px
+		line-height: 14px
+	&__bottom
+		background-color: $light-grey
+		.copyright
+			display: block
+			margin: 0
+			padding: 5px 0
+			text-align: center
+			font-size: 14px
+			line-height: 20px
+			

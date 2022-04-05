@@ -1,4 +1,5 @@
 @import "src/sass/swiper.sass"
+@import "src/sass/just-validate.sass"
 
 $light-grey: #f7f7f7
 $md-grey: #eaeaea
@@ -30,10 +31,7 @@ $orange-light-bgr :#fff5d1
 
 /**/
 .hero
-  // height: 300px
   margin-bottom: 70px
-  // @media (min-width: 768px)
-    // height: 400px
   &-content
     position: relative
     &__banner
@@ -103,13 +101,11 @@ $orange-light-bgr :#fff5d1
     flex-wrap: nowrap
     justify-content: flex-end
     align-items: center
-    // height: 415px
     height: 420px
     width: 296px
     background-color: $grey-light
     border-radius: 10px
     padding: 60px 0 30px 0
-    // margin-bottom: 12px
     &__discount
       position: absolute
       top: 30px
@@ -119,7 +115,6 @@ $orange-light-bgr :#fff5d1
       flex-wrap: nowrap
       align-items: center
       width: max-content
-      // min-width: 80px
       &__text
         padding: 10px 15px 10px 15px
         background-color: $orange
@@ -141,7 +136,6 @@ $orange-light-bgr :#fff5d1
       justify-content: center
       display: flex
     &__img
-      // margin-bottom: 15px
       margin-bottom: 10px
       @media (min-width: 768px)
         margin-bottom: 0
@@ -149,7 +143,6 @@ $orange-light-bgr :#fff5d1
       width: 236px
     &__desc
       margin: 0
-      // margin-bottom: 5px
       margin-bottom: 20px
       font-size: 24px
       line-height: 31px
@@ -158,7 +151,6 @@ $orange-light-bgr :#fff5d1
     &__price
       display: flex
       align-items: center
-      // margin-bottom: 20px
       margin-bottom: 25px
       .item-new-price
         width: 50%
@@ -179,7 +171,6 @@ $orange-light-bgr :#fff5d1
         grid-template-columns: 1fr 1fr
         width: 564px
         grid-template-rows: auto auto 55px
-        // height: 178px
         height: 245px
         grid-column-gap: 110px
     .spec-item__desc
@@ -210,7 +201,6 @@ $orange-light-bgr :#fff5d1
 
 /**/
 .rating
-  // margin-bottom: 70px
   &__title
     +main-title()
     margin-bottom: 25px
@@ -221,7 +211,6 @@ $orange-light-bgr :#fff5d1
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: repeat(3, 278px)
     grid-gap: 16px
-    // margin-bottom: 32px
     margin-bottom: 25px
     max-height: 872px
     overflow: hidden
@@ -302,9 +291,6 @@ $orange-light-bgr :#fff5d1
       padding-top: 10px
       padding-bottom: 10px
       @media (min-width: 768px)
-        // width: 128px
-        // padding-top: 18px
-        // padding-bottom: 20px
         width: 125px
         padding-top: 16px
         padding-bottom: 18px
@@ -345,7 +331,6 @@ $orange-light-bgr :#fff5d1
     width: 190px
     margin: 0
     padding: 0
-    // padding-right: 110px
     position: absolute
     top: 30px
     left: calc(50vw - 148px)
@@ -353,7 +338,7 @@ $orange-light-bgr :#fff5d1
       font-size: 60px
       line-height: 60px
       width: 510px
-      top: 150px
+      top: 160px
       left: calc(50vw - 348px)
     @media (min-width: 1024px)
       left: calc(50vw - 476px)
@@ -376,12 +361,14 @@ $orange-light-bgr :#fff5d1
   &__title
     +main-title()
     margin-bottom: 26px
+    @media (min-width: 1024px)
+      margin-bottom: 22px
   .tops-list
     display: grid
     grid-template-columns: repeat(2, auto)
     grid-template-rows: repeat(3, auto)
     grid-column-gap: 16px
-    grid-row-gap: 32px
+    grid-row-gap: 30px
     @media (min-width: 768px)
       grid-column-gap: 32px
     @media (min-width: 1024px)
@@ -399,13 +386,14 @@ $orange-light-bgr :#fff5d1
     grid-template-rows: repeat(3, auto)
     @media (min-width: 768px)
       width: 296px
-      padding: 30px 0
+      padding: 32px 0 25px 0
       grid-template-columns: 1fr
       grid-template-rows: repeat(4, auto)
     @media (min-width: 1290px)
       width: 405px
     &:first-child
       padding-top: 30px
+      padding-bottom: 25px
       max-width: 100%
       width: 100%
       grid-column-start: 1
@@ -427,12 +415,18 @@ $orange-light-bgr :#fff5d1
         padding-left: 20px
         font-size: 14px
         line-height: 14px
+        &__item
+          @media (min-width: 768px)
+            margin-right: 10px
       .tops-item__title
         padding-left: 30px
         margin: 18px 0
         font-size: 24px
         @media (min-width: 768px)
           margin: 18px 0 34px 0
+      .tops-img-wrapper
+        @media (min-width: 768px)
+          margin-bottom: 28px
     &:nth-child(2)
       @media (min-width: 1290px)
         grid-column-start: 1
@@ -466,7 +460,7 @@ $orange-light-bgr :#fff5d1
     .types-menu
       padding-left: 6px
       font-size: 10px
-      line-height: 10px
+      line-height: 11px
       color: $grey
       display: flex
       flex-direction: column
@@ -479,9 +473,12 @@ $orange-light-bgr :#fff5d1
         flex-direction: row
         padding-left: 20px
       &__item
-        padding: 1px 10px
+        @media (min-width: 768px)
+          margin-right: 10px
     &__title
-      margin: 12px 0
+      margin: 0
+      margin-top: 12px
+      margin-bottom: 19px
       padding-left: 16px
       padding-right: 5px
       width: 100%
@@ -495,7 +492,9 @@ $orange-light-bgr :#fff5d1
       @media (min-width: 768px)
         font-size: 24px
         padding-left: 30px
-        margin: 18px 0 40px 0
+        margin: 22px 0 40px 0
+      @media (min-width: 1290px)
+        margin-bottom: 32px
     .tops-img-wrapper
       grid-column-start: 1
       grid-column-end: -1
@@ -505,6 +504,8 @@ $orange-light-bgr :#fff5d1
         grid-row-start: -3
         grid-row-end: -2
         margin-bottom: 35px
+      @media (min-width: 1290px)
+        margin-bottom: 30px
     .tops-link
       width: max-content
       grid-column-start: -2
@@ -512,6 +513,7 @@ $orange-light-bgr :#fff5d1
       grid-row-start: 2
       grid-row-end: 3
       align-self: center
+      padding-bottom: 5px
       @media (min-width: 768px)
         margin-left: 30px
         grid-column-start: 1
@@ -530,12 +532,22 @@ $orange-light-bgr :#fff5d1
         background-image: url("../images/arrow-right-purple.png")
         background-size: 6px 8px
         vertical-align: -5px
+      &:hover
+        .tops-link__content
+          border-bottom-color: $purple-main
       &:hover::after
         background-color: $purple-main
         background-image: url("../images/arrow-right-white.png")
+      &:focus
+        .tops-link__content
+          border-bottom-color: $purple-main
       &:focus::after
         background-color: $purple-light
         background-image: url("../images/arrow-right-white.png")
+      &:active
+        .tops-link__content
+          color: $purple-shade
+          border-bottom-color: $purple-shade
       &:active::after
         border-color: $purple-shade
         background-color: $purple-shade
@@ -544,16 +556,15 @@ $orange-light-bgr :#fff5d1
         display: none
         font-weight: 700
         color: $purple-main
-        border-bottom: 2px solid $purple-main
+        border-bottom: 2px solid transparent
         @media (min-width: 768px)
           display: inline-block
-        &:active
-          color: $purple-shade
-          border-bottom-color: $purple-shade
 
 /**/
 .adviсes
   padding-top: 70px
+  @media (min-width: 768px)
+    padding-top: 58px
   &__title
     +main-title()
     margin-bottom: 26px
@@ -567,19 +578,205 @@ $orange-light-bgr :#fff5d1
     background-color: $grey-light
     border-radius: 10px
     @media (min-width: 1290px)
-      height: 676px
+      height: 650px
   &__desc
     margin: 0
-    padding: 30px
+    padding: 25px 30px 30px 30px
     line-height: 22px
     font-weight: 400
+    @media (min-width: 768px)
+      padding-top: 30px
     @media (min-width: 1290px)
       font-size: 24px
       line-height: 32px
+      padding-bottom: 0
   &__btn
     margin-left: 30px
   &-swiper
     padding-bottom: 50px
+
+/**/
+.contacts
+  padding-top: 70px
+  padding-bottom: 70px
+  @media (min-width: 768px)
+    padding-top: 25px
+    padding-bottom: 73px
+  @media (min-width: 1290px)
+    padding-top: 20px
+    padding-bottom: 70px
+  &-container
+    @media (min-width: 768px)
+      display: flex
+      flex-wrap: nowrap
+  &__main
+    @media (min-width: 768px)
+      width: 405px
+    @media (min-width: 1290px)
+      width: 624px
+  &__title
+    +main-title()
+    margin-bottom: 5px
+    @media (min-width: 1290px)
+      margin-bottom: 10px
+  &__content
+    font-size: 14px
+    line-height: 19px
+    margin: 0
+    color: $grey-shade
+    .tooltip
+      position: relative
+      &__marker
+        display: inline-block
+        width: 14px
+        height: 14px
+        background-image: url("../images/tooltip-transp.png")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        &:hover
+          background-image: url("../images/tooltip-orange.png")
+          &+.popup
+            opacity: 1
+      &__content
+        position: absolute
+        top: -65px
+        left: -73px
+      .popup
+        display: flex
+        flex-direction: column
+        flex-wrap: nowrap
+        align-items: center
+        opacity: 0
+        transition: opacity 0.5s
+        .popup__content
+          min-width: 160px
+          height: 55px
+          padding: 5px
+          font-size: 9px
+          line-height: 14px
+          color: #fff
+          text-align: center
+          background-color: #333
+        .popup__arrow
+          width: 0
+          height: 0
+          border-right: 9px solid transparent
+          border-left: 9px solid transparent
+          border-top: 8px solid #333
+
+  .contact-form__name, .contact-form__phone, .contact-form__email
+    width: 100%
+    padding: 7px 18px
+    margin-bottom: 14px
+    line-height: 40px
+    color: $grey
+    border: 1px solid $grey-light
+    border-radius: 10px
+    background-color: $grey-light
+  .contact-form__name::placeholder,
+  .contact-form__phone::placeholder,
+  .contact-form__email::placeholder
+    color: $grey
+  .contact-form__name::-webkit-input-placeholder,
+  .contact-form__phone::-webkit-input-placeholder,
+  .contact-form__email::-webkit-input-placeholder
+    color: $grey
+  .contact-form__name::-moz-placeholder,
+  .contact-form__phone::-moz-placeholder,
+  .contact-form__email::-moz-placeholder
+    color: $grey
+  .contact-form__name:hover,
+  .contact-form__phone:hover,
+  .contact-form__email:hover
+    background-color: $md-grey
+  .contact-form__name:active,
+  .contact-form__phone:active,
+  .contact-form__email:active
+    border-color: $purple-main
+    background-color: $pink-light
+  .contact-form__name:focus,
+  .contact-form__phone:focus,
+  .contact-form__email:focus
+    border-color: #b8ec64
+    color: #333
+  .contact-form-field
+    position: relative
+    padding-top:14px
+  .contact-form__submit
+    width: 159px
+    padding-top: 17px
+    padding-bottom: 17px
+    // margin-bottom: 14px
+    margin-top: 14px
+  .confirm
+    display: flex
+    &__check
+      display: none
+      &+.check-cust
+        position: relative
+        display: block
+        width: 14px
+        height: 14px
+        margin-right: 5px
+        background-color: $purple-main
+        border-radius: 2px
+        cursor: pointer
+        &:before,
+        &:after
+          content: ''
+          position: absolute
+          background: #fff
+          opacity: 0
+          transition: opacity 0.3s
+        &:before
+          left: 2px
+          top: 8px
+          width: 5px
+          height: 2px
+          transform: rotate(50deg)
+        &:after
+          left: 4px
+          top: 6px
+          width: 10px
+          height: 2px
+          transform: rotate(-50deg)
+    &__check:checked
+      &+.check-cust
+        &:before
+          opacity: 1
+        &:after
+          opacity: 1
+    &__desc
+      margin: 0
+      font-size: 12px
+      @media (min-width: 768px)
+        font-size: 14px
+    &__link
+      color: $purple-main
+      border-bottom: 1px solid $purple-main
+    
+  &__img
+    height: auto
+    @media (min-width: 768px)
+      width: calc(100% - 405px)
+      background-image: url("../images/contacts-m.png")
+      background-repeat: no-repeat
+      background-position: center right
+      background-size: 86%
+      @media (min-resolution: 2dppx)
+        background-image: url("../images/contacts-m-2x.png")
+    @media (min-width: 1024px)
+      background-image: url("../images/contacts-l.png")
+      background-size: 94%
+      @media (min-resolution: 2dppx)
+        background-image: url("../images/contacts-l-2x.png")
+    @media (min-width: 1290px)
+      width: calc(100% - 624px)
+      background-image: url("../images/contacts-xl.png")
+      background-size: 95%
+      @media (min-resolution: 2dppx)
+        background-image: url("../images/contacts-xl-2x.png")
 
 .no-js
   .hero__content
