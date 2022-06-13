@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Магазин SitDownPls">
+	<title>Магазин SitDownPls. Каталог товаров</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" type="text/css" href="/resources/third-party/choices/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="/resources/third-party/nouislider/nouislider.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/catalog/styles.css">
+</head>
+
+<body  class="catalog-page no-js">
+	@@include('page-blocks/_header.html')
+
+	<main class="main">
+		<div class="fixed-container catalog-container">
+			<h1 class="catalog-page__title">Каталог</h1>
+
+			<section class="filter">
+				<h2 class="filter__title visually-hidden">Выбор товаров по параметрам</h2>
+
+				<p class="filter__desc filter-desc">
+					<span class="filter-desc__large">Фильтровать по:</span>
+					<span class="filter-desc__small">Фильтры:</span>
+				</p>
+
+				<form class="filter__form filter-form js-filter-form" name="filterForm" id="filterForm" action="#">
+					<div class="filter-form__category">
+						<button type="button" class="filter-form-btn">
+							<span class="filter-form-btn__desc">Категория</span>
+							<span class="filter-form-btn__arrow"></span>
+						</button>
+
+						<fieldset class="filter-form__list">
+				      <label class="filter-form__item">
+				        <input type="radio" name="category" value="sofas" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Диваны</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="category" value="armchairs" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Кресла</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="category" value="poufs" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Пуфы</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="category" value="beds" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Кровати</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="category" value="curbstones" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Тумбы</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="category" value="dressers" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Комоды</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="category" value="chairs" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Стулья</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="category" value="tables" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Столы</span>
+				      </label>
+
+							<label class="filter-form__item">
+				        <input type="radio" name="category" value="accessories" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Аксессуары</span>
+				      </label>
+						</fieldset>
+					</div>
+
+					<div class="filter-form__price">
+						<button type="button" class="filter-form-btn">
+							<span class="filter-form-btn__desc">Цена</span>
+							<span class="filter-form-btn__arrow"></span>
+						</button>
+
+						<fieldset class="filter-form__list">
+							<div class="filter-form__item filter-price">
+								<div class="filter-price__inputs">
+									<label class="filter-price__label">
+										<span class="filter-price__text">от</span>
+
+										<input type="number" name="price-min" min="0" max="250000" placeholder="0" class="filter-price__input" id="price-input-0" form="filterForm">
+									</label>
+
+									<label class="filter-price__label">
+										<span class="filter-price__text">до</span>
+
+										<input type="number" name="price-max" min="0" max="250000" placeholder="250000" class="filter-price__input" id="price-input-1" form="filterForm">
+									</label>
+								</div>
+
+								<div class="filter-price__slider" id="price-slider"></div>
+							</div>
+						</fieldset>
+					</div>
+					
+					<div class="filter-form__discount">
+						<button type="button" class="filter-form-btn">
+							<span class="filter-form-btn__desc">Скидка</span>
+							<span class="filter-form-btn__arrow"></span>
+						</button>
+
+						<fieldset class="filter-form__list">
+							<label class="filter-form__item">
+				        <input type="radio" name="discount" value="more5k" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Более 5 000</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="discount" value="less5k" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Менее 5 000</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="discount" value="no-matter" form="filterForm" checked>
+				        <span class="check-cust"></span>
+				        <span>Не важно</span>
+				      </label>
+						</fieldset>
+					</div>
+					
+					<div class="filter-form__color">
+						<button type="button" class="filter-form-btn">
+							<span class="filter-form-btn__desc">Цвет</span>
+							<span class="filter-form-btn__arrow"></span>
+						</button>
+
+						<fieldset class="filter-form__list">
+							<label class="filter-form__item">
+				        <input type="radio" name="color" value="brown" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Коричневый</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="color" value="black" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Черный</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="color" value="beige" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Бежевый</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="color" value="gray" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Серый</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="color" value="white" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Белый</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="color" value="blue" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Синий</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="color" value="orange" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Оранжевый</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="color" value="yellow" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Желтый</span>
+				      </label>
+
+				      <label class="filter-form__item">
+				        <input type="radio" name="color" value="green" form="filterForm">
+				        <span class="check-cust"></span>
+				        <span>Зеленый</span>
+				      </label>
+						</fieldset>
+					</div>
+				</form>
+			</section>
+
+			<section class="baner-catalog">
+				<div class="baner-img-wrapper">
+	        <picture>
+	          <source type="image/webp"  media="(min-width: 1290px)" srcset="/images/baner-catalog-xl.webp 1x, /images/baner-catalog-xl-2x.webp 2x">
+	          
+	          <img class="baner-catalog__img" src="/images/baner-catalog-xl.jpg" srcset="/images/baner-catalog-xl-2x.jpg 2x" alt="Банер">
+	        </picture>
+	      </div>
+
+	      <div class="baner-desc">
+				<h2 class="baner-catalog__title baner-title">Оксфорд&nbsp;1950 
+	        <span class="baner-title__subtitle">Новая коллекция изысканных кресел</span>
+	      </h2>
+				
+				<button class="baner-catalog__btn baner-btn">
+					<span class="baner-btn__content">В каталог</span>
+				</button>
+				</div>
+			</section>
+
+			<section class="products">
+				<h2 class="products__title visually-hidden">Перечень товаров</h2>
+
+				<ul class="products__list products-list js-products-list">
+	        <li class="products__item products-item">
+	          <div class="products-item__score">5,0</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-1.webp 1x, /images/product-1-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-1.webp 1x, /images/product-1.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-1.png 1x, /images/product-1-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-1.png" srcset="/images/product-1-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван кожаный <span class="no-br">“R-94“</span></p>
+
+	            <div class="products-item__price">94 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,9</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-2.webp 1x, /images/product-2-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-2.webp 1x, /images/product-2.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-2.png 1x, /images/product-2-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-2.png" srcset="/images/product-2-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван апартековый <span class="no-br">“T-75”</span></p>
+
+	            <div class="products-item__price">69 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,8</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3.webp 1x, /images/product-3-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-3.webp 1x, /images/product-3.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-3.png 1x, /images/product-3-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-3.png" srcset="/images/product-3-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван тканевый <span class="no-br">“D-31”</span></p>
+
+	            <div class="products-item__price">28 490 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,8</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-4.webp 1x, /images/product-4-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-4.webp 1x, /images/product-4.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-4.png 1x, /images/product-4-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-4.png" srcset="/images/product-4-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван велюровый <span class="no-br">“Y-68”</span></p>
+
+	            <div class="products-item__price">22 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,8</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-5.webp 1x, /images/product-5-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-5.webp 1x, /images/product-5.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-5.png 1x, /images/product-5-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-5.png" srcset="/images/product-5-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван из&nbsp;шинила <span class="no-br">“W-95”</span></p>
+
+	            <div class="products-item__price">22 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,8</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-6.webp 1x, /images/product-6-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-6.webp 1x, /images/product-6.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-6.png 1x, /images/product-6-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-6.png" srcset="/images/product-6-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван флоковый <span class="no-br">“G-41”</span></p>
+
+	            <div class="products-item__price">17 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,8</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-7.webp 1x, /images/product-7-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-7.webp 1x, /images/product-7.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-7.png 1x, /images/product-7-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-7.png" srcset="/images/product-7-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван шиниловый <span class="no-br">“V-43”</span></p>
+
+	            <div class="products-item__price">19 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,7</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-8.webp 1x, /images/product-8-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-8.webp 1x, /images/product-8.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-8.png 1x, /images/product-8-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-8.png" srcset="/images/product-8-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван велюровый <span class="no-br">“S-99”</span></p>
+
+	            <div class="products-item__price">19 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,7</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-9.webp 1x, /images/product-9-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-9.webp 1x, /images/product-9.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-9.png 1x, /images/product-9-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-9.png" srcset="/images/product-9-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван из кожзама <span class="no-br">“F-85”</span></p>
+
+	            <div class="products-item__price">26 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,6</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-10.webp 1x, /images/product-10-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-10.webp 1x, /images/product-10.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-10.png 1x, /images/product-10-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-10.png" srcset="/images/product-10-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван флоковый <span class="no-br">“H-64”</span></p>
+
+	            <div class="products-item__price">25 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,6</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-11.webp 1x, /images/product-11-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-11.webp 1x, /images/product-11.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-11.png 1x, /images/product-11-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-11.png" srcset="/images/product-11-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван флоковый <span class="no-br">“H-58”</span></p>
+
+	            <div class="products-item__price">23 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,6</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-12.webp 1x, /images/product-12-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-12.webp 1x, /images/product-12.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-12.png 1x, /images/product-12-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-12.png" srcset="/images/product-12-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван из кожзама <span class="no-br">““R-43”</span></p>
+
+	            <div class="products-item__price">33 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,6</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-13.webp 1x, /images/product-13-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-13.webp 1x, /images/product-13.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-13.png 1x, /images/product-13-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-13.png" srcset="/images/product-13-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван из&nbsp;шинила <span class="no-br">“С-42”</span></p>
+
+	            <div class="products-item__price">18 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,6</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-14.webp 1x, /images/product-14-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-14.webp 1x, /images/product-14.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-1.png 1x, /images/product-1-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-14.png" srcset="/images/product-14-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван велюровый <span class="no-br">“U-58”</span></p>
+
+	            <div class="products-item__price">21 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,5</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-15.webp 1x, /images/product-15-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-15.webp 1x, /images/product-15.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-15.png 1x, /images/product-15-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-15.png" srcset="/images/product-15-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван флоковый <span class="no-br">“F-41”</span></p>
+
+	            <div class="products-item__price">17 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,5</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-16.webp 1x, /images/product-16-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-16.webp 1x, /images/product-16.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-16.png 1x, /images/product-16-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-16.png" srcset="/images/product-16-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван велюровый <span class="no-br">“R-85”</span></p>
+
+	            <div class="products-item__price">34 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,5</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-17.webp 1x, /images/product-17-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-17.webp 1x, /images/product-17.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-17.png 1x, /images/product-17-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-17.png" srcset="/images/product-17-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван велюровый <span class="no-br">“S-44”</span></p>
+
+	            <div class="products-item__price">19 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+
+	        <li class="products__item products-item">
+	          <div class="products-item__score">4,4</div>
+
+	          <div class="products-img-wrapper">
+	            <picture>
+	              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-18.webp 1x, /images/product-18-2x.webp 2x">
+	              <source type="image/webp" srcset="/images/product-18.webp 1x, /images/product-18.webp 2x">
+
+	              <source media="(min-width: 768px)" srcset="/images/product-18.png 1x, /images/product-18-2x.png 2x">
+	              <img class="products-item__img" src="/images/product-18.png" srcset="/images/product-18-2x.png 2x" alt="Наш товар">
+	            </picture>
+	          </div>
+	          
+	          <div class="products-item__details">
+	            <p class="products-item__desc">Диван из&nbsp;шинила <span class="no-br">“С-80”</span></p>
+
+	            <div class="products-item__price">20 990 руб</div>
+
+	            <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+	          </div>
+	        </li>
+				</ul>
+
+				<div class="products__pagination products-pagination js-products-pagination">
+					<!-- <span class="products-pagination__btn">1</span> -->
+				</div>
+			</section>
+		</div>
+	</main>
+
+	@@include('page-blocks/_footer.html')
+
+	<script src="/resources/third-party/choices/choices.min.js"></script>
+	<script src="/resources/third-party/nouislider/nouislider.min.js"></script>
+
+<!-- 	<script src="/resources/third-party/swiper/swiper-bundle.min.js"></script>
+	<script src="/resources/third-party/inputmask/inputmask.min.js"></script> -->
+
+  <script src="/js/catalog.js"></script>
+</body>
+</html>

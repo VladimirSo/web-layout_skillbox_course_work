@@ -4,13 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Магазин SitDownPls">
 	<title>Магазин SitDownPls</title>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-	<link rel="manifest" href="favicon/site.webmanifest">
-	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#2d89ef">
 	<meta name="theme-color" content="#ffffff">
 
@@ -19,156 +20,9 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
-<body class="no-js">
-	<header class="header">
-    <div class="header-container">
-  		<div class="header__region region-wrapper">
-  			<div class="region">
-  				<div class="region__select region-select">
-  					<p class="region-select__desc">Ваш регион:</p>
+<body class="main-page no-js">
 
-  					<select name="regionOfSearch" form="searchForm" class="region-select__list region-list animated-btn">
-  						<option class="region-list__item" value="Moscow">Москва</option>
-  						<option class="region-list__item" value="Kazan">Казань</option>
-  						<option class="region-list__item" value="Ufa">Уфа</option>
-  						<option class="region-list__item" value="Perm">Пермь</option>
-  					</select>
-  				</div>
-
-  				<div class="region__contact-phone">
-  					<a class="contact-phone animated-btn" href="tel:+74958854547">+7&nbsp;(495)&nbsp;885-45-47</a>
-  				</div>
-  			</div>
-  		</div>
-
-  		<div class="header__additional-menu add-menu-wrapper">
-  			<ul class="add-menu">
-  				<li class="add-menu__item">
-  					<a href="#" class="add-menu__link menu-link">О компании</a>
-  				</li>
-  				<li class="add-menu__item">
-  					<a href="#" class="add-menu__link menu-link">Гарантия и возврат</a>
-  				</li>
-  				<li class="add-menu__item">
-  					<a href="#" class="add-menu__link menu-link">Корпоративным клиентам</a>
-  				</li>
-  				<li class="add-menu__item">
-  					<a href="#" class="add-menu__link menu-link">Дизайн-решение</a>
-  				</li>
-  			</ul>
-  		</div>
-
-  		<div class="header__logo logo">
-        <svg class="logo__img" width="187" height="27">
-          <use xlink:href="images/sprite.svg#logo"></use>
-        </svg>
-  		</div>
-
-  		<nav class="header__main-nav main-nav js-main-nav">
-  			<div class="main-nav-container">
-  				<button type="button" class="main-nav__btn nav-btn js-nav-btn" aria-label="Меню">
-  					<span class="nav-btn-line"></span>
-  					<span class="nav-btn-line"></span>
-  					<span class="nav-btn-line"></span>
-  				</button>
-
-  				<ul class="main-nav__list">
-  					<li class="main-nav__item">
-  						<a href="#" class="main-nav__link menu-link">Каталог</a>
-  					</li>
-  					<li class="main-nav__item">
-  						<a href="#" class="main-nav__link menu-link">Магазины</a>
-  					</li>
-  					<li class="main-nav__item">
-  						<a href="#" class="main-nav__link menu-link">Шоу-рум</a>
-  					</li>
-  					<li class="main-nav__item">
-  						<a href="#" class="main-nav__link menu-link">Доставка и оплата</a>
-  					</li>
-  					<li class="main-nav__item">
-  						<a href="#" class="main-nav__link menu-link">Дисконт</a>
-  					</li>
-  					<li class="main-nav__item">
-  						<a href="#" class="main-nav__link menu-link">Контакты</a>
-  					</li>
-  				</ul>
-  			</div>
-  		</nav>
-
-  		<div class="header__search-form search-form">
-  			<form class="search-field" name="searchForm" id="searchForm" action="https://echo.htmlacademy.ru">
-  				<input type="search" class="search-field__input" name="indexOfSearch" placeholder="Я хочу купить...">
-
-  				<button type="submit" class="search-field__submit" aria-label="поиск"></button>
-  			</form>
-
-
-  			<div class="search-area js-search-area">
-  				<button type="button" class="search-area__btn srch-area-btn animated-btn js-srch-area-btn">
-  					<span class="srch-area-btn__desc">Категория</span>
-  					<span class="srch-area-btn__arrow"></span>
-  				</button>
-
-  				<fieldset class="search-area__list js-srch-area-list">
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="sofas" form="searchForm">
-  						<span>Диваны</span>
-  					</label>
-
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="dressers" form="searchForm">
-  						<span>Комоды</span>
-  					</label>
-
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="chairs" form="searchForm">
-  						<span>Кресла</span>
-  					</label>
-
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="chairs" form="searchForm">
-  						<span>Стулья</span>
-  					</label>
-
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="poufs" form="searchForm">
-  						<span>Пуфы</span>
-  					</label>
-
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="tables" form="searchForm">
-  						<span>Столы</span>
-  					</label>
-
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="beds" form="searchForm">
-  						<span>Кровати</span>
-  					</label>
-
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="accessories" form="searchForm">
-  						<span>Аксесуары</span>
-  					</label>
-
-  					<label class="search-area__item">
-  						<input type="radio" name="areaOfSearch" value="curbstones" form="searchForm">
-  						<span>Тумбы</span>
-  					</label>
-  				</fieldset>
-  			</div>
-		  </div>
-
-  		<div class="header__users-data users-data">
-        <div class="users-data-container">
-         <a class="users-cabinet animated-btn" href="#" aria-label="личный кабинет"></a>
-
-         <a class="users-basket animated-btn" href="#" aria-label="корзина">
-          <span class="users-basket__content">0</span>
-          </a>
-        </div>
-      </div>
-    </div>
-	</header>
+  @@include('components/page-blocks/_header.html')
 
 	<main class="main">
 		<section class="hero">
@@ -238,8 +92,6 @@
     <div class="offers">
       <div class="fixed-container">
         <section class="offers__special spec-offers">
-          
-
           <div class="swiper offers-swiper">
             <h2 class="spec-offers__title">Специальные предложения</h2>
 
@@ -446,181 +298,181 @@
           <h2 class="rating__title">Высокий рейтинг</h2>
 
           <ul class="rating__list">
-            <li class="rating__item rating-item">
-              <div class="rating-item__score">5,0</div>
+            <li class="rating__item products-item">
+              <div class="products-item__score">5,0</div>
 
-              <div class="rating-img-wrapper">
+              <div class="products-img-wrapper">
                 <picture>
                   <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-1.webp 1x, images/product-1-2x.webp 2x">
                   <source type="image/webp" srcset="images/product-1.webp 1x, images/product-1.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="images/product-1.png 1x, images/product-1-2x.png 2x">
-                  <img class="rating-item__img" src="images/product-1.png" srcset="images/product-1-2x.png 2x" alt="Наш товар">
+                  <img class="products-item__img" src="images/product-1.png" srcset="images/product-1-2x.png 2x" alt="Наш товар">
                 </picture>
               </div>
               
-              <div class="rating-item__details">
-                <p class="rating-item__desc">Диван кожаный <span class="no-br">“R-94“</span></p>
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван кожаный <span class="no-br">“R-94“</span></p>
 
-                <div class="rating-item__price">94 990 руб</div>
+                <div class="products-item__price">94 990 руб</div>
 
-                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
             </li>
 
-            <li class="rating__item rating-item">
-              <div class="rating-item__score">4,9</div>
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,9</div>
 
-              <div class="rating-img-wrapper">
+              <div class="products-img-wrapper">
                 <picture>
                   <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-2.webp 1x, images/product-2-2x.webp 2x">
                   <source type="image/webp" srcset="images/product-2.webp 1x, images/product-2.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="images/product-2.png 1x, images/product-2-2x.png 2x">
-                  <img class="rating-item__img" src="images/product-2.png" srcset="images/product-2-2x.png 2x" alt="Наш товар">
+                  <img class="products-item__img" src="images/product-2.png" srcset="images/product-2-2x.png 2x" alt="Наш товар">
                 </picture>
               </div>
               
-              <div class="rating-item__details">
-                <p class="rating-item__desc">Диван апартековый <span class="no-br">“T-75”</span></p>
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван апартековый <span class="no-br">“T-75”</span></p>
 
-                <div class="rating-item__price">69 990 руб</div>
+                <div class="products-item__price">69 990 руб</div>
 
-                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
             </li>
 
-            <li class="rating__item rating-item">
-              <div class="rating-item__score">4,8</div>
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,8</div>
 
-              <div class="rating-img-wrapper">
+              <div class="products-img-wrapper">
                 <picture>
                   <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-3.webp 1x, images/product-3-2x.webp 2x">
                   <source type="image/webp" srcset="images/product-3.webp 1x, images/product-3.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="images/product-3.png 1x, images/product-3-2x.png 2x">
-                  <img class="rating-item__img" src="images/product-3.png" srcset="images/product-3-2x.png 2x" alt="Наш товар">
+                  <img class="products-item__img" src="images/product-3.png" srcset="images/product-3-2x.png 2x" alt="Наш товар">
                 </picture>
               </div>
               
-              <div class="rating-item__details">
-                <p class="rating-item__desc">Диван тканевый <span class="no-br">“D-31”</span></p>
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван тканевый <span class="no-br">“D-31”</span></p>
 
-                <div class="rating-item__price">28 490 руб</div>
+                <div class="products-item__price">28 490 руб</div>
 
-                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
             </li>
 
-            <li class="rating__item rating-item">
-              <div class="rating-item__score">4,8</div>
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,8</div>
 
-              <div class="rating-img-wrapper">
+              <div class="products-img-wrapper">
                 <picture>
                   <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-4.webp 1x, images/product-4-2x.webp 2x">
                   <source type="image/webp" srcset="images/product-4.webp 1x, images/product-4.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="images/product-4.png 1x, images/product-4-2x.png 2x">
-                  <img class="rating-item__img" src="images/product-4.png" srcset="images/product-4-2x.png 2x" alt="Наш товар">
+                  <img class="products-item__img" src="images/product-4.png" srcset="images/product-4-2x.png 2x" alt="Наш товар">
                 </picture>
               </div>
               
-              <div class="rating-item__details">
-                <p class="rating-item__desc">Диван велюровый <span class="no-br">“Y-68”</span></p>
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван велюровый <span class="no-br">“Y-68”</span></p>
 
-                <div class="rating-item__price">22 990 руб</div>
+                <div class="products-item__price">22 990 руб</div>
 
-                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
             </li>
 
-            <li class="rating__item rating-item">
-              <div class="rating-item__score">4,8</div>
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,8</div>
 
-              <div class="rating-img-wrapper">
+              <div class="products-img-wrapper">
                 <picture>
                   <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-5.webp 1x, images/product-5-2x.webp 2x">
                   <source type="image/webp" srcset="images/product-5.webp 1x, images/product-5.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="images/product-5.png 1x, images/product-5-2x.png 2x">
-                  <img class="rating-item__img" src="images/product-5.png" srcset="images/product-5-2x.png 2x" alt="Наш товар">
+                  <img class="products-item__img" src="images/product-5.png" srcset="images/product-5-2x.png 2x" alt="Наш товар">
                 </picture>
               </div>
               
-              <div class="rating-item__details">
-                <p class="rating-item__desc">Диван из&nbsp;шинила <span class="no-br">“W-95”</span></p>
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван из&nbsp;шинила <span class="no-br">“W-95”</span></p>
 
-                <div class="rating-item__price">22 990 руб</div>
+                <div class="products-item__price">22 990 руб</div>
 
-                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
             </li>
 
-            <li class="rating__item rating-item">
-              <div class="rating-item__score">4,8</div>
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,8</div>
 
-              <div class="rating-img-wrapper">
+              <div class="products-img-wrapper">
                 <picture>
                   <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-6.webp 1x, images/product-6-2x.webp 2x">
                   <source type="image/webp" srcset="images/product-6.webp 1x, images/product-6.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="images/product-6.png 1x, images/product-6-2x.png 2x">
-                  <img class="rating-item__img" src="images/product-6.png" srcset="images/product-6-2x.png 2x" alt="Наш товар">
+                  <img class="products-item__img" src="images/product-6.png" srcset="images/product-6-2x.png 2x" alt="Наш товар">
                 </picture>
               </div>
               
-              <div class="rating-item__details">
-                <p class="rating-item__desc">Диван флоковый <span class="no-br">“G-41”</span></p>
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван флоковый <span class="no-br">“G-41”</span></p>
 
-                <div class="rating-item__price">17 990 руб</div>
+                <div class="products-item__price">17 990 руб</div>
 
-                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
             </li>
 
-            <li class="rating__item rating-item">
-              <div class="rating-item__score">4,8</div>
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,8</div>
 
-              <div class="rating-img-wrapper">
+              <div class="products-img-wrapper">
                 <picture>
                   <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-7.webp 1x, images/product-7-2x.webp 2x">
                   <source type="image/webp" srcset="images/product-7.webp 1x, images/product-7.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="images/product-7.png 1x, images/product-7-2x.png 2x">
-                  <img class="rating-item__img" src="images/product-7.png" srcset="images/product-7-2x.png 2x" alt="Наш товар">
+                  <img class="products-item__img" src="images/product-7.png" srcset="images/product-7-2x.png 2x" alt="Наш товар">
                 </picture>
               </div>
               
-              <div class="rating-item__details">
-                <p class="rating-item__desc">Диван шиниловый <span class="no-br">“V-43”</span></p>
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван шиниловый <span class="no-br">“V-43”</span></p>
 
-                <div class="rating-item__price">19 990 руб</div>
+                <div class="products-item__price">19 990 руб</div>
 
-                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
             </li>
 
-            <li class="rating__item rating-item">
-              <div class="rating-item__score">4,7</div>
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,7</div>
 
-              <div class="rating-img-wrapper">
+              <div class="products-img-wrapper">
                 <picture>
                   <source type="image/webp"  media="(min-width: 768px)" srcset="images/product-8.webp 1x, images/product-8-2x.webp 2x">
                   <source type="image/webp" srcset="images/product-8.webp 1x, images/product-8.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="images/product-8.png 1x, images/product-8-2x.png 2x">
-                  <img class="rating-item__img" src="images/product-8.png" srcset="images/product-8-2x.png 2x" alt="Наш товар">
+                  <img class="products-item__img" src="images/product-8.png" srcset="images/product-8-2x.png 2x" alt="Наш товар">
                 </picture>
               </div>
               
-              <div class="rating-item__details">
-                <p class="rating-item__desc">Диван велюровый <span class="no-br">“S-99”</span></p>
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван велюровый <span class="no-br">“S-99”</span></p>
 
-                <div class="rating-item__price">17 990 руб</div>
+                <div class="products-item__price">17 990 руб</div>
 
-                <a href="#" class="rating-item__link transp-btn animated-btn">Купить</a>
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
-            </li>                        
+            </li>
           </ul>
 
           <button class="rating__btn purple-btn animated-btn">Смотреть больше товаров</button>
@@ -684,7 +536,7 @@
               </picture>
             </div>
 
-            <a href="#" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -715,7 +567,7 @@
               </picture>
             </div>
 
-            <a href="#" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -746,7 +598,7 @@
               </picture>
             </div>
 
-            <a href="#" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -777,7 +629,7 @@
               </picture>
             </div>
 
-            <a href="#" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -808,7 +660,7 @@
               </picture>
             </div>
 
-            <a href="#" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -919,7 +771,7 @@
             </span>
           </p>
 
-          <form id="contactForm" class="contacts__form contact-form" name="contactForm" id="contactForm" action="#">
+          <form id="contactForm" class="contacts__form contact-form" name="contactForm" action="#">
             <div class="contact-form-field">
               <input id="contactName" type="text" class="contact-form__name" name="contactName" placeholder="Как вас зовут?" required>
             </div>
@@ -950,105 +802,13 @@
     </section>
 	</main>
 
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="footer-container">
-        <div class="footer__logo logo">
-          <svg class="logo__img" width="187" height="27">
-            <use xlink:href="images/sprite.svg#logo"></use>
-          </svg>
-        </div>
-
-        <ul class="footer__social footer-social">
-          <li class="footer-social__link">
-            <a class="social-link social-link_fb" href="#" aria-label="мы в фейсбук">
-              <svg class="social-icon" width="30" height="30"><use xlink:href="images/sprite.svg#fb"></use></svg>
-            </a>
-          </li>
-          <li class="footer-social__link">
-            <a class="social-link social-link_vk" href="#" aria-label="мы во вконтакте">
-              <svg class="social-icon" width="30" height="30"><use xlink:href="images/sprite.svg#vk"></use></svg>
-            </a>
-          </li>
-          <li class="footer-social__link">
-            <a class="social-link social-link_inst" href="#" aria-label="мы в инстаграм">
-              <svg class="social-icon" width="30" height="30"><use xlink:href="images/sprite.svg#instagram"></use></svg>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="footer__nav footer-menu">
-          <li class="footer-menu__group menu-group">
-            <p class="menu-group__title">О нас</p>
-
-            <ul class="menu-group__subgroup menu-subgroup">
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">О компании</a>
-              </li>
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Блог</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="footer-menu__group menu-group">
-            <p class="menu-group__title">Услуги</p>
-
-            <ul class="menu-group__subgroup menu-subgroup">
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Доставка</a>
-              </li>
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Рассрочка и кредит</a>
-              </li>
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Сборка и установка</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="footer-menu__group menu-group">
-            <p class="menu-group__title">Связь с нами</p>
-
-            <ul class="menu-group__subgroup menu-subgroup">
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Обратная связь</a>
-              </li>
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Контакты</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="footer-menu__group menu-group">
-            <p class="menu-group__title">Сотрудничество</p>
-
-            <ul class="menu-group__subgroup menu-subgroup">
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Поставщикам</a>
-              </li>
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Оптовикам</a>
-              </li>
-              <li class="menu-subgroup__item">
-                <a href="" class="menu-subgroup__link menu-link">Карьера</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <p class="copyright">SDP®&nbsp;&nbsp;&nbsp;2011-2021</p>
-    </div>
-  </footer>
+  @@include('components/page-blocks/_footer.html')
 
 	<script src="resources/third-party/choices/choices.min.js"></script>
   <script src="resources/third-party/swiper/swiper-bundle.min.js"></script>
   <script src="resources/third-party/just-validate/just-validate.production.min.js"></script>
   <script src="resources/third-party/inputmask/inputmask.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
   
 </body>
 

@@ -1,24 +1,7 @@
+@import "src/sass/_veriables.sass"
+@import "src/sass/_product-card.sass"
 @import "src/sass/swiper.sass"
 @import "src/sass/just-validate.sass"
-
-$light-grey: #f7f7f7
-$md-grey: #eaeaea
-$grey: #999
-$grey-light: #f6f6f6
-$grey-shade: #666
-
-
-$purple-main: #a65cf0
-$purple-shade: #7033ac
-$purple-light: #c998fb
-
-$pink-light: #f8efff
-$pink-violet: #ebd1ff
-
-$orange: #ff862f
-$orange-light: #ffbd59
-$orange-shade: #bb370e
-$orange-light-bgr :#fff5d1
 
 =main-title()
   margin: 0
@@ -225,75 +208,8 @@ $orange-light-bgr :#fff5d1
     @media (min-width: 1290px)
       grid-template-columns: repeat(4, 1fr)
       margin-bottom: 30px
-  &-item
-    display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: 16px 77px auto
-    justify-items: center
-    padding: 16px
-    background-color: $grey-light
-    border-radius: 10px
-    overflow-y: hidden
-    @media (min-width: 768px)
-      grid-template-rows: auto 1fr auto
-      padding: 30px 0
-    .rating-img-wrapper
-      flex-grow: 1
-      display: flex
-      justify-content: center
-      align-items: center
-      @media (min-width: 768px)
-        align-items: end
-        margin-bottom: 15px
-    &__score
-      width: 100%
-      font-size: 12px
-      line-height: 16px
-      color: $orange
-      @media (min-width: 768px)
-        width: 236px
-        font-size: 16px
-        line-height: 20px
-      &::before
-        content: ""
-        display: inline-block
-        width: 13px
-        height: 13px
-        margin-right: 5px
-        background-image: url("../images/star.png")
-        background-repeat: no-repeat
-        background-position: center
-        background-size: 13px 12px
-        vertical-align: -10%
-        @media (min-width: 768px)
-          width: 16px
-          height: 16px
-          background-size: 16px 15px
-    &__details
-      @media (min-width: 768px)
-        width: 236px
-    &__desc
-      line-height: 21px
-      margin: 0
-      margin-bottom: 16px
-      @media (min-width: 768px)
-        font-size: 24px
-        line-height: 31px
-        margin-bottom: 20px
-    &__price
-      color: $grey-shade
-      margin-bottom: 16px
-      @media (min-width: 768px)
-        line-height: 21px
-        margin-bottom: 25px
-    .transp-btn
-      width: 108px
-      padding-top: 10px
-      padding-bottom: 10px
-      @media (min-width: 768px)
-        width: 125px
-        padding-top: 16px
-        padding-bottom: 18px
+    @include product-card
+    
   &__btn.purple-btn
     width: 100%
     @media (min-width: 768px)
@@ -304,11 +220,13 @@ $orange-light-bgr :#fff5d1
 .baner-main
   position: relative
   &__img
-    max-height: 210px
+    // max-height: 210px
+    height: 210px
     width: 100%
     margin-bottom: 32px
     @media (min-width: 768px)
-      max-height: 600px
+      // max-height: 600px
+      height: 600px
       margin-bottom: 0
   &__btn.purple-btn
     width: 296px
@@ -366,16 +284,18 @@ $orange-light-bgr :#fff5d1
   .tops-list
     display: grid
     grid-template-columns: repeat(2, auto)
-    grid-template-rows: repeat(3, auto)
+    grid-template-rows: 296px 207px 207px
     grid-column-gap: 16px
     grid-row-gap: 30px
     @media (min-width: 768px)
+      grid-template-rows: repeat(3, 511px) 
       grid-column-gap: 32px
     @media (min-width: 1024px)
       grid-template-columns: repeat(3, auto)
-      grid-template-rows: repeat(2, auto)
+      grid-template-rows: repeat(2, 511px)
     @media (min-width: 1290px)
       grid-template-columns: repeat(6, auto)
+      grid-template-rows: 511px 407px
   .tops-item
     width: 140px
     padding: 16px 0
@@ -525,19 +445,22 @@ $orange-light-bgr :#fff5d1
         display: inline-block
         width:  22px
         height: 22px
+        margin-left: 2px
         border: 2px solid $purple-main
         border-radius: 50%
-        background-position: 45% 45%
+        background-position: 47% 47%
         background-repeat: no-repeat
         background-image: url("../images/arrow-right-purple.png")
         background-size: 6px 8px
         vertical-align: -5px
       &:hover
-        .tops-link__content
-          border-bottom-color: $purple-main
+        @media (min-width: 1025px)
+          .tops-link__content
+            border-bottom-color: $purple-main
       &:hover::after
-        background-color: $purple-main
-        background-image: url("../images/arrow-right-white.png")
+        @media (min-width: 1025px)
+          background-color: $purple-main
+          background-image: url("../images/arrow-right-white.png")
       &:focus
         .tops-link__content
           border-bottom-color: $purple-main
@@ -635,9 +558,10 @@ $orange-light-bgr :#fff5d1
         background-position: center
         background-size: cover
         &:hover
-          background-image: url("../images/tooltip-orange.png")
-          &+.popup
-            opacity: 1
+          @media (min-width: 1025px)
+            background-image: url("../images/tooltip-orange.png")
+            &+.popup
+              opacity: 1
       &__content
         position: absolute
         top: -65px
@@ -689,7 +613,8 @@ $orange-light-bgr :#fff5d1
   .contact-form__name:hover,
   .contact-form__phone:hover,
   .contact-form__email:hover
-    background-color: $md-grey
+    @media (min-width: 1025px)
+      background-color: $md-grey
   .contact-form__name:active,
   .contact-form__phone:active,
   .contact-form__email:active
@@ -778,6 +703,7 @@ $orange-light-bgr :#fff5d1
       @media (min-resolution: 2dppx)
         background-image: url("../images/contacts-xl-2x.png")
 
+/**/
 .no-js
   .hero__content
     margin-bottom: 30px

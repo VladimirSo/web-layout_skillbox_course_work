@@ -1,10 +1,12 @@
-$light-grey: #f7f7f7
+@import "src/sass/_veriables.sass"
 
-$purple-main: #a65cf0
-$purple-shade: #7033ac
-$purple-light: #c998fb
+// $light-grey: #f7f7f7
 
-$pink-violet: #ebd1ff
+// $purple-main: #a65cf0
+// $purple-shade: #7033ac
+// $purple-light: #c998fb
+
+// $pink-violet: #ebd1ff
 
 .choices
   width: max-content
@@ -20,7 +22,8 @@ $pink-violet: #ebd1ff
   min-height: auto
   font-size: 16px
   &:hover
-    color: $purple-light
+    @media (min-width: 1025px)
+      color: $purple-light
 .is-active .choices__inner
   color: $purple-shade
 .is-focused .choices__inner

@@ -1,20 +1,5 @@
+@import "src/sass/_veriables.sass"
 @import "src/sass/choices.sass"
-
-$light-grey: #f7f7f7
-$md-grey: #eaeaea
-$grey: #999
-
-$purple-main: #a65cf0
-$purple-shade: #7033ac
-$purple-light: #c998fb
-
-$pink-light: #f8efff
-$pink-violet: #ebd1ff
-
-$orange: #ff862f
-$orange-light: #ffbd59
-$orange-shade: #bb370e
-$orange-light-bgr :#fff5d1
 
 .header
   &-container
@@ -203,20 +188,21 @@ $orange-light-bgr :#fff5d1
     font-size: 14px
     line-height: 22px
     color: $orange
-    background-image: url("../images/sprite.svg#phone-orange")
+    background-image: url("/images/sprite.svg#phone-orange")
     background-repeat: no-repeat
     background-position: -45px 3px
     background-size: auto 18px
     &:hover
-      color: $orange-light
-      background-image: url("../images/sprite.svg#phone-orange-hover")
+      @media (min-width: 1025px)
+        color: $orange-light
+        background-image: url("/images/sprite.svg#phone-orange-hover")
     &:focus
       color: $orange
-      background-image: url("../images/sprite.svg#phone-orange")
+      background-image: url("/images/sprite.svg#phone-orange")
       background-color: $orange-light-bgr
     &:active
       color: $orange-shade
-      background-image: url("../images/sprite.svg#phone-orange-active")
+      background-image: url("/images/sprite.svg#phone-orange-active")
 
   .add-menu
     display: none
@@ -341,8 +327,9 @@ $orange-light-bgr :#fff5d1
       @media (min-width: 1290px)
         width: 77%
       &:hover
-        background-color: $md-grey
-        border-color: $md-grey
+        @media (min-width: 1025px)
+          background-color: $md-grey
+          border-color: $md-grey
       &:focus
         background-color: $pink-light
         border-color: $purple-main
@@ -350,15 +337,16 @@ $orange-light-bgr :#fff5d1
         background-color: $light-grey
       &__input
         width: 85%
-        background-color: inherit
-        border: none
         padding: 0 9px 0 25px
-        background-image: url("../images/sprite.svg#search")
+        line-height: 1.5        
+        border: none
+        background-color: inherit
+        background-image: url("/images/sprite.svg#search")
         background-repeat: no-repeat
         background-position: -40px center
         background-size: auto 16px
         &:focus
-          background-image: url("../images/sprite.svg#search-purple")
+          background-image: url("/images/sprite.svg#search-purple")
       &__input::placeholder
         color: $grey
       &__input::-webkit-input-placeholder
@@ -370,7 +358,7 @@ $orange-light-bgr :#fff5d1
         height: 32px
         border-radius: 50%
         border: 2px solid $purple-main
-        background-image: url("../images/arrow-right-purple.png")
+        background-image: url("/images/arrow-right-purple.png")
         background-repeat: no-repeat
         background-position: center
         background-color: inherit
@@ -424,7 +412,8 @@ $orange-light-bgr :#fff5d1
         @media (min-width: 1290px)
           padding-right: 40px
         &:hover
-          border-color: $purple-main
+          @media (min-width: 1025px)
+            border-color: $purple-main
         &:active
           border-color: $purple-shade
         &:focus
@@ -434,7 +423,7 @@ $orange-light-bgr :#fff5d1
           display: block
           width: 18px
           height: 15px
-          background-image: url("../images/arrow-down-purple.png")
+          background-image: url("/images/arrow-down-purple.png")
           background-repeat: no-repeat
           background-position: bottom center
 
@@ -467,34 +456,37 @@ $orange-light-bgr :#fff5d1
       display: block
       width: 34px
       height: 36px
-      background-image: url("../images/sprite.svg#users-cabinet")
+
+      background-image: url("/images/sprite.svg#users-cabinet")
       background-repeat: no-repeat
       background-position: center
       background-size: 187px 30px
       @media (min-width: 1290px)
         margin-right: 20px
       &:hover
-        background-image: url("../images/sprite.svg#users-cabinet-hover")
+        @media (min-width: 1025px)
+          background-image: url("/images/sprite.svg#users-cabinet-hover")
       &:active
-        background-image: url("../images/sprite.svg#users-cabinet-active")
+        background-image: url("/images/sprite.svg#users-cabinet-active")
       &:focus
-        background-image: url("../images/sprite.svg#users-cabinet-focus")
+        background-image: url("/images/sprite.svg#users-cabinet-focus")
         background-color: $purple-light
     .users-basket
       display: block
       width: 50px
       height: 36px
-      background-image: url("../images/sprite.svg#users-basket")
+      background-image: url("/images/sprite.svg#users-basket")
       background-repeat: no-repeat
       background-position: -62px center
       background-size: 187px 30px
       position: relative
       &:hover
-        background-image: url("../images/sprite.svg#users-basket-hover")
+        @media (min-width: 1025px)
+          background-image: url("/images/sprite.svg#users-basket-hover")
       &:active
-        background-image: url("../images/sprite.svg#users-basket-active")
+        background-image: url("/images/sprite.svg#users-basket-active")
       &:focus
-        background-image: url("../images/sprite.svg#users-basket-focus")
+        background-image: url("/images/sprite.svg#users-basket-focus")
         background-color: $purple-light
       &__content
         display: block
@@ -561,7 +553,34 @@ $orange-light-bgr :#fff5d1
       height: 100%
       left: 0
       opacity: 1
-      
+
+  &__breadcrumbs
+    display: none
+
+.catalog-page
+  .header
+    .search-form
+      padding-bottom: 20px
+  .header__breadcrumbs
+    display: none
+    @media (min-width: 768px)
+      display: block
+    .breadcrumb
+      &-item
+        display: inline-block
+        font-size: 14px
+        line-height: 14px
+        color: $grey
+        &::after
+          display: inline-block
+          padding-left: 4px
+          content: "/"
+        &:last-of-type::after
+          display: none
+        &--active
+          color: $purple-shade
+        a:hover
+          border-bottom: 1px solid $purple-shade
 .no-js
   .header
     padding-bottom: 150px
@@ -570,6 +589,8 @@ $orange-light-bgr :#fff5d1
     .main-nav
       &__list
         display: block
+        @media (min-width: 1024px)
+          display: flex
       &__item
         margin-top: 15px
 

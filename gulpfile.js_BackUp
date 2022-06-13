@@ -1,7 +1,6 @@
 const {
     src,
     dest,
-    parallel,
     series,
     watch
 } = require('gulp');
@@ -22,15 +21,10 @@ const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 // const webpHTML = require('gulp-webp-html-fix');
-const include = require('gulp-file-include');
-const header = require('gulp-header');
-const fs = require('fs');
 
 const clean = () => {
     return del([
-        'dist',
-        'src/styles/sass/**/*.css',
-        'src/styles/main/**/*.css'
+        'dist'
         ])
 }
 
@@ -52,37 +46,27 @@ const webpConv = () => {
 }
 
 const imgMin = () => {
-    const mapOff = (argv.prod) ? false : true;
-
     return src(['src/images/*', 'src/images/content/*'])
-    .pipe(gulpif(argv.prod, imagemin()))
+    .pipe(imagemin())
     .pipe(dest('dist/images'))
     .pipe(browserSync.stream())
 }
 
 const sassStyles = () => {
-    return src('src/sass/**/styles.sass')
+    const mapOff = (argv.prod) ? false : true;
+
+    return src('src/sass/**/*.sass')
     .pipe(sourcemaps.init())
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(dest('src/styles/sass'))
-    .pipe(browserSync.stream())
+    .pipe(dest('src/styles/sass'));
 };
-
-const mainStyles = () => {
-    return src('src/styles/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(concat('main.css'))
-    .pipe(dest('src/styles/main'))
-    .pipe(browserSync.stream())
-}
 
 const styles = () => {
     const mapOff = (argv.prod) ? false : true;
 
-    return src('src/styles/sass/**/*.css')
-    .pipe(header(fs.readFileSync('src/styles/main/main.css', 'utf8') ))
+    return src('src/styles/**/*.css')
     .pipe(sourcemaps.init())
-    // .pipe(concat('styles.css'))
+    .pipe(concat('styles.css'))
     .pipe(autoprefixer({
         cascade: false
     }))
@@ -96,12 +80,8 @@ const styles = () => {
 }
 
 const htmlMinify = () => {
-    return src([
-        'src/**/*.html',
-        '!src/components/page-blocks/**/*.html'
-        ])
+    return src('src/**/*.html')
     // .pipe(webpHTML())
-    .pipe(include())
     .pipe(gulpif(argv.prod, htmlMin({
         collapseWhitespace: true
     })))
@@ -142,38 +122,18 @@ const svgSprites = () => {
     .pipe(dest('dist/images'))
 }
 
-// const scripts = () => {
-//     const mapOff = (argv.prod) ? false : true;
-
-//     return src([
-//         'src/js/components/**/*.js',
-//         'src/js/main.js'
-//         ])
-//     .pipe(sourcemaps.init())
-//     .pipe(babel({
-//         presets: ['@babel/env']
-//     }))
-//     .pipe(concat('app.js'))
-//     .pipe(gulpif(argv.prod, uglify().on('error', notify.onError())))
-//     .pipe(gulpif(mapOff, sourcemaps.write('../maps')))
-//     .pipe(dest('dist/js'))
-//     .pipe(browserSync.stream())
-// }
-
 const scripts = () => {
     const mapOff = (argv.prod) ? false : true;
 
     return src([
         'src/js/components/**/*.js',
-        'src/js/main.js',
-        '!src/js/modules/**/*.js'
+        'src/js/main.js'
         ])
-    .pipe(include())
     .pipe(sourcemaps.init())
     .pipe(babel({
         presets: ['@babel/env']
     }))
-    // .pipe(concat('app.js'))
+    .pipe(concat('app.js'))
     .pipe(gulpif(argv.prod, uglify().on('error', notify.onError())))
     .pipe(gulpif(mapOff, sourcemaps.write('../maps')))
     .pipe(dest('dist/js'))
@@ -190,8 +150,7 @@ const watchFiles = () => {
 
 watch('src/**/*.html', htmlMinify);
 watch('src/sass/**/*.sass', sassStyles);
-watch('src/styles/*.css', mainStyles);
-watch(['src/styles/main/*.css', 'src/styles/sass/**/*.css'], styles);
+watch('src/styles/**/*.css', styles);
 watch('src/images/svg/**/*.svg', svgSprites);
 watch('src/js/**/*.js', scripts);
 watch('src/resouces/**', resources);
@@ -200,7 +159,6 @@ watch('src/images/**/*', imgMin);
 
 exports.clean = clean;
 exports.sassStyles = sassStyles;
-exports.mainStyles = mainStyles;
 exports.styles = styles;
 exports.htmlMinify = htmlMinify;
 exports.scripts = scripts;
@@ -208,9 +166,9 @@ exports.imgMin = imgMin;
 exports.webpConv = webpConv;
 
 if (argv.prod) {
-    exports.default = series(clean, parallel(resources, favicon), webpConv, imgMin, parallel(htmlMinify, scripts), parallel(sassStyles, mainStyles), styles, svgSprites);
-    // exports.default = series(clean, resources, favicon, webpConv, imgMin, htmlMinify, scripts, sassStyles, mainStyles, styles, svgSprites);
+    exports.default = series(clean, resources, favicon, webpConv, imgMin, htmlMinify, scripts, sassStyles, styles, svgSprites);
+    // exports.default = series(clean, resources, htmlMinify, scripts, sassStyles, svgSprites);
 } else {
-    exports.default = series(clean, parallel(resources, favicon),  webpConv, imgMin, parallel(htmlMinify, scripts), parallel(sassStyles, mainStyles), styles, svgSprites, watchFiles);
-    // exports.default = series(clean, resources, favicon,  webpConv, imgMin, htmlMinify, scripts, sassStyles, mainStyles, styles, svgSprites, watchFiles);
+    exports.default = series(clean, resources, favicon,  webpConv, imgMin, htmlMinify, scripts, sassStyles, styles, svgSprites, watchFiles);
+    // exports.default = series(clean, resources, htmlMinify, scripts, sassStyles, svgSprites, watchFiles);
 }

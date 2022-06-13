@@ -1,0 +1,44 @@
+@import "src/sass/_veriables.sass"
+
+.noUi-connect
+  background-color: $purple-main
+  &:focus
+    background-color: $purple-shade
+  &:active
+    background-color: $purple-shade
+
+.noUi-target
+  background-color: $md-grey
+  border: none
+  border-radius: 100px
+  box-shadow: none
+  height: 3px
+
+.noUi-handle::after,
+.noUi-handle::before
+  display: none
+
+.noUi-handle
+  box-shadow: none
+  background-color: transparent
+  border-bottom: 13px solid $purple-main
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  cursor: pointer
+  &:hover
+    @media (min-width: 1025px)
+      border-bottom-color: $purple-light
+  &:focus
+    border-bottom-color: $purple-shade
+  &:active
+    border-bottom-color: $purple-shade  
+
+.noUi-horizontal .noUi-handle
+  width: 13px
+  height: 13px
+  top: 0
+
+.noUi-horizontal .noUi-handle-upper
+  right: -10px
+.noUi-horizontal .noUi-handle-lower
+  right: -10px

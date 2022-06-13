@@ -1,7 +1,8 @@
-$purple-main: #a65cf0
-$purple-light: #c998fb
-$purple-shade: #7033ac
-$grey: #999
+@import "src/sass/_veriables.sass"
+// $purple-main: #a65cf0
+// $purple-light: #c998fb
+// $purple-shade: #7033ac
+// $grey: #999
 //
 .hero-swiper.swiper-horizontal > .swiper-pagination-bullets
   bottom: 102px
@@ -68,12 +69,19 @@ $grey: #999
   border-color: $grey
   filter: grayscale(100%)
   opacity: 1
-.swiper-button-prev:active, .swiper-button-prev:focus, .swiper-button-prev:hover
+.swiper-button-prev:active, .swiper-button-prev:focus
   background-image: url("../images/arrow-left-white.png")
-.swiper-button-next:active, .swiper-button-next:focus, .swiper-button-next:hover
+.swiper-button-prev:hover
+  @media (min-width: 1025px)
+    background-image: url("../images/arrow-left-white.png")
+.swiper-button-next:active, .swiper-button-next:focus
   background-image: url("../images/arrow-right-white.png")
+.swiper-button-next:hover
+  @media (min-width: 1025px)
+    background-image: url("../images/arrow-right-white.png")
 .swiper-button-prev:hover, .swiper-button-next:hover
-  background-color: $purple-main
+  @media (min-width: 1025px)
+    background-color: $purple-main
 .swiper-button-prev:focus, .swiper-button-next:focus
   background-color: $purple-light
 .swiper-button-prev:active, .swiper-button-next:active

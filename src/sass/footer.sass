@@ -1,13 +1,17 @@
-$md-grey: #eaeaea
-$light-grey: #f7f7f7
-$grey: #999
+@import "src/sass/_veriables.sass"
+
+// $md-grey: #eaeaea
+// $light-grey: #f7f7f7
+// $grey: #999
 
 .footer
 	color: $grey
 	&-container
 		padding: 0 2px
+		display: grid
+		grid-template-columns: auto 320px auto
+		grid-template-rows: auto auto auto
 		@media (min-width: 768px)
-			display: grid
 			grid-template-columns: auto 498px 146px auto
 			grid-template-rows: auto auto
 		@media (min-width: 1024px)
@@ -24,6 +28,10 @@ $grey: #999
 	&__logo
 		margin-bottom: 20px
 		text-align: center
+		grid-column-start: 2
+		grid-column-end: 3
+		grid-row-start: 1
+		grid-row-end: 2
 		@media (min-width: 768px)
 			grid-column-start: 2
 			grid-column-end: 3
@@ -42,6 +50,10 @@ $grey: #999
 		width: max-content
 		margin: 0 auto
 		margin-bottom: 22px
+		grid-column-start: 2
+		grid-column-end: 3
+		grid-row-start: 2
+		grid-row-end: 3
 		@media (min-width: 768px)
 			grid-column-start: -3
 			grid-column-end: -2
@@ -62,6 +74,10 @@ $grey: #999
 		display: grid
 		grid-template-columns: 1fr 1fr
 		grid-template-rows: auto auto
+		grid-column-start: 2
+		grid-column-end: 3
+		grid-row-start: -2
+		grid-row-end: -1
 		@media (min-width: 768px)
 			grid-template-columns: 105px 175px auto 150px
 			grid-template-rows: auto
