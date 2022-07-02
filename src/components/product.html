@@ -1,98 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Магазин SitDownPls">
-	<title>Магазин SitDownPls. Страница товара</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Магазин SitDownPls">
+  <title>Магазин SitDownPls. Страница товара</title>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-	<link rel="manifest" href="/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#2d89ef">
-	<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" type="text/css" href="/resources/third-party/choices/choices.min.css">
+  <link rel="stylesheet" type="text/css" href="/resources/third-party/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/product/styles.css">
 </head>
-<body>
-	@@include('page-blocks/_header.html')
-	
-	<main>
-	Главная
-	/
-	Каталог
-	/
-	Диваны
-	/
-	Прямые диваны
-	/
-	D-31
 
+<body class="product-page no-js">
+  @@include('page-blocks/_header.html')
 
-	4,8
-	Диван тканевый прямой “D-31”
-	Мини 120 см без ящика Stark синий (Рогожка)
-	28 490 руб
-	Купить в один клик
-	+ Добавить в корзину
+  <main class="main">
+    <div class="fixed-container">
+      <section class="product">
+        <h1 class="product__title visually-hidden">Карточка товара</h1>
 
-	Опорный механизм
-	Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье «выпрыгивает» вперёд и вытаскивает вторую часть спального места. Заключительный штрих — опустить спинку.
-	Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но подросток справится.
+        <div class="product__card">
+          <div class="product__img product-img">
+            <div class="product-img-wrapper">
+              <picture>
+                <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3.webp 1x, /images/product-3-2x.webp 2x">
+                <source type="image/webp" srcset="/images/product-3.webp 1x, /images/product-3-2x.webp 2x">
 
-	Гарантия
-	Артикул
-	Длина
-	Высота
-	Глубина
-	Спальное место
-	Высота посадки
-	Механизм
-	Тип обивки
-	Цвет
-	Наполнитель
-	Материал каркаса
-	Количество мест
-	Категория
-	Возврат
+                <source media="(min-width: 768px)" srcset="/images/product-3.png 1x, /images/product-3-2x.png 2x">
+                <img class="products-img__main" src="/images/product-3.png" srcset="/images/product-3-2x.png 2x" alt="Наш товар">
+              </picture>
+            </div>
 
-	18 месяцев
-	AAA41269004
-	163 см
-	90 см
-	108 см
-	200 см х 125 см
-	45 см
-	Опорный
-	Рогожка
-	Синий
-	Независимый пружинный блок
-	Металл. рама с дерев. латами
-	Двухместные
-	Прямые тканевые диваны
-	Условия
+            <div class="product-img__galery product-galery">
+              <picture>
+                <source type="image/webp" srcset="/images/product-3-galery-1.webp 1x, /images/product-3-galery-1-2x.webp 2x">
 
+                <img class="product-galery__front" src="/images/product-3-galery-1.png" srcset="/images/product-3-galery-1-2x.png 2x" alt="Наш товар">
+              </picture>
 
-	Похожие товары
+              <picture>
+                <source type="image/webp" srcset="/images/product-3-galery-2.webp 1x, /images/product-3-galery-2-2x.webp 2x">
 
-	4,5
-	Диван велюровый “R-85”
-	34 990 руб
-	Купить
-	4,6
-	Диван флоковый “H-58”
-	23 990 руб
-	Купить
-	4,5
-	Диван велюровый “S-44”
-	19 990 руб
-	Купить
-	4,8
-	Диван шиниловый “V-43”
-	19 990 руб
-	Купить
-	</main>
+                <img class="product-galery__side" src="/images/product-3-galery-2.png" srcset="/images/product-3-galery-2-2x.png 2x" alt="Наш товар">
+              </picture>
 
-	@@include('page-blocks/_footer.html')	
+              <picture>
+                <source type="image/webp" srcset="/images/product-3-galery-3.webp 1x, /images/product-3-galery-3-2x.webp 2x">
+
+                <img class="product-galery__backside" src="/images/product-3-galery-3.png" srcset="/images/product-3-galery-3-2x.png 2x" alt="Наш товар">
+              </picture>
+
+              <picture>
+                <source type="image/webp" srcset="/images/product-3-galery-4.webp 1x, /images/product-3-galery-4-2x.webp 2x">
+
+                <img class="product-galery__open" src="/images/product-3-galery-4.png" srcset="/images/product-3-galery-4-2x.png 2x" alt="Наш товар">
+              </picture>
+            </div>
+          </div>
+
+          <div class="product__details">
+            <div class="product__score">4,8</div>
+
+            <p class="product__desc">Диван тканевый прямой “D-31”
+              <span>Мини 120 см без ящика Stark синий (Рогожка)</span>
+            </p>
+
+            <div class="poduct__price">28 490 руб</div>
+
+            <button class="product__btn">Купить в один клик</button>
+
+            <a class="product__link" href="">+ Добавить в корзину</a>
+          </div>
+        </div>
+
+        <div class="product__specification specification">
+          <div class="specification__main">
+            <h2 class="specification__title">Опорный механизм</h2>
+
+            <div class="specification__desc">
+              <p>Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье «выпрыгивает» вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих — опустить спинку.</p>
+
+              <p>Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но подросток справится.</p>
+            </div>
+          </div>
+
+          <div class="specification__img">
+            <picture>
+              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3-shema-1.webp 1x, /images/product-3-shema-1-2x.webp 2x">
+              <source type="image/webp" srcset="/images/product-3-shema-1-s.webp 1x, /images/product-3-shema-1-s-2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="/images/product-3-shema-1.png 1x, /images/product-3-shema-1-2x.png 2x">
+              <img class="products-item__img" src="/images/product-3-shema-1-s.png" srcset="/images/product-3-shema-1-s-2x.png 2x" alt="Наш товар">
+            </picture>
+
+            <picture>
+              <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3-shema-2.webp 1x, /images/product-3-shema-2-2x.webp 2x">
+              <source type="image/webp" srcset="/images/product-3-shema-2-s.webp 1x, /images/product-3-shema-2-s-2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="/images/product-3-shema-2.png 1x, /images/product-3-shema-2-2x.png 2x">
+              <img class="products-item__img" src="/images/product-3-shema-2-s.png" srcset="/images/product-3-shema-2-s-2x.png 2x" alt="Наш товар">
+            </picture>
+          </div>
+
+          <div class="specification__feature">
+            <div class="">Гарантия</div>
+            <div class="">18 месяцев</div>
+            <div class="">Артикул</div>
+            <div class="">AAA41269004</div>
+            <div class="">Длина</div>
+            <div class="">163 см</div>
+            <div class="">Высота</div>
+            <div class="">90 см</div>
+            <div class="">Глубина</div>
+            <div class="">108 см</div>
+            <div class="">Спальное место</div>
+            <div class="">200 см х 125 см</div>
+            <div class="">Высота посадки</div>
+            <div class="">45 см</div>
+            <div class="">Механизм</div>
+            <div class="">Опорный</div>
+            <div class="">Тип обивки</div>
+            <div class="">Рогожка</div>
+            <div class="">Цвет</div>
+            <div class="">Синий</div>
+            <div class="">Наполнитель</div>
+            <div class="">Независимый пружинный блок</div>
+            <div class="">Материал каркаса</div>
+            <div class="">Металл. рама с дерев. латами</div>
+            <div class="">Количество мест</div>
+            <div class="">Двухместные</div>
+            <div class="">Категория</div>
+            <div class="">Прямые тканевые диваны</div>
+            <div class="">Возврат</div>
+            <div class="">Условия</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="similar-products">
+        <div class="swiper similar-swiper">
+          <h2 class="similar-products__title">Похожие товары</h2>
+
+          <ul class="similar-products__list swiper-wrapper">
+            <li class="similar-products__item products-item swiper-slide">
+              <div class="products-item__score">4,5</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-16.webp 1x, /images/product-16-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-16.webp 1x, /images/product-16.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-16.png 1x, /images/product-16-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-16.png" srcset="/images/product-16-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван велюровый <span class="no-br">“R-85”</span></p>
+
+                <div class="products-item__price">34 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="similar-products__item products-item swiper-slide">
+              <div class="products-item__score">4,6</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-11.webp 1x, /images/product-11-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-11.webp 1x, /images/product-11.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-11.png 1x, /images/product-11-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-11.png" srcset="/images/product-11-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван флоковый <span class="no-br">“H-58”</span></p>
+
+                <div class="products-item__price">23 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="similar-products__item products-item swiper-slide">
+              <div class="products-item__score">4,5</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-17.webp 1x, /images/product-17-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-17.webp 1x, /images/product-17.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-17.png 1x, /images/product-17-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-17.png" srcset="/images/product-17-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван велюровый <span class="no-br">“S-44”</span></p>
+
+                <div class="products-item__price">19 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="similar-products__item products-item swiper-slide">
+              <div class="products-item__score">4,8</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-7.webp 1x, /images/product-7-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-7.webp 1x, /images/product-7.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-7.png 1x, /images/product-7-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-7.png" srcset="/images/product-7-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван шиниловый <span class="no-br">“V-43”</span></p>
+
+                <div class="products-item__price">19 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="similar-products__item products-item swiper-slide">
+              <div class="products-item__score">4,6</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-13.webp 1x, /images/product-13-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-13.webp 1x, /images/product-13.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-13.png 1x, /images/product-13-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-13.png" srcset="/images/product-13-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван из&nbsp;шинила <span class="no-br">“С-42”</span></p>
+
+                <div class="products-item__price">18 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="similar-btn-prev swiper-button-prev"></div>
+          <div class="similar-btn-next swiper-button-next"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  @@include('page-blocks/_footer.html')
+
+  <script src="/resources/third-party/choices/choices.min.js"></script>
+  <script src="/resources/third-party/swiper/swiper-bundle.min.js"></script>
+
+  <script src="/js/product.js"></script>
 </body>
 </html>

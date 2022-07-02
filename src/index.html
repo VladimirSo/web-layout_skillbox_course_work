@@ -16,7 +16,7 @@
 	<meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" type="text/css" href="resources/third-party/choices/choices.min.css">
-  <link rel="stylesheet" type="text/css" href="resources/third-party/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" type="text/css" href="resources/third-party/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
@@ -293,11 +293,11 @@
         </section>
       </div>
 
-      <section class="rating">
+      <section class="rating js-raiting">
         <div class="fixed-container">
           <h2 class="rating__title">Высокий рейтинг</h2>
 
-          <ul class="rating__list">
+          <ul class="rating__list js-raiting-list">
             <li class="rating__item products-item">
               <div class="products-item__score">5,0</div>
 
@@ -468,14 +468,102 @@
               <div class="products-item__details">
                 <p class="products-item__desc">Диван велюровый <span class="no-br">“S-99”</span></p>
 
-                <div class="products-item__price">17 990 руб</div>
+                <div class="products-item__price">19 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,7</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-9.webp 1x, /images/product-9-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-9.webp 1x, /images/product-9.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-9.png 1x, /images/product-9-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-9.png" srcset="/images/product-9-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван из кожзама <span class="no-br">“F-85”</span></p>
+
+                <div class="products-item__price">26 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,6</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-10.webp 1x, /images/product-10-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-10.webp 1x, /images/product-10.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-10.png 1x, /images/product-10-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-10.png" srcset="/images/product-10-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван флоковый <span class="no-br">“H-64”</span></p>
+
+                <div class="products-item__price">25 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,6</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-11.webp 1x, /images/product-11-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-11.webp 1x, /images/product-11.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-11.png 1x, /images/product-11-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-11.png" srcset="/images/product-11-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван флоковый <span class="no-br">“H-58”</span></p>
+
+                <div class="products-item__price">23 990 руб</div>
+
+                <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rating__item products-item">
+              <div class="products-item__score">4,6</div>
+
+              <div class="products-img-wrapper">
+                <picture>
+                  <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-12.webp 1x, /images/product-12-2x.webp 2x">
+                  <source type="image/webp" srcset="/images/product-12.webp 1x, /images/product-12.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="/images/product-12.png 1x, /images/product-12-2x.png 2x">
+                  <img class="products-item__img" src="/images/product-12.png" srcset="/images/product-12-2x.png 2x" alt="Наш товар">
+                </picture>
+              </div>
+              
+              <div class="products-item__details">
+                <p class="products-item__desc">Диван из кожзама <span class="no-br">““R-43”</span></p>
+
+                <div class="products-item__price">33 990 руб</div>
 
                 <a href="#" class="products-item__link transp-btn animated-btn">Купить</a>
               </div>
             </li>
           </ul>
 
-          <button class="rating__btn purple-btn animated-btn">Смотреть больше товаров</button>
+          <button class="rating__btn purple-btn animated-btn js-raiting-btn">Смотреть больше товаров</button>
         </div>
       </section>
     </div>

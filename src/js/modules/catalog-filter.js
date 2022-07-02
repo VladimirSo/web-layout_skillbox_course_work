@@ -32,14 +32,20 @@ const getDataFromForm = () => {
   return data;
 };
 
-// т.к. кнопки submit в форме нет, отправлять данные будем при каждом изменении
-filterFormEl.addEventListener('change', (ev) => {
-  ev.preventDefault();
+// ф-я отсылает данные из формы
+const sendFormData = () => {
   // заберем данные из формы
   const dataForSend = getDataFromForm();
   // и отправим их куда-нибудь...
-  // filterFormEl.submit(dataForSend);
+  // filterFormEl.submit();
   console.log(dataForSend);
+}
+
+// т.к. кнопки submit в форме нет, отправлять данные будем при каждом изменении
+filterFormEl.addEventListener('change', (ev) => {
+  ev.preventDefault();
+
+  sendFormData();
 });
 
 

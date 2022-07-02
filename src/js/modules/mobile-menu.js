@@ -1,4 +1,4 @@
-// 
+// моб.меню в хэдере
 const menuElem = document.querySelector('.js-main-nav')
 const mobMenuBtnElem = document.querySelector('.js-nav-btn');
 

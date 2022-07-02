@@ -28,13 +28,10 @@ if (priceSlider) {
   priceSlider.noUiSlider.on('end', function(){
     // помещаем в sessionStorage изменившиеся данные 
     sessionStorage.setItem('priceSliderValue', priceSlider.noUiSlider.get());
-    /* из формы данные забираем через функцию getDataFromForm
+    /* из формы данные отсылаем через функцию sendFormData
       (!) для корректной работы файл с настройками noUiSlider д.б. подключен
-      после файла с описанием функции getDataFromForm */
-    const dataForSend = getDataFromForm();
-    // отсылаем данные из формы...
-    // filterFormEl.submit(dataForSend);
-    console.log(dataForSend);
+      после файла с описанием функции sendFormData */
+    sendFormData();
   });
 
   const setRangeSlider = (i, value) => {

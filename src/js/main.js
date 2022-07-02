@@ -21,6 +21,9 @@
 // слайдеры главной страницы
 @@include('modules/main-page-swiper.js')
 
+// лист товаров с высоким рейтингом
+@@include('modules/raiting-list.js');
+
 // маска поля ввода телефона на главной странице
 @@include('modules/phone-mask.js')
 

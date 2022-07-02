@@ -1,4 +1,4 @@
-//
+// настройки для coices.js
 const selectRegElem = document.querySelector('.region-list');
 
 const choices = new Choices(selectRegElem, {

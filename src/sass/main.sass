@@ -26,7 +26,6 @@
     &__desc
       position: absolute
       top: 30px
-      // left: 30px
       left: calc(50vw - 130px)
       margin: 0
       width: 202px
@@ -192,23 +191,24 @@
   &__list
     display: grid
     grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: repeat(3, 278px)
+    // grid-template-rows: repeat(3, 278px)
+    grid-template-rows: repeat(1, auto)
     grid-gap: 16px
     margin-bottom: 25px
-    max-height: 872px
-    overflow: hidden
+    // overflow: hidden
     @media (min-width: 768px)
-      grid-template-rows: repeat(3, 420px)
+      // grid-template-rows: repeat(3, 420px)
       grid-gap: 32px
-      max-height: 1330px
     @media (min-width: 1024px)
       grid-template-columns: repeat(3, 1fr)
-      grid-template-rows: repeat(2, 420px)
-      max-height: 878px
+      // grid-template-rows: repeat(2, 420px)
     @media (min-width: 1290px)
       grid-template-columns: repeat(4, 1fr)
       margin-bottom: 30px
     @include product-card
+
+    .products-item
+      transition: opacity, 1s, easy
     
   &__btn.purple-btn
     width: 100%
@@ -220,12 +220,10 @@
 .baner-main
   position: relative
   &__img
-    // max-height: 210px
     height: 210px
     width: 100%
     margin-bottom: 32px
     @media (min-width: 768px)
-      // max-height: 600px
       height: 600px
       margin-bottom: 0
   &__btn.purple-btn

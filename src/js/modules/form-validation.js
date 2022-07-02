@@ -1,4 +1,4 @@
-//
+// настройки для just-validate.js
 const validation = new JustValidate('#contactForm',
   {
     errorFieldCssClass: 'is-invalid',

@@ -1,4 +1,4 @@
-//
+// слайдеры на главной странице
 const swiperHeroElem = document.querySelector('.hero-swiper');
 
 const swiper1 = new Swiper(swiperHeroElem, {
