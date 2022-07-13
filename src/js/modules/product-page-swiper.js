@@ -35,3 +35,55 @@ const swiper1 = new Swiper(swiperSimilarElem, {
     },
   }
 });
+
+
+const swiperProdCardElem = document.querySelector('.product-swiper');
+const swiperProdNavElem = document.querySelector('.nav-swiper');
+
+const swiper3 = new Swiper(swiperProdNavElem, {
+  direction: 'horizontal',
+  slidesPerView: 2.3 ,
+  spaceBetween: 24,
+  breakpoints: {
+    0: {
+      direction: 'horizontal',
+    },
+    768: {
+      direction: 'vertical',
+    },
+    1024: {
+      direction: 'horizontal',
+    }
+  }
+});
+
+const swiper2 = new Swiper(swiperProdCardElem, {
+  slidesPerView: 1,
+  noSwiping: true,
+  noSwipingClass: 'product-img-wrapper',
+  thumbs: { 
+    swiper: swiper3
+  },
+});
+
+const sliderNavItems = document.querySelectorAll('.nav-swiper__item');
+
+sliderNavItems.forEach((el, index) => {
+  el.setAttribute('data-index', index);
+
+  el.addEventListener('click', (e) => {
+    // const index = parseInt(e.currentTarget.dataset.index);
+    // // console.log(index)
+    // swiper2.slideTo(index);
+
+    for (let i = 0; i < sliderNavItems.length; i++) {
+      if (sliderNavItems[i].getAttribute('data-index') != index) {
+        // console.log('NO');
+        sliderNavItems[i].classList.remove('visually-hidden');
+      } else {
+        // console.log('YES');
+        sliderNavItems[i].classList.add('visually-hidden');
+      }
+    }
+  });
+});

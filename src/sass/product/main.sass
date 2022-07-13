@@ -3,9 +3,122 @@
 @import "src/sass/product/swiper.sass"
 /**/
 
+.main
+  padding-top: 12px
 .product
   padding-bottom: 70px
-  
+  &__card
+    margin-bottom: 32px
+    .product-swiper
+      padding-bottom: 16px
+    .product-img-wrapper
+      display: flex
+      justify-content: center
+    // .product__nav
+    //   // display: flex
+    //   height: 80px
+    //   padding: 10px
+    //   margin-bottom: 16px
+    //   // overflow-x: auto
+    //   // overflow-y: hidden
+    //   background-color: $grey-light
+    .nav-swiper
+      height: 80px
+      padding: 10px
+      margin-bottom: 16px
+      background-color: $grey-light
+      &__item
+        display: flex
+        justify-content: center
+      .product-nav__img
+        height: 61px
+        width: auto
+  &__details
+    display: flex
+    flex-direction: column
+  &__score
+    width: 100%
+    font-size: 16px
+    line-height: 21px
+    color: $orange
+    @media (min-width: 768px)
+      width: 236px
+      font-size: 16px
+      line-height: 20px
+    &::before
+      content: ""
+      display: inline-block
+      width: 16px
+      height: 16px
+      margin-right: 5px
+      background-image: url("/images/star.png")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 16px 16px
+      vertical-align: -10%
+      @media (min-width: 768px)
+        width: 16px
+        height: 16px
+        background-size: 16px 15px
+  &__title
+    margin: 0
+    margin-bottom: 8px
+    font-size: 16px
+    font-weight: 400
+    line-height: 21px
+  &__desc
+    width: 75%
+    margin-bottom: 16px
+    font-size: 14px
+    line-height: 14px
+    color: $grey
+  &__price
+    margin-bottom: 16px
+    font-size: 24px
+    line-height: 31px
+  &__btn
+    margin-bottom: 12px
+  &__link
+    display: block
+    width: max-content
+    align-self: center
+    font-size: 16px
+    line-height: 21px
+    color: $purple-main
+    border-bottom: 1px solid transparent
+    &:hover
+      @media (min-width: 1025px)
+        border-bottom-color: $purple-light
+    &:focus
+      border-bottom-color: $purple-light
+    &:active
+      border-bottom-color: $purple-shade
+
+  .specification
+    &__title
+      margin: 0
+      margin-bottom: 8px
+      font-size: 16px
+      line-height: 16px
+      font-weight: 600
+    &__desc
+      margin-bottom: 32px
+      font-size: 14px
+      line-height: 25px
+    &__img
+      display: flex
+      margin-bottom: 32px
+      picture:not(:last-child)
+        margin-right: 16px
+  .features
+    &__name
+      font-size: 10px
+      line-height: 14px
+      color: $grey
+    &__content
+      margin-bottom: 8px
+      font-size: 14px
+      line-height: 19px
 .similar-products
   padding-bottom: 70px
   &__title
