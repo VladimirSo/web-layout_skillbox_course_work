@@ -634,6 +634,7 @@
     margin-top: 14px
   .confirm
     display: flex
+    align-items: flex-end
     &__check
       display: none
       &+.check-cust
@@ -645,20 +646,20 @@
         background-color: $purple-main
         border-radius: 2px
         cursor: pointer
-        &:before,
-        &:after
+        &::before,
+        &::after
           content: ''
           position: absolute
           background: #fff
           opacity: 0
           transition: opacity 0.3s
-        &:before
+        &::before
           left: 2px
           top: 8px
           width: 5px
           height: 2px
           transform: rotate(50deg)
-        &:after
+        &::after
           left: 4px
           top: 6px
           width: 10px
@@ -666,9 +667,9 @@
           transform: rotate(-50deg)
     &__check:checked
       &+.check-cust
-        &:before
+        &::before
           opacity: 1
-        &:after
+        &::after
           opacity: 1
     &__desc
       margin: 0

@@ -140,20 +140,20 @@
           border: 1px solid $grey
           border-radius: 2px
           cursor: pointer
-          &:before,
-          &:after
+          &::before,
+          &::after
             content: ''
             position: absolute
             background: #fff
             opacity: 0
             transition: opacity 0.3s
-          &:before
+          &::before
             left: 2px
             top: 11px
             width: 7px
             height: 2px
             transform: rotate(50deg)
-          &:after
+          &::after
             left: 5px
             top: 9px
             width: 13px
@@ -164,9 +164,9 @@
         &+.check-cust
           background-color: $purple-main
           border-color: $purple-main
-          &:before
+          &::before
             opacity: 1
-          &:after
+          &::after
             opacity: 1
     &__item:not(:last-child)
       margin-bottom: 12px

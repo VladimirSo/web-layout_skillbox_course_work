@@ -1,13 +1,5 @@
 @import "src/sass/_veriables.sass"
 
-// $light-grey: #f7f7f7
-
-// $purple-main: #a65cf0
-// $purple-shade: #7033ac
-// $purple-light: #c998fb
-
-// $pink-violet: #ebd1ff
-
 .choices
   width: max-content
   min-width: 90px
@@ -53,7 +45,7 @@
   background-color: #fff
   color: $purple-main
 /**/
-.choices[data-type*=select-one]:after
+.choices[data-type*=select-one]::after
   height: 8px
   width: 8px
   border-width: 0px
@@ -61,7 +53,7 @@
   border-top: 1px solid $purple-main
   transform: rotate(135deg)
   margin-top: -4px
-.choices[data-type*=select-one].is-open:after
+.choices[data-type*=select-one].is-open::after
   border-width: 0px
   border-left: 1px solid $purple-main
   border-bottom: 1px solid $purple-main

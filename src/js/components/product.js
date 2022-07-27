@@ -14,3 +14,6 @@
 
 // слайдеры страницы карточки товара
 @@include('../modules/product-page-swiper.js')
+
+// модальные окна страницы карточки товара
+@@include('../modules/product-page-modal.js')

@@ -1,32 +1,69 @@
 @import "src/sass/_veriables.sass"
 @import "src/sass/_product-card.sass"
 @import "src/sass/product/swiper.sass"
-/**/
+@import "src/sass/product/modal-swiper.sass"
 
+/**/
 .main
   padding-top: 12px
+  @media (min-width: 768px)
+    padding-top: 32px
+
+/**/
 .product
   padding-bottom: 70px
+  @media (min-width: 768px)
+    padding-bottom: 35px
   &__card
-    margin-bottom: 32px
+    // margin-bottom: 32px
+    @media (min-width: 768px)
+      display: grid
+      grid-template-columns: 187px 436px
+      grid-template-rows: auto auto auto
+      grid-column-gap: 32px
+    @media (min-width: 1024px)
+      grid-template-columns: 514px 404px
+      grid-template-rows: 220px auto auto
+    @media (min-width: 1290px)
+      grid-template-columns: 624px 634px
+      grid-template-rows: 260px auto auto
+    .product-img
+      @media (min-width: 768px)
+        grid-column-start: 1
+        grid-column-end: -1
+        grid-row-start: 1
+        grid-row-end: 2
+      @media (min-width: 1024px)
+        grid-column-end: 2
     .product-swiper
       padding-bottom: 16px
+      @media (min-width: 768px)
+        padding-bottom: 32px
+      @media (min-width: 1290px)
+        padding-bottom: 16px
     .product-img-wrapper
       display: flex
       justify-content: center
-    // .product__nav
-    //   // display: flex
-    //   height: 80px
-    //   padding: 10px
-    //   margin-bottom: 16px
-    //   // overflow-x: auto
-    //   // overflow-y: hidden
-    //   background-color: $grey-light
     .nav-swiper
       height: 80px
       padding: 10px
       margin-bottom: 16px
       background-color: $grey-light
+      @media (min-width: 768px)
+        height: 350px
+        padding: 25px 32px
+        margin-bottom: 0
+      @media (min-width: 1024px)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 2
+        grid-row-end: 3
+        height: 81px
+        width: 514px
+        padding: 10px
+      @media (min-width: 1290px)
+        width: 624px
+        padding: 10px 25px
       &__item
         display: flex
         justify-content: center
@@ -34,8 +71,17 @@
         height: 61px
         width: auto
   &__details
+    margin-bottom: 32px
     display: flex
     flex-direction: column
+    @media (min-width: 768px)
+      align-self: center
+    @media (min-width: 1024px)
+      grid-column-start: -2
+      grid-column-end: -1
+      grid-row-start: 1
+      grid-row-end: 3
+      margin-bottom: 0
   &__score
     width: 100%
     font-size: 16px
@@ -61,11 +107,14 @@
         height: 16px
         background-size: 16px 15px
   &__title
-    margin: 0
+    margin-top: 10px
     margin-bottom: 8px
     font-size: 16px
     font-weight: 400
     line-height: 21px
+    @media (min-width: 768px)
+      font-size: 24px
+      line-height: 31px
   &__desc
     width: 75%
     margin-bottom: 16px
@@ -76,8 +125,16 @@
     margin-bottom: 16px
     font-size: 24px
     line-height: 31px
+    @media (min-width: 768px)
+      margin-bottom: 21px
+      font-size: 36px
+      line-height: 46px
   &__btn
     margin-bottom: 12px
+    @media (min-width: 768px)
+      width: max-content
+      padding-left: 35px
+      padding-right: 35px
   &__link
     display: block
     width: max-content
@@ -86,6 +143,9 @@
     line-height: 21px
     color: $purple-main
     border-bottom: 1px solid transparent
+    @media (min-width: 768px)
+      align-self: start
+      padding-left: 30px
     &:hover
       @media (min-width: 1025px)
         border-bottom-color: $purple-light
@@ -93,8 +153,21 @@
       border-bottom-color: $purple-light
     &:active
       border-bottom-color: $purple-shade
+  &__specification
+    @media (min-width: 768px)
+      grid-column-start: 1
+      grid-column-end: -1
 
   .specification
+    @media (min-width: 768px)
+      padding-top: 32px
+    @media (min-width: 1024px)
+      display: grid
+      grid-column-gap: 32px
+      grid-template-columns: 514px 404px
+      grid-template-rows: auto auto
+    @media (min-width: 1290px)
+      grid-template-columns: 624px 634px
     &__title
       margin: 0
       margin-bottom: 8px
@@ -105,22 +178,61 @@
       margin-bottom: 32px
       font-size: 14px
       line-height: 25px
+      @media (min-width: 768px)
+        width: 82%
+      @media (min-width: 1024px)
+        width: 100%
     &__img
       display: flex
       margin-bottom: 32px
       picture:not(:last-child)
         margin-right: 16px
+        @media (min-width: 1290px)
+          margin-right: 32px
+      @media (min-width: 1024px)
+        grid-column-start: 1
+        grid-column-end: 2
+        margin-bottom: 0
+    &__features
+      @media (min-width: 1024px)
+        grid-column-start: -2
+        grid-column-end: -1
+        grid-row-start: 1
+        grid-row-end: -1
   .features
+    @media (min-width: 768px)
+      display: grid
+      grid-template-columns: auto 216px
+      align-items: end
+      grid-row-gap: 10px
     &__name
       font-size: 10px
       line-height: 14px
       color: $grey
+      @media (min-width: 768px)
+        display: flex
+      .name__desc
+        @media (min-width: 768px)
+          font-size: 14px
+          margin-right: 8px
+      .name__dots
+        @media (min-width: 768px)
+          display: block
+          width: 100%
+          border-bottom: 1px dashed #999
     &__content
       margin-bottom: 8px
       font-size: 14px
       line-height: 19px
+      @media (min-width: 768px)
+        margin-bottom: 0
+        line-height: 14px
+
+/**/      
 .similar-products
   padding-bottom: 70px
+  @media (min-width: 768px)
+    padding-bottom: 20px
   &__title
     margin: 0
     margin-bottom: 24px
@@ -129,3 +241,59 @@
     @include product-card
   &__item
     width: 140px
+
+/**/
+.modal
+  &__container
+    width: 296px
+    padding: 32px 0 0 0
+    @media (min-width: 768px)
+      width: 624px
+    @media (min-width: 1024px)
+      padding: 50px 0 0 0
+      width: 952px
+    @media (min-width: 1290px)
+      width: 1280px
+  .btn-reset
+    top: 16px
+    right: 16px
+    width: 16px
+    height: 16px
+    border: none
+    // border: 1px solid black
+    background-color: transparent
+    @media (min-width: 768px)
+      top: 20px
+      right: 20px
+      width: 20px
+      height: 20px
+    &::after,
+    &::before
+      content: ''
+      width: 18px
+      height: 2px
+      background-color: $grey
+      position: absolute
+      left: -1px
+      top: 7px
+      @media (min-width: 1024px)
+        width: 22px
+        top: 9px
+    &::after
+      transform: rotate(45deg)
+    &::before
+      transform: rotate(-45deg)
+    &:hover
+      &::after,
+      &::before
+        @media (min-width: 1025px)
+          background-color: $purple-main
+    &:focus
+      background-color: $pink-violet
+      &::after,
+      &::before
+        background-color: $purple-shade
+    &:active
+      &::after,
+      &::before
+        background-color: $purple-shade

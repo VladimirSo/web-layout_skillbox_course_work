@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" type="text/css" href="/resources/third-party/choices/choices.min.css">
   <link rel="stylesheet" type="text/css" href="/resources/third-party/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="/resources/third-party/modal/modal.css">
   <link rel="stylesheet" type="text/css" href="/css/product/styles.css">
 </head>
 
@@ -28,14 +29,17 @@
         <h1 class="product__title visually-hidden">Карточка товара</h1>
 
         <div class="product__card">
-          <div class="product__img product-img">
-            <div class="product-swiper swiper">
+          <!-- -->
+          <div class="product__img product-img js-modal-swiper-open">
+            <div class="product-swiper swiper js-product-swiper">
               <div class="swiper-wrapper">
                 <div class="product-img-wrapper swiper-slide">
                   <picture>
+                    <source type="image/webp"  media="(min-width: 1290px)" srcset="/images/product-3-card-1-xl-1x.webp 1x, /images/product-3-card-1-xl-2x.webp 2x">
                     <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3-card-1-m.webp 1x, /images/product-3-card-1-m-2x.webp 2x">
                     <source type="image/webp" srcset="/images/product-3-card-1-s.webp 1x, /images/product-3-card-1-s-2x.webp 2x">
 
+                    <source media="(min-width: 1290px)" srcset="/images/product-3-card-1-xl-1x.png 1x, /images/product-3-card-1-xi-2x.png 2x">
                     <source media="(min-width: 768px)" srcset="/images/product-3-card-1-m.png 1x, /images/product-3-card-1-m-2x.png 2x">
                     <img class="product-img__main" src="/images/product-3-card-1-s.png" srcset="/images/product-3-card-1-s-2x.png 2x" alt="Наш товар">
                   </picture>
@@ -43,9 +47,11 @@
 
                 <div class="product-img-wrapper swiper-slide">
                   <picture>
+                    <source type="image/webp"  media="(min-width: 1290px)" srcset="/images/product-3-card-2-xl-1x.webp 1x, /images/product-3-card-2-xl-2x.webp 2x">
                     <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3-card-2-m.webp 1x, /images/product-3-card-2-m-2x.webp 2x">
                     <source type="image/webp" srcset="/images/product-3-card-2-s.webp 1x, /images/product-3-card-2-s-2x.webp 2x">
 
+                    <source media="(min-width: 1290px)" srcset="/images/product-3-card-2-xl-1x.png 1x, /images/product-3-card-2-xi-2x.png 2x">
                     <source media="(min-width: 768px)" srcset="/images/product-3-card-2-m.png 1x, /images/product-3-card-2-m-2x.png 2x">
                     <img class="product-img__main" src="/images/product-3-card-2-s.png" srcset="/images/product-3-card-2-s-2x.png 2x" alt="Наш товар">
                   </picture>
@@ -53,9 +59,11 @@
 
                 <div class="product-img-wrapper swiper-slide">
                   <picture>
+                    <source type="image/webp"  media="(min-width: 1290px)" srcset="/images/product-3-card-3-xl-1x.webp 1x, /images/product-3-card-3-xl-2x.webp 2x">
                     <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3-card-3-m.webp 1x, /images/product-3-card-3-m-2x.webp 2x">
                     <source type="image/webp" srcset="/images/product-3-card-3-s.webp 1x, /images/product-3-card-3-s-2x.webp 2x">
 
+                    <source media="(min-width: 1290px)" srcset="/images/product-3-card-3-xl-1x.png 1x, /images/product-3-card-3-xi-2x.png 2x">
                     <source media="(min-width: 768px)" srcset="/images/product-3-card-3-m.png 1x, /images/product-3-card-3-m-2x.png 2x">
                     <img class="product-img__main" src="/images/product-3-card-3-s.png" srcset="/images/product-3-card-3-s-2x.png 2x" alt="Наш товар">
                   </picture>
@@ -63,9 +71,11 @@
 
                 <div class="product-img-wrapper swiper-slide">
                   <picture>
+                    <source type="image/webp"  media="(min-width: 1290px)" srcset="/images/product-3-card-4-xl-1x.webp 1x, /images/product-3-card-4-xl-2x.webp 2x">
                     <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3-card-4-m.webp 1x, /images/product-3-card-4-m-2x.webp 2x">
                     <source type="image/webp" srcset="/images/product-3-card-4-s.webp 1x, /images/product-3-card-4-s-2x.webp 2x">
 
+                    <source media="(min-width: 1290px)" srcset="/images/product-3-card-4-xl-1x.png 1x, /images/product-3-card-4-xi-2x.png 2x">
                     <source media="(min-width: 768px)" srcset="/images/product-3-card-4-m.png 1x, /images/product-3-card-4-m-2x.png 2x">
                     <img class="product-img__main" src="/images/product-3-card-4-s.png" srcset="/images/product-3-card-4-s-2x.png 2x" alt="Наш товар">
                   </picture>
@@ -73,9 +83,11 @@
 
                 <div class="product-img-wrapper swiper-slide">
                   <picture>
+                    <source type="image/webp"  media="(min-width: 1290px)" srcset="/images/product-3-card-5-xl-1x.webp 1x, /images/product-3-card-5-xl-2x.webp 2x">
                     <source type="image/webp"  media="(min-width: 768px)" srcset="/images/product-3-card-5-m.webp 1x, /images/product-3-card-5-m-2x.webp 2x">
                     <source type="image/webp" srcset="/images/product-3-card-5-s.webp 1x, /images/product-3-card-5-s-2x.webp 2x">
 
+                    <source media="(min-width: 1290px)" srcset="/images/product-3-card-5-xl-1x.png 1x, /images/product-3-card-5-xi-2x.png 2x">
                     <source media="(min-width: 768px)" srcset="/images/product-3-card-5-m.png 1x, /images/product-3-card-5-m-2x.png 2x">
                     <img class="product-img__main" src="/images/product-3-card-5-s.png" srcset="/images/product-3-card-5-s-2x.png 2x" alt="Наш товар">
                   </picture>
@@ -84,7 +96,7 @@
             </div>
           </div>
 
-          <div class="product__nav product-nav nav-swiper swiper">
+          <div class="product__nav product-nav nav-swiper swiper js-nav-swiper">
             <div class="swiper-wrapper">
               <div class="nav-swiper__item swiper-slide visually-hidden">
                 <picture>
@@ -137,6 +149,7 @@
               </div> 
             </div>
           </div>
+          <!-- -->
 
           <div class="product__details">
             <div class="product__score">4,8</div>
@@ -147,13 +160,12 @@
 
             <div class="product__price">28 490 руб</div>
 
-            <button class="product__btn purple-btn">Купить в один клик</button>
+            <button class="product__btn purple-btn js-product-buy-btn">Купить в один клик</button>
 
             <a class="product__link" href="">+ Добавить в корзину</a>
           </div>
-        </div>
 
-        <div class="product__specification specification">
+          <div class="product__specification specification">
           <div class="specification__main">
             <h3 class="specification__title">Опорный механизм</h3>
 
@@ -219,14 +231,14 @@
             <div class="features__content">108 см</div>
 
             <div class="features__name name">
-              <div class="name__desc">Спальное место</div>
+              <div class="name__desc">Спальное&nbsp;место</div>
               <div class="name__dots"></div>
             </div>
 
             <div class="features__content">200 см х 125 см</div>
 
             <div class="features__name name">
-              <div class="name__desc">Высота посадки</div>
+              <div class="name__desc">Высота&nbsp;посадки</div>
               <div class="name__dots"></div>
             </div>
 
@@ -240,7 +252,7 @@
             <div class="features__content">Опорный</div>
 
             <div class="features__name name">
-              <div class="name__desc">Тип обивки</div>
+              <div class="name__desc">Тип&nbsp;обивки</div>
               <div class="name__dots"></div>
             </div>
 
@@ -261,14 +273,14 @@
             <div class="features__content">Независимый пружинный блок</div>
 
             <div class="features__name name">
-              <div class="name__desc">Материал каркаса</div>
+              <div class="name__desc">Материал&nbsp;каркаса</div>
               <div class="name__dots"></div>
             </div>
 
             <div class="features__content">Металл. рама с дерев. латами</div>
 
             <div class="features__name name">
-               <div class="name__desc">Количество мест</div>              
+               <div class="name__desc">Количество&nbsp;мест</div>              
                <div class="name__dots"></div>
             </div>
 
@@ -287,6 +299,7 @@
             </div>
 
             <div class="features__content">Условия</div>
+          </div>
           </div>
         </div>
       </section>
@@ -416,8 +429,52 @@
 
   @@include('page-blocks/_footer.html')
 
+  <div class="modal js-modal">
+    <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="one">
+      <button class="btn-reset modal__close js-modal-close"></button>
+
+      <div class="modal-content js-modal-content"></div>
+    </div>
+
+    <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="two">
+      <button class="btn-reset modal__close js-modal-close"></button>
+
+      <div class="modal-content buy-modal js-modal-content">
+        <button class="btn-reset modal__close js-modal-close"></button>
+
+        <h2 class="buy-modal__title">Купить в один клик</h2>
+
+        <p class="buy-modal__desc">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.</p>
+
+        <form id="buyForm" class="buy-modal__form buy-form" name="contactForm" action="#">
+            <div class="buy-form-field">
+              <input id="buyName" type="text" class="buy-form__name" name="buyName" placeholder="Как вас зовут?" required>
+            </div>
+
+            <div class="buy-form-field">
+              <input id="buyPhone" type="text" class="buy-form__phone" name="buyPhone" placeholder="Ваш телефон" required>
+            </div>
+
+            <button type="submit" class="buy-form__submit purple-btn">Отправить</button>
+
+            <div class="buy-form-field confirm">
+              <label for="buyCheck">
+                <input id="buyCheck" class="confirm__check" type="checkbox" name="buyCheck" required>
+                <span class="check-cust"></span>
+              </label>
+
+              <p class="confirm__desc">Принимаю <a href="#" class="confirm__link">пользовательское соглашение</a></p>
+            </div>
+          </form>
+      </div>
+    </div>    
+  </div>
+
   <script src="/resources/third-party/choices/choices.min.js"></script>
   <script src="/resources/third-party/swiper/swiper-bundle.min.js"></script>
+  <script src="/resources/third-party/just-validate/just-validate.production.min.js"></script>
+  <script src="/resources/third-party/inputmask/inputmask.min.js"></script>
+  <script src="/resources/third-party/modal/modal.js"></script>
 
   <script src="/js/product.js"></script>
 </body>
