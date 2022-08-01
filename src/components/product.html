@@ -430,13 +430,13 @@
   @@include('page-blocks/_footer.html')
 
   <div class="modal js-modal">
-    <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="one">
+    <div class="modal__container swiper-container" role="dialog" aria-modal="true" data-graph-target="one">
       <button class="btn-reset modal__close js-modal-close"></button>
 
       <div class="modal-content js-modal-content"></div>
     </div>
 
-    <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="two">
+    <div class="modal__container buy-container" role="dialog" aria-modal="true" data-graph-target="two">
       <button class="btn-reset modal__close js-modal-close"></button>
 
       <div class="modal-content buy-modal js-modal-content">
@@ -446,28 +446,40 @@
 
         <p class="buy-modal__desc">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.</p>
 
-        <form id="buyForm" class="buy-modal__form buy-form" name="contactForm" action="#">
-            <div class="buy-form-field">
-              <input id="buyName" type="text" class="buy-form__name" name="buyName" placeholder="Как вас зовут?" required>
-            </div>
+        <form id="buyForm" class="buy-modal__form buy-form js-buy-form" name="contactForm" action="#">
+          <div class="buy-form-field">
+            <input id="buyName" type="text" class="buy-form__name" name="buyName" placeholder="Как вас зовут?" required>
+          </div>
 
-            <div class="buy-form-field">
-              <input id="buyPhone" type="text" class="buy-form__phone" name="buyPhone" placeholder="Ваш телефон" required>
-            </div>
+          <div class="buy-form-field">
+            <input id="buyPhone" type="text" class="buy-form__phone" name="buyPhone" placeholder="Ваш телефон" required>
+          </div>
 
-            <button type="submit" class="buy-form__submit purple-btn">Отправить</button>
+          <button type="submit" class="buy-form__submit purple-btn">Отправить</button>
 
-            <div class="buy-form-field confirm">
-              <label for="buyCheck">
-                <input id="buyCheck" class="confirm__check" type="checkbox" name="buyCheck" required>
-                <span class="check-cust"></span>
-              </label>
+          <div class="buy-form-field confirm">
+            <label for="buyCheck">
+              <input id="buyCheck" class="confirm__check" type="checkbox" name="buyCheck" required>
+              <span class="check-cust"></span>
+            </label>
 
-              <p class="confirm__desc">Принимаю <a href="#" class="confirm__link">пользовательское соглашение</a></p>
-            </div>
-          </form>
+            <p class="confirm__desc">Принимаю <a href="#" class="confirm__link">пользовательское соглашение</a></p>
+          </div>
+        </form>
       </div>
-    </div>    
+    </div>
+
+    <div class="modal__container confirm-container" role="dialog" aria-modal="true" data-graph-target="three">
+      <button class="btn-reset modal__close js-modal-close"></button>
+
+      <div class="confirm-img logo">
+        <svg class="logo__img" width="172" height="117">
+          <use xlink:href="/images/sprite.svg#logo-sign"></use>
+        </svg>
+      </div>
+
+      <p class="confirm-desc">Спасибо, мы вам перезвоним!</p>
+    </div> 
   </div>
 
   <script src="/resources/third-party/choices/choices.min.js"></script>

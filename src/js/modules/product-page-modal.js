@@ -1,5 +1,6 @@
 // модалки страницы карточки товара
 
+// модалка формы запроса на покупку
 const modalBuyOpen = document.querySelector('.js-product-buy-btn');
 
 modalBuyOpen.addEventListener('click', () => {
@@ -42,17 +43,6 @@ modalBuyOpen.addEventListener('click', () => {
         },
       ])
 
-    // .addField('#buyEmail', [
-    //     {
-    //       rule: 'required',
-    //       errorMessage: 'Заполните это поле',
-    //     },
-    //     {
-    //       rule: 'email',
-    //       errorMessage: 'Недопустимый формат',
-    //     },
-    //   ])
-
     .addField('#buyPhone', [
         {
           rule: 'required',
@@ -64,7 +54,9 @@ modalBuyOpen.addEventListener('click', () => {
           errorMessage: 'Недопустимый формат',
           validator: () => {
             const phone = buyPhone.inputmask.unmaskedvalue();
-            return Number(phone) && phone.length === 10
+            // return Number(phone) && phone.length === 10
+            const checkResult = (Number(phone) && phone.length === 10) ? true : false ;
+            return checkResult
           },        
         }
       ])
@@ -75,12 +67,45 @@ modalBuyOpen.addEventListener('click', () => {
           errorMessage: 'Заполните это поле',
       },
     ]);
+
+    const buyFormEl = document.querySelector('.js-buy-form');
+    // обработчик события submit на форме
+    buyFormEl.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      // если все поля заполнены отправляем запрос
+      if (buyFormEl.checkValidity()) {
+        console.log('Форма валидна');
+        
+        const formData = new FormData(buyFormEl);
+        console.log(Array.from(formData.entries()));
+/*
+отправка fetch-запроса на нужный URL
+если приходит ОК-ответ то закрываем окно с формой
+очищаем форму и открываем окно с уведомлением
+
+код fetch-запроса закоммментирован, демонстрация работает и так
+*/
+        // let response = fetch('https://echo.htmlacademy.ru', {
+        //   method: 'POST',
+        //   body: formData
+        // })
+        //   .then(response => {
+        //     if (response.status === 200) {
+              buyFormEl.parentElement.parentElement.classList.remove('modal-open');
+              buyFormEl.reset();
+
+              new GraphModal().open('three');
+        //   }
+        // });
+      } else {
+        console.log('Форма не валидна');
+      }
+    });
 });
 
 // модалка свайпера
 const modalSwiperOpen = document.querySelector('.js-modal-swiper-open');
 
-// modalOpen.addEventListener('click', () => {
 modalSwiperOpen.addEventListener('click', () => {
   new GraphModal().open('one');
 
