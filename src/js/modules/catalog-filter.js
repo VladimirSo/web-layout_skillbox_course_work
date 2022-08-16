@@ -1,6 +1,7 @@
 // catalog-filter
-const filterFormEl = document.querySelector('.js-filter-form');
 
+//обработка данных из формы выбора товаров
+const filterFormEl = document.querySelector('.js-filter-form');
 // ф-я сбора данных для передачи из формы с фильтрами товара
 const getDataFromForm = () => {
   /* создаем объект содержащий все элементы формы,
@@ -31,7 +32,6 @@ const getDataFromForm = () => {
   // console.log(data);
   return data;
 };
-
 // ф-я отсылает данные из формы
 const sendFormData = () => {
   // заберем данные из формы
@@ -40,7 +40,6 @@ const sendFormData = () => {
   // filterFormEl.submit();
   console.log(dataForSend);
 }
-
 // т.к. кнопки submit в форме нет, отправлять данные будем при каждом изменении
 filterFormEl.addEventListener('change', (ev) => {
   ev.preventDefault();
@@ -48,10 +47,9 @@ filterFormEl.addEventListener('change', (ev) => {
   sendFormData();
 });
 
-
+//обработка показа/скрытия листов с категориями для формы выбора товаров
 // после загрузки если окно < 1290 на все children формы вешаем обработчик
 document.addEventListener('DOMContentLoaded', () => {
-
   if (document.documentElement.clientWidth < 1290 ) {
     for (let i = 0; i < filterFormEl.children.length; i++) {
 
@@ -59,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
-
 // ф-я открытия листов категорий фильтров выбора товаров
 const openFilterList = (ev) => {
   // console.log(ev.target.className);
@@ -87,3 +84,98 @@ const openFilterList = (ev) => {
     }
   }
 };
+
+//обработка листов с опциями выбора в фильтре выбора товаров
+const formLists = filterFormEl.querySelectorAll('.filter-form__list');
+//сколько пунктов в листе показывать
+// const numOfShowEls = 6;
+const numOfShowEls = 4;
+
+//ф-я-обработчик прячет лишние пункты
+function hideAdditionalElements (ev) {
+  // вычисляем величину до которой должна уменьшиться высота блока при анимации
+  const controlledHeight1 = parseFloat(getComputedStyle(this.lastElementChild).height);
+  
+  function getHeight (el) {
+    let height = 0;
+
+    for (let i=0; i<numOfShowEls; i++) {
+      height = height + (parseFloat(getComputedStyle(el.children[i]).height) + parseFloat(getComputedStyle(el.children[i]).marginBottom));
+    }
+
+    return height
+  };
+  const controlledHeight2 = getHeight(this);
+  const controlledHeight3 = parseFloat(getComputedStyle(this).paddingTop) + parseFloat(getComputedStyle(this).paddingBottom);
+
+  const controlledHeightFull = controlledHeight3 + controlledHeight2 + controlledHeight1;
+  // console.log(controlledHeight1);
+  // console.log(controlledHeight2);
+  // console.log(controlledHeight3);
+  // console.log(controlledHeightFull);
+
+  if (ev.target.classList.contains('filter-list-btn')) {
+    const num1 = numOfShowEls;
+    const num2 = this.children.length - 1; 
+
+    for (let i = num1; i < num2; i++) {
+      this.children[i].classList.add('visually-hidden');
+    }
+
+    this.removeEventListener('click', hideAdditionalElements);
+    this.addEventListener('click', showAdditionalElements);
+
+    ev.target.textContent = `Ещё ${num2 - num1}`;
+
+    this.style.height = `${controlledHeightFull}px`;
+  }
+}
+//ф-я-обработчик открывает спрятанные пункты
+function showAdditionalElements (ev) {
+  // величина от которой будет меняться высота блока при анимации
+  const blockHeigh = getComputedStyle(this).height;
+  // console.log('высота: ' + blockHeigh);
+
+  if (ev.target.classList.contains('filter-list-btn')) {
+    const num1 = numOfShowEls;
+    const num2 = this.children.length - 1;
+    // начальная высота для отработки анимации
+    this.style.height = blockHeigh;
+
+    for (let i = num1; i < num2; i++) {
+      // console.log(i);
+      this.children[i].classList.remove('visually-hidden');
+    }
+
+    this.removeEventListener('click', showAdditionalElements);
+    this.addEventListener('click', hideAdditionalElements);
+
+    ev.target.textContent = 'Свернуть';
+    // конечная высота для отработки анимации
+    this.style.height = `${this.scrollHeight}px`;
+  }
+}
+//после загрузки проходим по листам формы, если в листе больше пунктов чем задано, то прячем лишние
+//добавляем кнопку для открытия спрятанных пунктов и вешаем на неё ф-ю-обработчик открывающюю спрятанные пункты
+document.addEventListener('DOMContentLoaded', () => {
+  for (let i = 0; i < formLists.length; i++) {
+    const elemlOfList = formLists[i];
+    // console.log(elemlOfList);
+
+    if (elemlOfList.children.length > numOfShowEls) {
+      for (let i = numOfShowEls; i < elemlOfList.children.length; i++) {
+        elemlOfList.children[i].classList.add('visually-hidden');
+      }
+
+      const numOfHiddenEls = elemlOfList.children.length - numOfShowEls;
+
+      elemlOfList.insertAdjacentHTML('beforeend', `<span class="filter-list-btn">Ещё ${numOfHiddenEls}</span>`);
+
+      elemlOfList.addEventListener('click', showAdditionalElements);
+      // стили для анимации
+      elemlOfList.style.overflow = 'hidden';
+      elemlOfList.style.transition = 'height 500ms ease';
+    }
+  }
+});
+

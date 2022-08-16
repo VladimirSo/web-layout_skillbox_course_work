@@ -249,11 +249,6 @@
     padding: 32px 0 0 0
     @media (min-width: 768px)
       width: 624px
-    // @media (min-width: 1024px)
-    //   padding: 50px 0 0 0
-    //   width: 952px
-    // @media (min-width: 1290px)
-    //   width: 1280px
   .swiper-container
     @media (min-width: 1024px)
       padding: 50px 0 0 0
@@ -303,3 +298,31 @@
       &::after,
       &::before
         background-color: $purple-shade
+
+  .confirm-modal
+      display: flex
+      flex-direction: column
+      align-items: center
+      min-height: 216px
+      @media (min-width: 768px)
+        min-height: 420px
+      &__logo
+        margin-bottom: 14px
+        margin-top: 28px
+        @media (min-width: 768px)
+          margin-bottom: 32px
+          margin-top: 86px
+        .logo__img
+          width: 73px
+          height: 50px
+          @media (min-width: 768px)
+            width: 172px
+            height: 117px
+      &__desc
+        margin: 0
+        width: 195px
+        text-align: center
+        @media (min-width: 768px)
+          width: 100%
+          font-size: 32px
+          line-height: 32px

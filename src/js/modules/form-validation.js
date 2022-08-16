@@ -1,4 +1,4 @@
-// настройки для just-validate.js
+// настройки just-validate.js для главного окна
 const validation = new JustValidate('#contactForm',
   {
     errorFieldCssClass: 'is-invalid',
@@ -53,7 +53,9 @@ validation
         errorMessage: 'Недопустимый формат',
         validator: () => {
           const phone = contactPhone.inputmask.unmaskedvalue();
-          return Number(phone) && phone.length === 10
+          // return Number(phone) && phone.length === 10
+          const checkResult = (Number(phone) && phone.length === 10) ? true : false ;
+          return checkResult
         },        
       }
     ])
@@ -64,3 +66,31 @@ validation
         errorMessage: 'Заполните это поле',
     },
   ]);
+
+//
+const contactFormEl = document.querySelector('.js-contact-form');
+
+contactFormEl.addEventListener('submit', (ev) => {
+  ev.preventDefault();
+
+  if (contactFormEl.checkValidity()) {
+    console.log('Форма валидна');
+
+    const formData = new FormData(contactFormEl);
+    console.log(Array.from(formData.entries()));
+
+    let response = fetch('/resources/mailer/mail.php', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => {
+        if (response.status === 200) {
+          contactFormEl.reset();
+
+          // new GraphModal().open('three');
+          }
+        });
+  } else {
+    console.log('Форма не валидна');
+  }
+});

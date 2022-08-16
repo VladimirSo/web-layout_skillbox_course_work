@@ -12,6 +12,13 @@
 //
 @@include('../modules/select-region.js')
 
+console.log(breadcrumb.build());
+
+const brCrumbEl = document.querySelector('.breadcrumbs');
+const crumbs = breadcrumb.build();
+
+brCrumbEl.insertAdjacentHTML('beforeend', crumbs);
+
 // лист фильтра товаров по категориям
 @@include('../modules/catalog-filter.js')
 
