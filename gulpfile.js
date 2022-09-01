@@ -208,9 +208,7 @@ exports.imgMin = imgMin;
 exports.webpConv = webpConv;
 
 if (argv.prod) {
-    // exports.default = series(clean, parallel(resources, favicon), webpConv, imgMin, parallel(htmlMinify, scripts), parallel(sassStyles, mainStyles), styles, svgSprites);
-    exports.default = series(clean, parallel(resources, favicon), webpConv, imgMin, parallel(htmlMinify, scripts), parallel(mainStyles, sassStyles), styles, svgSprites);
+    exports.default = series(clean, parallel(resources, favicon), webpConv, imgMin, parallel(htmlMinify, scripts), mainStyles, sassStyles, styles, svgSprites);
 } else {
-    // exports.default = series(clean, parallel(resources, favicon),  webpConv, imgMin, parallel(htmlMinify, scripts), parallel(sassStyles, mainStyles), styles, svgSprites, watchFiles);
-    exports.default = series(clean, parallel(resources, favicon),  webpConv, imgMin, parallel(htmlMinify, scripts), parallel( mainStyles, sassStyles), styles, svgSprites, watchFiles);
+    exports.default = series(clean, parallel(resources, favicon),  webpConv, imgMin, parallel(htmlMinify, scripts), mainStyles, sassStyles, styles, svgSprites, watchFiles);
 }
