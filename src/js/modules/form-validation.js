@@ -1,4 +1,4 @@
-// настройки just-validate.js для главного окна
+// настройки just-validate.js для формы главного окна
 const validation = new JustValidate('#contactForm',
   {
     errorFieldCssClass: 'is-invalid',
@@ -67,7 +67,8 @@ validation
     },
   ]);
 
-//
+// обработка отправки формы
+// код fetch-запроса закоммментирован, демонстрация работает и так
 const contactFormEl = document.querySelector('.js-contact-form');
 
 contactFormEl.addEventListener('submit', (ev) => {
@@ -79,17 +80,17 @@ contactFormEl.addEventListener('submit', (ev) => {
     const formData = new FormData(contactFormEl);
     console.log(Array.from(formData.entries()));
 
-    let response = fetch('/resources/mailer/mail.php', {
-      method: 'POST',
-      body: formData
-    })
-      .then(response => {
-        if (response.status === 200) {
+    // let response = fetch('/resources/mailer/mail.php', {
+    //   method: 'POST',
+    //   body: formData
+    // })
+    //   .then(response => {
+    //     if (response.status === 200) {
           contactFormEl.reset();
 
-          // new GraphModal().open('three');
-          }
-        });
+          new GraphModal().open('one');
+        //   }
+        // });
   } else {
     console.log('Форма не валидна');
   }

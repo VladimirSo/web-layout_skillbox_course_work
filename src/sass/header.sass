@@ -554,9 +554,6 @@
       left: 0
       opacity: 1
 
-  &__breadcrumbs
-    display: none
-
 .catalog-page,
 .product-page
   .header
@@ -575,6 +572,7 @@
         &::after
           display: inline-block
           padding-left: 4px
+          padding-right: 3px
           content: "/"
         &:last-of-type::after
           display: none
@@ -582,9 +580,13 @@
           color: $purple-shade
         a:hover
           border-bottom: 1px solid $purple-shade
-.catalog-page .breadcrumb
-  &-item:last-child
-    display: none
+    .breadcrumb-item:last-child
+      a
+        color: $purple-shade
+        pointer-events: none
+      a:hover
+        border-bottom: 1px solid transparent
+        cursor: default
 
 .no-js
   .header

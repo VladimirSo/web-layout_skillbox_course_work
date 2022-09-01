@@ -85,7 +85,7 @@ modalBuyOpen.addEventListener('click', () => {
 
 код fetch-запроса закоммментирован, демонстрация работает и так
 */
-        // let response = fetch('https://echo.htmlacademy.ru', {
+        // let response = fetch('/resources/mailer/mail.php', {
         //   method: 'POST',
         //   body: formData
         // })

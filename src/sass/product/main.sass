@@ -13,7 +13,8 @@
 .product
   padding-bottom: 70px
   @media (min-width: 768px)
-    padding-bottom: 35px
+    // padding-bottom: 50px
+    padding-bottom: 25px
   &__card
     // margin-bottom: 32px
     @media (min-width: 768px)
@@ -44,6 +45,12 @@
     .product-img-wrapper
       display: flex
       justify-content: center
+      .product-img__main
+        @media (min-width: 1024px)
+          // border: 2px solid red
+          max-height: 208px
+        @media (min-width: 1290px)
+          max-height: 245px
     .nav-swiper
       height: 80px
       padding: 10px
@@ -75,13 +82,16 @@
     display: flex
     flex-direction: column
     @media (min-width: 768px)
-      align-self: center
+      margin-bottom: 50px
+      align-self: flex-end
     @media (min-width: 1024px)
       grid-column-start: -2
       grid-column-end: -1
       grid-row-start: 1
       grid-row-end: 3
-      margin-bottom: 0
+      margin-bottom: 35px
+    @media (min-width: 1290px)
+      margin-bottom: 77px
   &__score
     width: 100%
     font-size: 16px
@@ -107,12 +117,13 @@
         height: 16px
         background-size: 16px 15px
   &__title
-    margin-top: 10px
+    margin-top: 0
     margin-bottom: 8px
     font-size: 16px
     font-weight: 400
     line-height: 21px
     @media (min-width: 768px)
+      margin-bottom: 5px
       font-size: 24px
       line-height: 31px
   &__desc
@@ -121,20 +132,29 @@
     font-size: 14px
     line-height: 14px
     color: $grey
+    @media (min-width: 768px)
+      width: 100%
+      margin-bottom: 20px
   &__price
-    margin-bottom: 16px
+    margin-bottom: 14px
     font-size: 24px
     line-height: 31px
     @media (min-width: 768px)
-      margin-bottom: 21px
+      margin-bottom: 20px
       font-size: 36px
       line-height: 46px
   &__btn
-    margin-bottom: 12px
+    margin-bottom: 10px
     @media (min-width: 768px)
       width: max-content
+      margin-bottom: 15px
       padding-left: 35px
       padding-right: 35px
+  .purple-btn
+    @media (min-width: 768px)
+      letter-spacing: -0.04em
+      padding-bottom: 18px
+      padding-top: 18px
   &__link
     display: block
     width: max-content
@@ -170,7 +190,7 @@
       grid-template-columns: 624px 634px
     &__title
       margin: 0
-      margin-bottom: 8px
+      margin-bottom: 6px
       font-size: 16px
       line-height: 16px
       font-weight: 600
@@ -182,17 +202,27 @@
         width: 82%
       @media (min-width: 1024px)
         width: 100%
+        margin-bottom: 80px
+      p
+        margin: 0
+        margin-bottom: 5px
+        @media (min-width: 1024px)
+          margin-bottom: 10px
     &__img
       display: flex
       margin-bottom: 32px
       picture:not(:last-child)
         margin-right: 16px
+        @media (min-width: 1024px)
+          margin-right: 25px
         @media (min-width: 1290px)
           margin-right: 32px
       @media (min-width: 1024px)
         grid-column-start: 1
         grid-column-end: 2
         margin-bottom: 0
+      @media (min-width: 1290px)
+        padding-top: 15px
     &__features
       @media (min-width: 1024px)
         grid-column-start: -2
@@ -204,7 +234,12 @@
       display: grid
       grid-template-columns: auto 216px
       align-items: end
-      grid-row-gap: 10px
+      grid-row-gap: 11px
+    @media (min-width: 1024px)
+      padding-top: 5px
+      padding-bottom: 10px
+    @media (min-width: 1290px)
+      grid-template-columns: auto 305px
     &__name
       font-size: 10px
       line-height: 14px
@@ -230,12 +265,19 @@
 
 /**/      
 .similar-products
-  padding-bottom: 70px
+  padding-bottom: 68px
   @media (min-width: 768px)
     padding-bottom: 20px
+    padding-top: 10px
+  @media (min-width: 1024px)
+    padding-top: 35px
+  @media (min-width: 1290px)
+    padding-top: 47px
   &__title
-    margin: 0
-    margin-bottom: 24px
+    // margin: 0
+    margin-top: 15px
+    margin-bottom: 30px
+    letter-spacing: -0.05em
   &__list
     box-sizing: border-box
     @include product-card
@@ -299,30 +341,31 @@
       &::before
         background-color: $purple-shade
 
-  .confirm-modal
-      display: flex
-      flex-direction: column
-      align-items: center
-      min-height: 216px
-      @media (min-width: 768px)
-        min-height: 420px
-      &__logo
-        margin-bottom: 14px
-        margin-top: 28px
-        @media (min-width: 768px)
-          margin-bottom: 32px
-          margin-top: 86px
-        .logo__img
-          width: 73px
-          height: 50px
-          @media (min-width: 768px)
-            width: 172px
-            height: 117px
-      &__desc
-        margin: 0
-        width: 195px
-        text-align: center
-        @media (min-width: 768px)
-          width: 100%
-          font-size: 32px
-          line-height: 32px
+  @import "src/sass/_notice-modal.sass"
+  // .confirm-modal
+  //   display: flex
+  //   flex-direction: column
+  //   align-items: center
+  //   min-height: 216px
+  //   @media (min-width: 768px)
+  //     min-height: 420px
+  //   &__logo
+  //     margin-bottom: 14px
+  //     margin-top: 28px
+  //     @media (min-width: 768px)
+  //       margin-bottom: 32px
+  //       margin-top: 86px
+  //     .logo__img
+  //       width: 73px
+  //       height: 50px
+  //       @media (min-width: 768px)
+  //         width: 172px
+  //         height: 117px
+  //   &__desc
+  //     margin: 0
+  //     width: 195px
+  //     text-align: center
+  //     @media (min-width: 768px)
+  //       width: 100%
+  //       font-size: 32px
+  //       line-height: 32px

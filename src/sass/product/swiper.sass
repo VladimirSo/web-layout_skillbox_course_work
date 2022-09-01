@@ -2,6 +2,9 @@
 
 .similar-swiper
   padding-bottom: 50px
+  .swiper-button-prev, .swiper-button-next
+    @media (min-width: 768px)
+      top: 25px
 
 
 .swiper-button-prev::after, .swiper-button-next::after  
@@ -13,7 +16,6 @@
   height: 32px
   border: 2px solid $purple-main
   border-radius: 50%
-  // background-position: center
   background-position: 45% 45%
   background-repeat: no-repeat
   @media (min-width: 768px)

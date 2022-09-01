@@ -17,10 +17,12 @@
 
   <link rel="stylesheet" type="text/css" href="resources/third-party/choices/choices.min.css">
   <link rel="stylesheet" type="text/css" href="resources/third-party/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="/resources/third-party/modal/modal.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body class="main-page no-js">
+  <script src="/js/check-js.js"></script>
 
   @@include('components/page-blocks/_header.html')
 
@@ -624,7 +626,7 @@
               </picture>
             </div>
 
-            <a href="/components/catalog.html" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link" aria-label="В каталог">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -655,7 +657,7 @@
               </picture>
             </div>
 
-            <a href="/components/catalog.html" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link" aria-label="В каталог">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -686,7 +688,7 @@
               </picture>
             </div>
 
-            <a href="/components/catalog.html" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link" aria-label="В каталог">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -717,7 +719,7 @@
               </picture>
             </div>
 
-            <a href="/components/catalog.html" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link" aria-label="В каталог">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -748,7 +750,7 @@
               </picture>
             </div>
 
-            <a href="/components/catalog.html" class="tops-item__link tops-link">
+            <a href="/components/catalog.html" class="tops-item__link tops-link" aria-label="В каталог">
               <span class="tops-link__content">В каталог</span>
             </a>
           </li>
@@ -860,6 +862,9 @@
           </p>
 
           <form id="contactForm" class="contacts__form contact-form js-contact-form" name="contactForm" action="#">
+            <input type="hidden" name="project" value="SitDownPls">
+            <input type="hidden" name="subject" value="from the contact form">
+
             <div class="contact-form-field">
               <input id="contactName" type="text" class="contact-form__name" name="contactName" placeholder="Как вас зовут?" required>
             </div>
@@ -892,10 +897,21 @@
 
   @@include('components/page-blocks/_footer.html')
 
+  <div class="modal js-modal">
+    <div class="modal__container confirm-container" role="dialog" aria-modal="true" data-graph-target="one">
+      <button class="btn-reset modal__close js-modal-close"></button>
+
+      @@include('components/page-blocks/_notice-modal.html')
+
+    </div>
+  </div>
+
+
 	<script src="resources/third-party/choices/choices.min.js"></script>
   <script src="resources/third-party/swiper/swiper-bundle.min.js"></script>
   <script src="resources/third-party/just-validate/just-validate.production.min.js"></script>
   <script src="resources/third-party/inputmask/inputmask.min.js"></script>
+  <script src="resources/third-party/modal/modal.js"></script>
   <script src="js/main.js"></script>
   
 </body>
