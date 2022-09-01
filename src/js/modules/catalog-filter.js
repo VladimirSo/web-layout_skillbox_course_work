@@ -88,8 +88,8 @@ const openFilterList = (ev) => {
 //обработка листов с опциями выбора в фильтре выбора товаров
 const formLists = filterFormEl.querySelectorAll('.filter-form__list');
 //сколько пунктов в листе показывать
-// const numOfShowEls = 6;
-const numOfShowEls = 4;
+const numOfShowEls = 9;
+// const numOfShowEls = 4;
 
 //ф-я-обработчик прячет лишние пункты
 function hideAdditionalElements (ev) {
