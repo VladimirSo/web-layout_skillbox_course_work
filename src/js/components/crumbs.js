@@ -21,7 +21,7 @@ const crumbsTmpl = [
 let crumbsList = document.createElement('ul');
 crumbsList.className = "breadcrumb breadcrumb-list";
 // вставляем в список элементы которые будут на всех страницах
-crumbsList.innerHTML = '<li class="breadcrumb-item"><a href="/">Главная</a></li><li class="breadcrumb-item"><a href="#">Каталог</a></li><li class="breadcrumb-item"><a href="#">Диваны</a></li>';
+crumbsList.innerHTML = '<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="/">Главная</a></li><li class="breadcrumb-item"><a class="breadcrumb-item__link" href="#">Каталог</a></li><li class="breadcrumb-item"><a class="breadcrumb-item__link" href="#">Диваны</a></li>';
 // console.log(crumbsList);
 
 // ф-я будет получать лист со списком крошек и записывать в sessionStorage массив с ссылками из крошек
@@ -72,10 +72,10 @@ const makeCrumbsList = (url, name) => {
       for (let i=0; i<arrayLiElems.length; i++) {
         let currentCrumbName = getCrumbName(arrayLiElems[i]);
 
-        crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a href="${arrayLiElems[i]}">${currentCrumbName}</a></li>`);
+        crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${arrayLiElems[i]}">${currentCrumbName}</a></li>`);
       }
           
-      crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a href="${url}">${name}</a></li>`);
+      crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${url}">${name}</a></li>`);
     } else {
       arrayLiElems.forEach(function(item, index) {
         if (item == url) {
@@ -85,13 +85,13 @@ const makeCrumbsList = (url, name) => {
           // console.log('новый список:' + arrayLiElems);
 
           for (let i=0; i<arrayLiElems.length; i++) {
-            crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a href="${arrayLiElems[i]}">${name}</a></li>`);
+            crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${arrayLiElems[i]}">${name}</a></li>`);
           }
         }
       });
     }
   } else {
-    crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a href="${url}">${name}</a></li>`);
+    crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${url}">${name}</a></li>`);
   }
 }
 

@@ -74,10 +74,10 @@ modalBuyOpen.addEventListener('click', () => {
       ev.preventDefault();
       // если все поля заполнены отправляем запрос
       if (buyFormEl.checkValidity()) {
-        console.log('Форма валидна');
+        // console.log('Форма валидна');
         
         const formData = new FormData(buyFormEl);
-        console.log(Array.from(formData.entries()));
+        // console.log(Array.from(formData.entries()));
 /*
 отправка fetch-запроса на нужный URL
 если приходит ОК-ответ то закрываем окно с формой

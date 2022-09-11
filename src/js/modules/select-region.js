@@ -5,4 +5,5 @@ const choices = new Choices(selectRegElem, {
   searchEnabled: false,
   itemSelectText: '',
   shouldSort: false,
+  labelId: '',
 });

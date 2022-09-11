@@ -51,11 +51,16 @@ const showProducts = (ev) => {
       prodListEl.children[i].classList.remove('visually-hidden');
     }
   }
+  // прокручиваем страницу до начала списка
+  prodListEl.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+  });
 }
 
 // отрисовка кнопок страниц списка товаров и навешивание на них функции-обработчика
 for (let i=0; i < pagesOfProdItems; i++) {
-  pagesBlockEl.insertAdjacentHTML('beforeend', `<span class="products-pagination__btn transp-btn animated-btn">${i+1}</span>`);
+  pagesBlockEl.insertAdjacentHTML('beforeend', `<span class="products-pagination__btn animated-btn">${i+1}</span>`);
 
   pagesBlockEl.children[i].addEventListener('click', showProducts);
 }

@@ -164,17 +164,19 @@
 
             <button class="product__btn purple-btn js-product-buy-btn">Купить в один клик</button>
 
-            <a class="product__link" href="">+ Добавить в корзину</a>
+            <div class="product__link">
+              <a class="product-add-link" href="#">+ Добавить в корзину</a>
+            </div>
           </div>
 
           <div class="product__specification specification">
           <div class="specification__main">
             <h3 class="specification__title">Опорный механизм</h3>
 
-            <div class="specification__desc">
-              <p>Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье «выпрыгивает» вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих — опустить&nbsp;спинку.</p>
+            <div class="specification__desc spec-desc">
+              <p class="spec-desc__tail">Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье «выпрыгивает» вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих — опустить&nbsp;спинку.</p>
 
-              <p>Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но подросток справится.</p>
+              <p class="spec-desc__tail">Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но подросток справится.</p>
             </div>
           </div>
 
@@ -432,7 +434,7 @@
   @@include('page-blocks/_footer.html')
 
   <div class="modal js-modal">
-    <div class="modal__container swiper-container" role="dialog" aria-modal="true" data-graph-target="one">
+    <div class="modal__container modal-swiper-container" role="dialog" aria-modal="true" data-graph-target="one">
       <button class="btn-reset modal__close js-modal-close"></button>
 
       <div class="modal-content js-modal-content"></div>

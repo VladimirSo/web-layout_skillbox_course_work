@@ -1,0 +1,189 @@
+@import "src/sass/_veriables.sass"
+
+.modal
+  .product-swiper
+    margin: 0 16px 0 16px
+    @media (min-width: 1024px)
+      margin: 0 65px 50px 65px
+    @media (min-width: 1290px)
+      margin: 0 107px 50px 107px
+  .product-img-wrapper
+    display: flex
+    justify-content: center
+  .product-img__main
+    @media (min-width: 1024px)
+      height: 322px
+    @media (min-width: 1290px)
+      height: 418px
+      max-height: 418px
+  .nav-swiper
+    background-color: $grey-light
+    height: 118px
+    border-radius: 0 0 10px 10px
+    @media (min-width: 768px)
+      height: 166px
+      padding-left: 60px
+      padding-right: 60px
+      @media (min-width: 1290px)
+        width: 100%
+        padding-left: 50px
+        padding-right: 50px
+    &__item
+      height: 86px
+      margin: auto 0
+      display: flex
+      justify-content: center
+      align-items: center
+      @media (min-width: 768px)
+        height: 126px
+  .product-nav__img
+    height: 86px
+    width: auto
+    @media (min-width: 768px)
+      height: 126px
+  .nav-swiper-btn-prev
+    left: 16px
+    top: 50%
+    @media (min-width: 1290px)
+      display: none
+  .nav-swiper-btn-next
+    right: 16px
+    top: 50%
+    @media (min-width: 1290px)
+      display: none
+
+.buy-modal
+  padding: 0 16px 30px 16px
+  @media (min-width: 768px)
+    padding: 0 30px 30px 30px
+  &__title
+    margin: 0
+    margin-bottom: 8px
+    font-size: 24px
+    line-height: 24px
+    font-weight: 400
+    @media (min-width: 768px)
+      font-size: 32px
+      line-height: 32px
+  &__desc
+    margin: 0
+    margin-bottom: 16px
+    font-size: 14px
+    line-height: 19px
+    @media (min-width: 768px)
+      max-width: 374px
+      // margin-bottom: 16px
+.buy-form__name, .buy-form__phone
+  width: 100%
+  padding: 7px 18px
+  margin-bottom: 16px
+  line-height: 40px
+  color: $grey
+  border: 1px solid $grey-light
+  border-radius: 10px
+  background-color: $grey-light
+.buy-form__phone
+  @media (min-width: 768px)
+    margin-bottom: 30px
+.buy-form__name::placeholder,
+.buy-form__phone::placeholder,
+.buy-form__email::placeholder
+  color: $grey
+.buy-form__name::-webkit-input-placeholder,
+.buy-form__phone::-webkit-input-placeholder,
+.buy-form__email::-webkit-input-placeholder
+  color: $grey
+.buy-form__name::-moz-placeholder,
+.buy-form__phone::-moz-placeholder,
+.buy-form__email::-moz-placeholder
+  color: $grey
+.buy-form__name:hover,
+.buy-form__phone:hover,
+.buy-form__email:hover
+  @media (min-width: 1025px)
+    background-color: $md-grey
+.buy-form__name:active,
+.buy-form__phone:active,
+.buy-form__email:active
+  border-color: $purple-main
+  background-color: $pink-light
+.buy-form__name:focus,
+.buy-form__phone:focus,
+.buy-form__email:focus
+  border-color: #b8ec64
+  color: #333
+.buy-form-field
+  position: relative
+  padding-top:14px
+.buy-form__submit
+  min-width: 160px
+  margin-bottom: 12px
+  text-align: center
+  @media (min-width: 768px)
+    margin-bottom: 0
+
+.confirm
+  display: flex
+  align-items: flex-end
+  &__check
+    display: none
+    &+.check-cust
+      position: relative
+      display: block
+      width: 14px
+      height: 14px
+      margin-right: 5px
+      background-color: $purple-main
+      border-radius: 2px
+      cursor: pointer
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        background: #fff
+        opacity: 0
+        transition: opacity 0.3s
+      &::before
+        left: 2px
+        top: 8px
+        width: 5px
+        height: 2px
+        transform: rotate(50deg)
+      &::after
+        left: 4px
+        top: 6px
+        width: 10px
+        height: 2px
+        transform: rotate(-50deg)
+  &__check:checked
+    &+.check-cust
+      &::before
+        opacity: 1
+      &::after
+        opacity: 1
+  &__desc
+    margin: 0
+    margin-right: -5px
+    font-size: 12px
+    @media (min-width: 768px)
+      font-size: 14px
+  &__link
+    color: $purple-main
+    border-bottom: 1px solid $purple-main
+
+.buy-form__name.is-invalid,
+.buy-form__email.is-invalid,
+.buy-form__phone.is-invalid
+  border-color: #ff6972
+.buy-form__name.is-success,
+.buy-form__email.is-success,
+.buy-form__phone.is-success
+  border-color: #B8EC64
+  color: #333
+.is-label-invalid
+  color: #ff6972
+  font-size: 12px
+  line-height: 12px
+  position: absolute
+  top: 0
+  left: 12px

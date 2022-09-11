@@ -116,477 +116,483 @@
       grid-row-start: 1
       grid-row-end: 2
 
-  .logo
-    display: flex
-    justify-content: center
-    background-color: $light-grey
+.header-logo
+  display: flex
+  justify-content: center
+  background-color: $light-grey
+  @media (min-width: 768px)
+    background-color: transparent
+  @media (min-width: 1290px)
+    justify-content: flex-start
+  &__img
+    margin: 12px 0 11px 0
     @media (min-width: 768px)
-      background-color: transparent
-    @media (min-width: 1290px)
-      justify-content: flex-start
-    &__img
-      margin: 12px 0 11px 0
-      @media (min-width: 768px)
-        margin: 32px 0 12px 0
-      @media (min-width: 1024px)
-        margin: 32px auto 12px 0
-      @media (min-width: 1290px)
-        margin-bottom: 20px
-  .region
-    display: flex
-    flex-direction: column
-    padding: 18px 0 15px 0
-    border-bottom: 1px solid $light-grey
-    @media (min-width: 768px)
-      flex-direction: row
-      justify-content: space-between
-      padding: 18px 0
-      border-bottom: none
+      margin: 32px 0 12px 0
     @media (min-width: 1024px)
-      padding: 18px 0
+      margin: 32px auto 12px 0
     @media (min-width: 1290px)
-      justify-content: flex-end
-      width: 360px
-      padding: 14px 0 14px 0
-      margin: 0 215px 0 auto
-    &-select
-      display: flex
-      align-items: center
-      margin-bottom: 15px
-      @media (min-width: 768px)
-        margin-bottom: 0
-      @media (min-width: 1290px)
-        margin-right: 20px
-      &__desc
-        margin: 0
-    &-wrapper
-      @media (min-width: 1290px)
-        background-color: $light-grey
-    .region-list
-      // -webkit-appearance: none
-      // -moz-appearance: none
-      // -ms-appearance: none
-      // width: max-content
-      // min-width: 80px
-      // line-height: 18px
-      // padding: 2px 20px 2px 3px
-      // background: url("../images/arrow-down-purple.png")
-      // background-repeat: no-repeat
-      // background-position: right 8px
-      // border: none
-      // color: $purple-main
-      // cursor: pointer
-      // &:active
-      //   color: $purple-shade
-      // &:focus
-      //   background-color: $pink-violet
-      //   color: $purple-shade
+      margin-bottom: 20px
 
-  .contact-phone
-    display: block
-    padding-left: 22px
-    font-size: 14px
-    line-height: 22px
+.region
+  display: flex
+  flex-direction: column
+  padding: 18px 0 15px 0
+  border-bottom: 1px solid $light-grey
+  @media (min-width: 768px)
+    flex-direction: row
+    justify-content: space-between
+    padding: 18px 0
+    border-bottom: none
+  @media (min-width: 1024px)
+    padding: 18px 0
+  @media (min-width: 1290px)
+    justify-content: flex-end
+    width: 360px
+    padding: 14px 0 14px 0
+    margin: 0 215px 0 auto
+  &-select
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+    @media (min-width: 768px)
+      margin-bottom: 0
+    @media (min-width: 1290px)
+      margin-right: 20px
+    &__desc
+      margin: 0
+  &-wrapper
+    @media (min-width: 1290px)
+      background-color: $light-grey
+.region-list
+  // -webkit-appearance: none
+  // -moz-appearance: none
+  // -ms-appearance: none
+  // width: max-content
+  // min-width: 80px
+  // line-height: 18px
+  // padding: 2px 20px 2px 3px
+  // background: url("../images/arrow-down-purple.png")
+  // background-repeat: no-repeat
+  // background-position: right 8px
+  // border: none
+  // color: $purple-main
+  // cursor: pointer
+  // &:active
+  //   color: $purple-shade
+  // &:focus
+  //   background-color: $pink-violet
+  //   color: $purple-shade
+
+.contact-phone
+  display: block
+  padding-left: 22px
+  font-size: 14px
+  line-height: 22px
+  color: $orange
+  background-image: url("/images/sprite.svg#phone-orange")
+  background-repeat: no-repeat
+  background-position: -45px 3px
+  background-size: auto 18px
+  &:hover
+    @media (min-width: 1025px)
+      color: $orange-light
+      background-image: url("/images/sprite.svg#phone-orange-hover")
+  &:focus
     color: $orange
     background-image: url("/images/sprite.svg#phone-orange")
-    background-repeat: no-repeat
-    background-position: -45px 3px
-    background-size: auto 18px
-    &:hover
-      @media (min-width: 1025px)
-        color: $orange-light
-        background-image: url("/images/sprite.svg#phone-orange-hover")
-    &:focus
-      color: $orange
-      background-image: url("/images/sprite.svg#phone-orange")
-      background-color: $orange-light-bgr
-    &:active
-      color: $orange-shade
-      background-image: url("/images/sprite.svg#phone-orange-active")
+    background-color: $orange-light-bgr
+  &:active
+    color: $orange-shade
+    background-image: url("/images/sprite.svg#phone-orange-active")
 
-  .add-menu
-    display: none
-    @media (min-width: 768px)
-      display: flex
-      justify-content: flex-start
-      flex-wrap: wrap
-      padding: 18px 0 10px 0
-      margin: 0 auto
-      max-width: 624px
-      font-size:14px
-      color: $grey
+.add-menu
+  display: none
+  @media (min-width: 768px)
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding: 18px 0 10px 0
+    margin: 0 auto
+    max-width: 624px
+    font-size:14px
+    color: $grey
+  @media (min-width: 1024px)
+    max-width: 710px
+    margin: 0 135px 0 auto
+  @media (min-width: 1290px)
+    padding: 18px 0 12px 5px
+    margin: 0 auto 0 0
+    max-width: 725px
+    background-color: transparent
+  &__item
+    margin-bottom: 5px
+    margin-right: 15px
     @media (min-width: 1024px)
-      max-width: 710px
-      margin: 0 135px 0 auto
-    @media (min-width: 1290px)
-      padding: 18px 0 12px 5px
-      margin: 0 auto 0 0
-      max-width: 725px
-      background-color: transparent
-    &__item
-      margin-bottom: 5px
-      margin-right: 15px
-      @media (min-width: 1024px)
-        margin-right: 44px
-    &__item:first-child
-      margin-left: -10px
-    &__item:last-child
-      margin-right: -10px
-    &-wrapper
-      @media (min-width: 768px)
-        background-color: $light-grey
-      @media (min-width: 1290px)
-        background-color: $light-grey
-
-  .main-nav
-    padding: 10px 0 10px 0
+      margin-right: 44px
+  &__item:first-child
+    margin-left: -10px
+  &__item:last-child
+    margin-right: -10px
+  &-wrapper
     @media (min-width: 768px)
+      background-color: $light-grey
+    @media (min-width: 1290px)
+      background-color: $light-grey
+
+.main-nav
+  padding: 10px 0 10px 0
+  @media (min-width: 768px)
+    padding: 30px 0 12px 0
+  @media (min-width: 1024px)
+    width: 725px
+    padding: 30px 0 0 0 
+    margin-right: -10px
+    align-self: center
+    justify-self: flex-end
+  @media (min-width: 1290px)
+    width: 990px
+    padding: 22px 0 0 0
+  &__list
+    display: none
+    @media (min-width: 1024px)
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+  &__item
+    @media (min-width: 1024px)
+      margin-bottom: 10px
+      margin-right:22px
+    @media (min-width: 1290px)
+      margin-right: 72px
+  &__item:last-child
+    @media (min-width: 1024px)
+      margin-right: 0
+    @media (min-width: 1290px)
+      margin-right: 10px
+
+.nav-btn
+  width: 32px
+  height: 30px
+  padding: 3px 4px
+  border: none
+  background-color: transparent
+  @media (min-width: 768px)
+    height: 32px
+  @media (min-width: 1024px)
+    display: none
+  &-line
+    display: block
+    width: 24px
+    height: 3px
+    background-color: $purple-main
+    transition: all 0.3s ease-in-out
+    &:nth-child(2)
+      margin: 7px auto
+  &-active
+    .nav-btn-line:nth-child(2)
+      opacity: 0
+    .nav-btn-line:nth-child(1)
+      transform: translateY(10px) rotate(45deg)
+    .nav-btn-line:nth-child(3)
+      transform: translateY(-10px) rotate(-45deg)
+
+.search-form
+  border-top: 1px solid $light-grey
+  padding: 15px 0 32px 0
+  @media (min-width: 768px)
+    border-top: none
+    padding: 15px 0 30px 0
+    display: flex
+    flex-direction: row
+  @media (min-width: 1024px)
+    padding: 22px 0 32px 0
+  @media (min-width: 1290px)
+    padding: 12px 90px 32px 0px
+
+.search-field
+  border: 2px solid $light-grey
+  background-color: $light-grey
+  border-radius: 10px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 12px 32px
+  margin-bottom: 15px
+  @media (min-width: 768px)
+    width: 90%
+    border-radius: 10px 0 0 10px
+    margin-bottom: 0
+  @media (min-width: 1024px)
+    width: 68.5%
+  @media (min-width: 1290px)
+    width: 77%
+  &:hover
+    @media (min-width: 1025px)
+      background-color: $md-grey
+      border-color: $md-grey
+  &:focus
+    background-color: $pink-light
+    border-color: $purple-main
+  &:active
+    background-color: $light-grey
+  &__input
+    width: 85%
+    padding: 0 9px 0 25px
+    line-height: 1.5        
+    border: none
+    background-color: inherit
+    background-image: url("/images/sprite.svg#search")
+    background-repeat: no-repeat
+    background-position: -5px center
+    background-size: auto 16px
+    &:focus
+      background-image: url("/images/sprite.svg#search-purple")
+  &__input::placeholder
+    color: $grey
+  &__input::-webkit-input-placeholder
+    color: $grey
+  &__input::-moz-placeholder
+    color: $grey
+  &__submit
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    border: 2px solid $purple-main
+    background-image: url("/images/arrow-right-purple.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-color: inherit
+    cursor: pointer
+    &:focus
+      background-color: $pink-light
+
+.users-data
+  @media (min-width: 1024px)
+    width: 100%
+    justify-self: start
+    background-color: $light-grey
+  @media (min-width: 1290px)
+    width: auto
+    justify-self: end
+    align-self: center
+    background-color: transparent
+  &-container
+    display: flex
+    justify-content: space-between
+    width: 103px
+    padding: 5px 0 5px 0
+    @media (min-width: 768px)
+      width: 105px
       padding: 30px 0 12px 0
     @media (min-width: 1024px)
-      width: 725px
-      padding: 30px 0 0 0 
-      margin-right: -10px
-      align-self: center
-      justify-self: flex-end
+      width: 110px
+      padding: 7px 0 6px 5px
     @media (min-width: 1290px)
-      width: 990px
-      padding: 22px 0 0 0
-    &__list
-      display: none
-      @media (min-width: 1024px)
-        display: flex
-        justify-content: center
-        flex-wrap: wrap
-    &__item
-      @media (min-width: 1024px)
-        margin-bottom: 10px
-        margin-right:22px
-      @media (min-width: 1290px)
-        margin-right: 72px
-    &__item:last-child
-      @media (min-width: 1024px)
-        margin-right: 0
-      @media (min-width: 1290px)
-        margin-right: 10px
-    .nav-btn
-      width: 32px
-      height: 30px
-      padding: 3px 4px
-      border: none
-      background-color: transparent
-      @media (min-width: 768px)
-        height: 32px
-      @media (min-width: 1024px)
-        display: none
-      &-line
-        display: block
-        width: 24px
-        height: 3px
-        background-color: $purple-main
-        transition: all 0.3s ease-in-out
-        &:nth-child(2)
-          margin: 7px auto
-      &.nav-btn-active
-        .nav-btn-line:nth-child(2)
-          opacity: 0
-      &.nav-btn-active
-        .nav-btn-line:nth-child(1)
-          transform: translateY(10px) rotate(45deg)
-      &.nav-btn-active
-        .nav-btn-line:nth-child(3)
-          transform: translateY(-10px) rotate(-45deg)
+      padding: 0 5px 15px 0
+      justify-content: flex-end
+      
+.users-cabinet
+  display: block
+  width: 34px
+  height: 36px
+  background-image: url("/images/sprite.svg#users-cabinet")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 187px 30px
+  @media (min-width: 1290px)
+    margin-right: 20px
+  &:hover
+    @media (min-width: 1025px)
+      background-image: url("/images/sprite.svg#users-cabinet-hover")
+  &:active
+    background-image: url("/images/sprite.svg#users-cabinet-active")
+  &:focus
+    background-image: url("/images/sprite.svg#users-cabinet-focus")
+    background-color: $purple-light
 
-  .search-form
-    border-top: 1px solid $light-grey
-    padding: 15px 0 32px 0
-    @media (min-width: 768px)
-      border-top: none
-      padding: 15px 0 30px 0
-      display: flex
-      flex-direction: row
-    @media (min-width: 1024px)
-      padding: 22px 0 32px 0
-    @media (min-width: 1290px)
-      padding: 12px 90px 32px 0px
+.users-basket
+  display: block
+  width: 50px
+  height: 36px
+  background-image: url("/images/sprite.svg#users-basket")
+  background-repeat: no-repeat
+  background-position: -62px center
+  background-size: 187px 30px
+  position: relative
+  &:hover
+    @media (min-width: 1025px)
+      background-image: url("/images/sprite.svg#users-basket-hover")
+  &:active
+    background-image: url("/images/sprite.svg#users-basket-active")
+  &:focus
+    background-image: url("/images/sprite.svg#users-basket-focus")
+    background-color: $purple-light
+  &__content
+    display: block
+    width: 15px
+    height: 15px
+    position: absolute
+    top: 10px
+    left: 6px
+    border-radius: 50%
+    background-color: $orange
+    font-size: 10px
+    color: #fff
+    text-align: center
 
-    .search-field
-      border: 2px solid $light-grey
-      background-color: $light-grey
-      border-radius: 10px
-      display: flex
-      align-items: center
-      justify-content: space-between
-      padding: 12px 32px
-      margin-bottom: 15px
-      @media (min-width: 768px)
-        width: 90%
-        border-radius: 10px 0 0 10px
-        margin-bottom: 0
-      @media (min-width: 1024px)
-        width: 68.5%
-      @media (min-width: 1290px)
-        width: 77%
-      &:hover
-        @media (min-width: 1025px)
-          background-color: $md-grey
-          border-color: $md-grey
-      &:focus
-        background-color: $pink-light
-        border-color: $purple-main
-      &:active
-        background-color: $light-grey
-      &__input
-        width: 85%
-        padding: 0 9px 0 25px
-        line-height: 1.5        
-        border: none
-        background-color: inherit
-        background-image: url("/images/sprite.svg#search")
-        background-repeat: no-repeat
-        background-position: -40px center
-        background-size: auto 16px
-        &:focus
-          background-image: url("/images/sprite.svg#search-purple")
-      &__input::placeholder
-        color: $grey
-      &__input::-webkit-input-placeholder
-        color: $grey
-      &__input::-moz-placeholder
-        color: $grey
-      &__submit
-        width: 32px
-        height: 32px
-        border-radius: 50%
-        border: 2px solid $purple-main
-        background-image: url("/images/arrow-right-purple.png")
-        background-repeat: no-repeat
-        background-position: center
-        background-color: inherit
-        cursor: pointer
-        &:focus
-          background-color: $pink-light
+.search-area
+  position: relative
+  background-color: #fff
+  @media (min-width: 768px)
+    width: 40%
+  @media (min-width: 1024px)
+    width: 31.5%
+  &__list
+    display: none
+    position: absolute
+    flex-wrap: wrap
+    padding: 22px 10% 12px 10%
+    border: 2px solid $light-grey
+    border-radius: 0 0 10px 10px
+    z-index: 15
+    background-color: inherit
+  &__item
+    width: 50%
+    display: block
+    margin-bottom: 10px
+    cursor: pointer
+    caret-color: transparent
+    overflow: hidden
+    text-overflow: ellipsis
 
-    .search-area
-      position: relative
-      background-color: #fff
-      @media (min-width: 768px)
-        width: 40%
-      @media (min-width: 1024px)
-        width: 31.5%
-      &__list
-        display: none
-        position: absolute
-        flex-wrap: wrap
-        padding: 22px 10% 12px 10%
-        border: 2px solid $light-grey
-        border-radius: 0 0 10px 10px
-        z-index: 15
-        background-color: inherit
-      &__item
-        width: 50%
-        display: block
-        margin-bottom: 10px
-        cursor: pointer
-        caret-color: transparent
-        overflow: hidden
-        text-overflow: ellipsis
-        input[type="radio"]
-          display: none
-          &:checked+span
-            color: $purple-shade
+.search-item__input
+  display: none
+  &:checked+.search-item__text
+    color: $purple-shade
 
-      .srch-area-btn
-        width: 100%
-        display: flex
-        justify-content: space-between
-        background-color: transparent
-        border: 2px solid $light-grey
-        border-radius: 10px
-        padding: 19px 28px 19px 28px
-        color: $purple-main
-        line-height: 18px
-        text-align: left
-        @media (min-width: 768px)
-          border-radius: 0 10px 10px 0
-        @media (min-width: 1290px)
-          padding-right: 40px
-        &:hover
-          @media (min-width: 1025px)
-            border-color: $purple-main
-        &:active
-          border-color: $purple-shade
-        &:focus
-          border-color: $purple-main
-          background-color: $pink-light
-        &__arrow
-          display: block
-          width: 18px
-          height: 15px
-          background-image: url("/images/arrow-down-purple.png")
-          background-repeat: no-repeat
-          background-position: bottom center
+.srch-area-btn
+  width: 100%
+  display: flex
+  justify-content: space-between
+  background-color: transparent
+  border: 2px solid $light-grey
+  border-radius: 10px
+  padding: 19px 28px 19px 28px
+  color: $purple-main
+  line-height: 18px
+  text-align: left
+  @media (min-width: 768px)
+    border-radius: 0 10px 10px 0
+  @media (min-width: 1290px)
+    padding-right: 40px
+  &:hover
+    @media (min-width: 1025px)
+      border-color: $purple-main
+  &:active
+    border-color: $purple-shade
+  &:focus
+    border-color: $purple-main
+    background-color: $pink-light
+  &__arrow
+    display: block
+    width: 18px
+    height: 15px
+    background-image: url("/images/arrow-down-purple.png")
+    background-repeat: no-repeat
+    background-position: bottom center
 
-  .users-data
-    @media (min-width: 1024px)
-      width: 100%
-      justify-self: start
-      background-color: $light-grey
-    @media (min-width: 1290px)
-      width: auto
-      justify-self: end
-      align-self: center
-      background-color: transparent
-    &-container
-      display: flex
-      justify-content: space-between
-      width: 103px
-      padding: 5px 0 5px 0
-      @media (min-width: 768px)
-        width: 105px
-        padding: 30px 0 12px 0
-      @media (min-width: 1024px)
-        width: 110px
-        padding: 7px 0 6px 5px
-      @media (min-width: 1290px)
-        padding: 0 5px 15px 0
-        justify-content: flex-end
-        
-    .users-cabinet
-      display: block
-      width: 34px
-      height: 36px
+.search-area-open
+  .srch-area-btn__arrow
+    transform: rotateX(180deg)
+    transition: transform 0.5s ease-in-out
+  .search-area__list
+    display: flex
+    animation: open-srch-list 0.5s ease-in-out 1
+    animation-fill-mode: forwards
+    transform-origin: center top
 
-      background-image: url("/images/sprite.svg#users-cabinet")
-      background-repeat: no-repeat
-      background-position: center
-      background-size: 187px 30px
-      @media (min-width: 1290px)
-        margin-right: 20px
-      &:hover
-        @media (min-width: 1025px)
-          background-image: url("/images/sprite.svg#users-cabinet-hover")
-      &:active
-        background-image: url("/images/sprite.svg#users-cabinet-active")
-      &:focus
-        background-image: url("/images/sprite.svg#users-cabinet-focus")
-        background-color: $purple-light
-    .users-basket
-      display: block
-      width: 50px
-      height: 36px
-      background-image: url("/images/sprite.svg#users-basket")
-      background-repeat: no-repeat
-      background-position: -62px center
-      background-size: 187px 30px
-      position: relative
-      &:hover
-        @media (min-width: 1025px)
-          background-image: url("/images/sprite.svg#users-basket-hover")
-      &:active
-        background-image: url("/images/sprite.svg#users-basket-active")
-      &:focus
-        background-image: url("/images/sprite.svg#users-basket-focus")
-        background-color: $purple-light
-      &__content
-        display: block
-        width: 15px
-        height: 15px
-        position: absolute
-        top: 10px
-        left: 6px
-        border-radius: 50%
-        background-color: $orange
-        font-size: 10px
-        color: #fff
-        text-align: center
+@keyframes open-srch-list
+  from
+    transform: scaleY(0)
+  to
+    transform: scaleY(1)
 
-  .search-area-open
-    .srch-area-btn__arrow
-      transform: rotateX(180deg)
-      transition: transform 0.5s ease-in-out
-    .search-area__list
-      display: flex
-      animation: open-srch-list 0.5s ease-in-out 1
-      animation-fill-mode: forwards
-      transform-origin: center top
-
-  @keyframes open-srch-list
-    from
-      transform: scaleY(0)
-    to
-      transform: scaleY(1)
-
-  .main-nav-open
-    width: 100vw
+.main-nav-open
+  width: 100vw
+  height: 100%
+  padding: 0
+  background-color: rgba(0, 0, 0, 0.5)
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 16
+  .main-nav-container
+    width: 90vw
     height: 100%
-    padding: 0
-    background-color: rgba(0, 0, 0, 0.5)
-    position: fixed
+    padding: 20px
+    background-color: #fff
+    animation: move-popup 0.5s ease-in-out 1
+    position: absolute
     top: 0
     left: 0
-    z-index: 16
-    .main-nav-container
-      width: 90vw
-      height: 100%
-      padding: 20px
-      background-color: #fff
-      animation: move-popup 0.5s ease-in-out 1
-      position: absolute
-      top: 0
-      left: 0
-      .main-nav__list
-        display: block
-        overflow-x: hidden
-        overflow-Y: auto
-        .main-nav__item
-          margin: 20px 0
-        .main-nav__link
-          padding: 0 10px
+    .main-nav__list
+      display: block
+      overflow-x: hidden
+      overflow-Y: auto
+      .main-nav__item
+        margin: 20px 0
+      .main-nav__link
+        padding: 0 10px
 
-  @keyframes move-popup
-    from
-      height: 0
-      left: -90vw
-      opacity: 0
-    to
-      height: 100%
-      left: 0
-      opacity: 1
+@keyframes move-popup
+  from
+    height: 0
+    left: -90vw
+    opacity: 0
+  to
+    height: 100%
+    left: 0
+    opacity: 1
 
+/**/
 .catalog-page,
 .product-page
   .header
     .search-form
       padding-bottom: 20px
-  .header__breadcrumbs
-    display: none
-    @media (min-width: 768px)
-      display: block
-    .breadcrumb
-      &-item
-        display: inline-block
-        font-size: 14px
-        line-height: 14px
-        color: $grey
-        &::after
-          display: inline-block
-          padding-left: 4px
-          padding-right: 3px
-          content: "/"
-        &:last-of-type::after
-          display: none
-        &--active
-          color: $purple-shade
-        a:hover
-          border-bottom: 1px solid $purple-shade
-    .breadcrumb-item:last-child
-      a
-        color: $purple-shade
-        pointer-events: none
-      a:hover
-        border-bottom: 1px solid transparent
-        cursor: default
 
+.header__breadcrumbs
+  display: none
+  @media (min-width: 768px)
+    display: block
+
+.breadcrumb
+  &-item
+    display: inline-block
+    font-size: 14px
+    line-height: 14px
+    color: $grey
+    &::after
+      display: inline-block
+      padding-left: 6px
+      padding-right: 3px
+      content: "/"
+    &:last-of-type::after
+      display: none
+    &--active
+      color: $purple-shade
+    &__link:hover
+      border-bottom: 1px solid $purple-shade
+
+.breadcrumb-item:last-child
+  .breadcrumb-item__link
+    color: $purple-shade
+    pointer-events: none
+  .breadcrumb-item__link:hover
+    border-bottom: 1px solid transparent
+    cursor: default
+
+/**/
 .no-js
   .header
     padding-bottom: 150px

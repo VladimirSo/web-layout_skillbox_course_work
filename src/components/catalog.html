@@ -24,7 +24,7 @@
 
   @@include('page-blocks/_header.html')
 
-  <main class="main">
+  <main class="main catalog-main">
     <div class="fixed-container catalog-container">
       <h1 class="catalog-page__title">Каталог</h1>
 
@@ -46,55 +46,55 @@
 
             <fieldset class="filter-form__list">
               <label class="filter-form__item">
-                <input type="radio" name="category" value="sofas" form="filterForm">
+                <input class="category-input" type="radio" name="category" value="sofas" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Диваны</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="category" value="armchairs" form="filterForm">
+                <input class="category-input"  type="radio" name="category" value="armchairs" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Кресла</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="category" value="poufs" form="filterForm">
+                <input class="category-input"  type="radio" name="category" value="poufs" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Пуфы</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="category" value="beds" form="filterForm">
+                <input class="category-input"  type="radio" name="category" value="beds" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Кровати</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="category" value="curbstones" form="filterForm">
+                <input class="category-input"  type="radio" name="category" value="curbstones" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Тумбы</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="category" value="dressers" form="filterForm">
+                <input class="category-input"  type="radio" name="category" value="dressers" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Комоды</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="category" value="chairs" form="filterForm">
+                <input class="category-input"  type="radio" name="category" value="chairs" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Стулья</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="category" value="tables" form="filterForm">
+                <input class="category-input"  type="radio" name="category" value="tables" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Столы</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="category" value="accessories" form="filterForm">
+                <input class="category-input"  type="radio" name="category" value="accessories" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Аксессуары</span>
               </label>
@@ -102,24 +102,24 @@
           </div>
 
           <div class="filter-form__price">
-            <button type="button" class="filter-form-btn">
+            <button type="button" class="filter-form-btn price-btn">
               <span class="filter-form-btn__desc">Цена</span>
               <span class="filter-form-btn__arrow"></span>
             </button>
 
-            <fieldset class="filter-form__list">
+            <fieldset class="filter-form__list price-list">
               <div class="filter-form__item filter-price">
                 <div class="filter-price__inputs">
                   <label class="filter-price__label">
                     <span class="filter-price__text">от</span>
 
-                    <input type="number" name="price-min" min="0" max="250000" placeholder="0" class="filter-price__input" id="price-input-0" form="filterForm">
+                    <input class="price-input"  type="number" name="price-min" min="0" max="250000" placeholder="0" class="filter-price__input" id="price-input-0" form="filterForm">
                   </label>
 
                   <label class="filter-price__label">
                     <span class="filter-price__text">до</span>
 
-                    <input type="number" name="price-max" min="0" max="250000" placeholder="250000" class="filter-price__input" id="price-input-1" form="filterForm">
+                    <input class="price-input" type="number" name="price-max" min="0" max="250000" placeholder="250000" class="filter-price__input" id="price-input-1" form="filterForm">
                   </label>
                 </div>
 
@@ -136,19 +136,19 @@
 
             <fieldset class="filter-form__list">
               <label class="filter-form__item">
-                <input type="radio" name="discount" value="more5k" form="filterForm">
+                <input class="discount-input" type="radio" name="discount" value="more5k" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Более 5 000</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="discount" value="less5k" form="filterForm">
+                <input class="discount-input" type="radio" name="discount" value="less5k" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Менее 5 000</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="discount" value="no-matter" form="filterForm" checked>
+                <input class="discount-input" type="radio" name="discount" value="no-matter" form="filterForm" checked>
                 <span class="check-cust"></span>
                 <span>Не важно</span>
               </label>
@@ -163,55 +163,55 @@
 
             <fieldset class="filter-form__list">
               <label class="filter-form__item">
-                <input type="radio" name="color" value="brown" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="brown" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Коричневый</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="color" value="black" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="black" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Черный</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="color" value="beige" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="beige" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Бежевый</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="color" value="gray" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="gray" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Серый</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="color" value="white" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="white" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Белый</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="color" value="blue" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="blue" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Синий</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="color" value="orange" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="orange" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Оранжевый</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="color" value="yellow" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="yellow" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Желтый</span>
               </label>
 
               <label class="filter-form__item">
-                <input type="radio" name="color" value="green" form="filterForm">
+                <input class="color-input" type="radio" name="color" value="green" form="filterForm">
                 <span class="check-cust"></span>
                 <span>Зеленый</span>
               </label>

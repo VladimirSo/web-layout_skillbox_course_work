@@ -23,6 +23,18 @@
       background-color: $light-grey
       @media (min-width: 768px)
         height: 400px
+    &__btn
+      width: 284px
+      margin: 32px auto 0 auto
+      @media (min-width: 768px)
+        width: 170px
+        position: absolute
+        left: calc(50vw - 312px)
+        bottom: 80px
+      @media (min-width: 1024px)
+        left: calc(50vw - 476px)
+      @media (min-width: 1290px)
+        left: calc(50vw - 640px)
     &__desc
       position: absolute
       top: 30px
@@ -43,39 +55,28 @@
         left: calc(50vw - 476px)
       @media (min-width: 1290px)
         left: calc(50vw - 640px)
-      &.desc-dark
-        color: $grey
-      &.desc-light
-        color: #fff
-
-    &__btn
-      width: 284px
-      margin: 32px auto 0 auto
-      @media (min-width: 768px)
-        width: 170px
-        position: absolute
-        left: calc(50vw - 312px)
-        bottom: 80px
-      @media (min-width: 1024px)
-        left: calc(50vw - 476px)
-      @media (min-width: 1290px)
-        left: calc(50vw - 640px)
+.desc-dark
+  color: $grey
+.desc-light
+  color: #fff
 
 /**/
 .offers
   padding-bottom: 70px
-  .spec-offers
-    margin-bottom: 70px
-    @media (min-width: 768px)
-      margin-bottom: 20px
-    &__title
-      +main-title()
-      margin-bottom: 25px
-
-  .offers-swiper
+  &-swiper
     padding-bottom: 50px
 
-  .spec-item
+.spec-offers
+  margin-bottom: 70px
+  @media (min-width: 768px)
+    margin-bottom: 20px
+  &__title
+    +main-title()
+    margin-bottom: 25px
+    @media (min-width: 1290px)
+      margin-bottom: 22px
+
+.spec-item
     position: relative
     display: flex
     flex-direction: column
@@ -91,40 +92,20 @@
       position: absolute
       top: 30px
       left: 0
-    .discount-tag
-      display: flex
-      flex-wrap: nowrap
-      align-items: center
-      width: max-content
-      &__text
-        padding: 10px 15px 10px 15px
-        background-color: $orange
-        font-weight: bold
-        font-size: 14px
-        line-height: 14px
-        color: #fff
-        min-width: 55px
-        text-align: center
-      &__arrow
-        width: 0
-        height: 0
-        border-top: 17px solid transparent
-        border-bottom: 17px solid transparent
-        border-left: 8px solid #ff862f
     &-img-wrapper
       flex-grow: 1
       align-items: center
       justify-content: center
       display: flex
     &__img
-      margin-bottom: 10px
+      margin-bottom: 5px
       @media (min-width: 768px)
         margin-bottom: 0
     &-details
       width: 236px
     &__desc
       margin: 0
-      margin-bottom: 20px
+      margin-bottom: 25px
       font-size: 24px
       line-height: 31px
       @media (min-width: 768px)
@@ -142,43 +123,65 @@
         color: $grey
         text-decoration: line-through
 
-  .spec-item-adv
-    .spec-item__img
-      @media (min-width: 1290px)
-        margin-bottom: 15px
-    .spec-item-details
-      @media (min-width: 1290px)
-        display: grid
-        grid-template-columns: 1fr 1fr
-        width: 564px
-        grid-template-rows: auto auto 55px
-        height: 245px
-        grid-column-gap: 110px
-    .spec-item__desc
-      @media (min-width: 1290px)
-        grid-column-start: 1
-        grid-column-end: 2
-        grid-row-start: 1
-        grid-row-end: 2
-    .spec-item__price
-      @media (min-width: 1290px)
-        grid-column-start: 1
-        grid-column-end: 2
-    .spec-item__link
-      @media (min-width: 1290px)
-        grid-column-start: 1
-        grid-column-end: 2
-        grid-row-start: -2
-        grid-row-end: -1
-    .spec-item__scheme
-      display: none
-      @media (min-width: 1290px)
-        display: block
-        grid-column-start: -2
-        grid-column-end: -1
-        grid-row-start: 1
-        grid-row-end: -1
-        align-self: end
+.discount-tag
+  display: flex
+  flex-wrap: nowrap
+  align-items: center
+  width: max-content
+  &__text
+    padding: 10px 15px 10px 15px
+    background-color: $orange
+    font-weight: bold
+    font-size: 14px
+    line-height: 14px
+    color: #fff
+    min-width: 55px
+    text-align: center
+  &__arrow
+    width: 0
+    height: 0
+    border-top: 17px solid transparent
+    border-bottom: 17px solid transparent
+    border-left: 8px solid #ff862f
+
+.spec-item-adv
+  align-self: end
+  &__img
+    @media (min-width: 1290px)
+      margin-bottom: 15px
+  &-details
+    @media (min-width: 1290px)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      width: 564px
+      grid-template-rows: auto auto 55px
+      height: 245px
+      grid-column-gap: 110px
+  &__desc
+    @media (min-width: 1290px)
+      grid-column-start: 1
+      grid-column-end: 2
+      grid-row-start: 1
+      grid-row-end: 2
+  &__price
+    @media (min-width: 1290px)
+      grid-column-start: 1
+      grid-column-end: 2
+  &__link
+    @media (min-width: 1290px)
+      grid-column-start: 1
+      grid-column-end: 2
+      grid-row-start: -2
+      grid-row-end: -1
+  &__scheme
+    display: none
+    @media (min-width: 1290px)
+      display: block
+      grid-column-start: -2
+      grid-column-end: -1
+      grid-row-start: 1
+      grid-row-end: -1
+      align-self: end
 
 /**/
 .rating
@@ -192,7 +195,7 @@
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: repeat(1, auto)
     grid-gap: 16px
-    margin-bottom: 25px
+    margin-bottom: 30px
     @media (min-width: 768px)
       grid-gap: 32px
     @media (min-width: 1024px)
@@ -201,11 +204,9 @@
       grid-template-columns: repeat(4, 1fr)
       margin-bottom: 30px
     @include product-card
-
     .products-item
       transition: opacity, 1s, easy
-    
-  &__btn.purple-btn
+  &__btn
     width: 100%
     @media (min-width: 768px)
       width: 296px
@@ -217,11 +218,11 @@
   &__img
     height: 210px
     width: 100%
-    margin-bottom: 32px
+    margin-bottom: 30px
     @media (min-width: 768px)
       height: 600px
       margin-bottom: 0
-  &__btn.purple-btn
+  &__btn
     width: 296px
     margin: 0 auto
     @media (min-width: 768px)
@@ -241,9 +242,8 @@
     color: #d5b986
     width: 190px
     margin: 0
-    padding: 0
     position: absolute
-    top: 30px
+    top: 32px
     left: calc(50vw - 148px)
     @media (min-width: 768px)
       font-size: 60px
@@ -255,15 +255,16 @@
       left: calc(50vw - 476px)
     @media (min-width: 1290px)
       left: calc(50vw - 640px)
-  .baner-title__subtitle
-    font-family: "Open Sans", "Arial", sans-serif
-    font-size: 16px
-    line-height: 16px
-    font-weight: 400
-    color: #fff
-    @media (min-width: 768px)
-      font-size: 48px
-      line-height: 48px
+
+.baner-title__subtitle
+  font-family: "Open Sans", "Arial", sans-serif
+  font-size: 16px
+  line-height: 16px
+  font-weight: 400
+  color: #fff
+  @media (min-width: 768px)
+    font-size: 48px
+    line-height: 48px
 
 /**/
 .catalog-tops
@@ -274,213 +275,222 @@
     margin-bottom: 26px
     @media (min-width: 1024px)
       margin-bottom: 22px
-  .tops-list
-    display: grid
-    grid-template-columns: repeat(2, auto)
-    grid-template-rows: 296px 207px 207px
-    grid-column-gap: 16px
-    grid-row-gap: 30px
+
+.tops-list
+  display: grid
+  grid-template-columns: repeat(2, auto)
+  grid-template-rows: 335px 207px 207px
+  grid-column-gap: 16px
+  grid-row-gap: 30px
+  @media (min-width: 768px)
+    grid-template-rows: repeat(3, 511px) 
+    grid-column-gap: 32px
+  @media (min-width: 1024px)
+    grid-template-columns: repeat(3, auto)
+    grid-template-rows: repeat(2, 511px)
+  @media (min-width: 1290px)
+    grid-template-columns: repeat(6, auto)
+    grid-template-rows: 511px 407px
+
+.tops-item
+  width: 140px
+  padding: 16px 0
+  background-color: $light-grey
+  border-radius: 10px
+  display: grid
+  grid-template-columns: auto minmax(50px, 75px)
+  grid-template-rows: repeat(3, auto)
+  @media (min-width: 768px)
+    width: 296px
+    padding: 32px 0 25px 0
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, auto)
+  @media (min-width: 1290px)
+    width: 405px
+  &:first-child
+    padding-top: 30px
+    padding-bottom: 25px
+    max-width: 100%
+    width: 100%
+    grid-column-start: 1
+    grid-column-end: -1
+    grid-row-start: 1
+    grid-row-end: 2
+    grid-template-columns: auto minmax(50px, 170px)
     @media (min-width: 768px)
-      grid-template-rows: repeat(3, 511px) 
-      grid-column-gap: 32px
+      padding-bottom: 32px
     @media (min-width: 1024px)
-      grid-template-columns: repeat(3, auto)
-      grid-template-rows: repeat(2, 511px)
-    @media (min-width: 1290px)
-      grid-template-columns: repeat(6, auto)
-      grid-template-rows: 511px 407px
-  .tops-item
-    width: 140px
-    padding: 16px 0
-    background-color: $light-grey
-    border-radius: 10px
-    display: grid
-    grid-template-columns: auto minmax(50px, 75px)
-    grid-template-rows: repeat(3, auto)
-    @media (min-width: 768px)
-      width: 296px
-      padding: 32px 0 25px 0
-      grid-template-columns: 1fr
-      grid-template-rows: repeat(4, auto)
-    @media (min-width: 1290px)
-      width: 405px
-    &:first-child
-      padding-top: 30px
-      padding-bottom: 25px
-      max-width: 100%
-      width: 100%
       grid-column-start: 1
-      grid-column-end: -1
+      grid-column-end: 3
       grid-row-start: 1
       grid-row-end: 2
-      grid-template-columns: auto minmax(50px, 170px)
-      @media (min-width: 1024px)
-        grid-column-start: 1
-        grid-column-end: 3
-        grid-row-start: 1
-        grid-row-end: 2
-      @media (min-width: 1290px)
-        grid-column-start: 1
-        grid-column-end: 4
-      .types-menu
-        flex-direction: row
-        flex-wrap: wrap
-        padding-left: 20px
-        font-size: 14px
-        line-height: 14px
-        &__item
-          @media (min-width: 768px)
-            margin-right: 10px
-      .tops-item__title
-        padding-left: 30px
-        margin: 18px 0
-        font-size: 24px
-        @media (min-width: 768px)
-          margin: 18px 0 34px 0
-      .tops-img-wrapper
-        @media (min-width: 768px)
-          margin-bottom: 28px
-    &:nth-child(2)
-      @media (min-width: 1290px)
-        grid-column-start: 1
-        grid-column-end: 3
-        grid-row-start: -2
-        grid-row-end: -1
-    &:nth-child(3)
-      @media (min-width: 1024px)
-        grid-column-start: 2
-        grid-column-end: 3
-        grid-row-start: -2
-        grid-row-end: -1
-      @media (min-width: 1290px)
-        width: 100%
-        grid-column-start: -4
-        grid-column-end: -1
-        grid-row-start: 1
-        grid-row-end: 2
-    &:nth-child(4)
-      @media (min-width: 1290px)
-        grid-column-start: 3
-        grid-column-end: 5
-        grid-row-start: -2
-        grid-row-end: -1
-    &:nth-child(5)
-      @media (min-width: 1290px)
-        grid-column-start: -3
-        grid-column-end: -1      
-        grid-row-start: -2
-        grid-row-end: -1
+    @media (min-width: 1290px)
+      grid-column-start: 1
+      grid-column-end: 4
     .types-menu
-      padding-left: 6px
-      font-size: 10px
-      line-height: 11px
-      color: $grey
-      display: flex
-      flex-direction: column
-      grid-column-start: 1
-      grid-column-end: -1
-      grid-row-start: 1
-      grid-row-end: 2
-      @media (min-width: 768px)
-        font-size: 14px
-        flex-direction: row
-        padding-left: 20px
+      flex-direction: row
+      flex-wrap: wrap
+      padding-left: 20px
+      font-size: 14px
+      line-height: 14px
       &__item
         @media (min-width: 768px)
           margin-right: 10px
-    &__title
-      margin: 0
-      margin-top: 12px
-      margin-bottom: 19px
-      padding-left: 16px
-      padding-right: 5px
-      width: 100%
-      font-size: 16px
-      line-height: 100%
-      font-weight: 400
-      grid-column-start: 1
-      grid-column-end: 2
-      grid-row-start: 2
-      grid-row-end: 3
+    .tops-item__title
+      padding-left: 30px
+      margin: 18px 0
+      font-size: 24px
       @media (min-width: 768px)
-        font-size: 24px
-        padding-left: 30px
-        margin: 22px 0 40px 0
-      @media (min-width: 1290px)
-        margin-bottom: 32px
+        margin: 18px 0 34px 0
     .tops-img-wrapper
+      @media (min-width: 768px)
+        margin-bottom: 25px
+    .tops-link
+      padding: 0
+  &:nth-child(2)
+    @media (min-width: 1290px)
       grid-column-start: 1
-      grid-column-end: -1
+      grid-column-end: 3
       grid-row-start: -2
       grid-row-end: -1
-      @media (min-width: 768px)
-        grid-row-start: -3
-        grid-row-end: -2
-        margin-bottom: 35px
-      @media (min-width: 1290px)
-        margin-bottom: 30px
-    .tops-link
-      width: max-content
-      grid-column-start: -2
+  &:nth-child(3)
+    @media (min-width: 1024px)
+      grid-column-start: 2
+      grid-column-end: 3
+      grid-row-start: -2
+      grid-row-end: -1
+    @media (min-width: 1290px)
+      width: 100%
+      grid-column-start: -4
       grid-column-end: -1
-      grid-row-start: 2
-      grid-row-end: 3
-      align-self: center
-      padding-bottom: 5px
-      @media (min-width: 768px)
-        margin-left: 30px
-        grid-column-start: 1
-        grid-column-end: -1
-        grid-row-start: -2
-        grid-row-end: -1
-      &::after
-        content: ""
-        display: inline-block
-        width:  22px
-        height: 22px
-        margin-left: 2px
-        border: 2px solid $purple-main
-        border-radius: 50%
-        background-position: 47% 47%
-        background-repeat: no-repeat
-        background-image: url("../images/arrow-right-purple.png")
-        background-size: 6px 8px
-        vertical-align: -5px
-      &:hover
-        @media (min-width: 1025px)
-          .tops-link__content
-            border-bottom-color: $purple-main
-      &:hover::after
-        @media (min-width: 1025px)
-          background-color: $purple-main
-          background-image: url("../images/arrow-right-white.png")
-      &:focus
-        .tops-link__content
-          border-bottom-color: $purple-main
-      &:focus::after
-        background-color: $purple-light
-        background-image: url("../images/arrow-right-white.png")
-      &:active
-        .tops-link__content
-          color: $purple-shade
-          border-bottom-color: $purple-shade
-      &:active::after
-        border-color: $purple-shade
-        background-color: $purple-shade
-        background-image: url("../images/arrow-right-white.png")
-      &__content
-        display: none
-        font-weight: 700
-        color: $purple-main
-        border-bottom: 2px solid transparent
-        @media (min-width: 768px)
-          display: inline-block
+      grid-row-start: 1
+      grid-row-end: 2
+  &:nth-child(4)
+    @media (min-width: 1290px)
+      grid-column-start: 3
+      grid-column-end: 5
+      grid-row-start: -2
+      grid-row-end: -1
+  &:nth-child(5)
+    @media (min-width: 1290px)
+      grid-column-start: -3
+      grid-column-end: -1      
+      grid-row-start: -2
+      grid-row-end: -1
+  &__title
+    margin: 0
+    margin-top: 12px
+    margin-bottom: 19px
+    padding-left: 16px
+    padding-right: 5px
+    width: 100%
+    font-size: 16px
+    line-height: 100%
+    font-weight: 400
+    grid-column-start: 1
+    grid-column-end: 2
+    grid-row-start: 2
+    grid-row-end: 3
+    @media (min-width: 768px)
+      font-size: 24px
+      padding-left: 30px
+      margin: 22px 0 40px 0
+    @media (min-width: 1290px)
+      margin-bottom: 32px
+
+.types-menu
+  padding-left: 6px
+  font-size: 10px
+  line-height: 11px
+  color: $grey
+  display: flex
+  flex-direction: column
+  grid-column-start: 1
+  grid-column-end: -1
+  grid-row-start: 1
+  grid-row-end: 2
+  @media (min-width: 768px)
+    font-size: 14px
+    flex-direction: row
+    padding-left: 20px
+  &__item
+    @media (min-width: 768px)
+      margin-right: 10px
+
+.tops-img-wrapper
+  grid-column-start: 1
+  grid-column-end: -1
+  grid-row-start: -2
+  grid-row-end: -1
+  @media (min-width: 768px)
+    grid-row-start: -3
+    grid-row-end: -2
+    margin-bottom: 30px
+  @media (min-width: 1290px)
+    margin-bottom: 30px
+
+.tops-link
+  width: max-content
+  grid-column-start: -2
+  grid-column-end: -1
+  grid-row-start: 2
+  grid-row-end: 3
+  align-self: center
+  padding-bottom: 5px
+  @media (min-width: 768px)
+    margin-left: 30px
+    grid-column-start: 1
+    grid-column-end: -1
+    grid-row-start: -2
+    grid-row-end: -1
+  &::after
+    content: ""
+    display: inline-block
+    width:  22px
+    height: 22px
+    margin-left: 2px
+    border: 2px solid $purple-main
+    border-radius: 50%
+    background-position: 47% 47%
+    background-repeat: no-repeat
+    background-image: url("../images/arrow-right-purple.png")
+    background-size: 6px 8px
+    vertical-align: -5px
+  &:hover
+    @media (min-width: 1025px)
+      .tops-link__content
+        border-bottom-color: $purple-main
+  &:hover::after
+    @media (min-width: 1025px)
+      background-color: $purple-main
+      background-image: url("../images/arrow-right-white.png")
+  &:focus
+    .tops-link__content
+      border-bottom-color: $purple-main
+  &:focus::after
+    background-color: $purple-light
+    background-image: url("../images/arrow-right-white.png")
+  &:active
+    .tops-link__content
+      color: $purple-shade
+      border-bottom-color: $purple-shade
+  &:active::after
+    border-color: $purple-shade
+    background-color: $purple-shade
+    background-image: url("../images/arrow-right-white.png")
+  &__content
+    display: none
+    font-weight: 700
+    color: $purple-main
+    border-bottom: 2px solid transparent
+    @media (min-width: 768px)
+      display: inline-block
 
 /**/
 .adviсes
   padding-top: 70px
   @media (min-width: 768px)
-    padding-top: 58px
+    padding-top: 62px
   &__title
     +main-title()
     margin-bottom: 26px
@@ -516,7 +526,7 @@
   padding-top: 70px
   padding-bottom: 70px
   @media (min-width: 768px)
-    padding-top: 25px
+    padding-top: 22px
     padding-bottom: 73px
   @media (min-width: 1290px)
     padding-top: 20px
@@ -533,151 +543,15 @@
   &__title
     +main-title()
     margin-bottom: 5px
-    @media (min-width: 1290px)
-      margin-bottom: 10px
+    @media (min-width: 768px)
+      margin-bottom: 8px
+    // @media (min-width: 1290px)
+    //   margin-bottom: 8px
   &__content
     font-size: 14px
     line-height: 19px
     margin: 0
     color: $grey-shade
-    .tooltip
-      position: relative
-      &__marker
-        display: inline-block
-        width: 14px
-        height: 14px
-        background-image: url("../images/tooltip-transp.png")
-        background-repeat: no-repeat
-        background-position: center
-        background-size: cover
-        &:hover
-          @media (min-width: 1025px)
-            background-image: url("../images/tooltip-orange.png")
-        &:hover,
-        &:active
-          &+.popup
-            opacity: 1
-
-      &__content
-        position: absolute
-        top: -65px
-        left: -73px
-      .popup
-        display: flex
-        flex-direction: column
-        flex-wrap: nowrap
-        align-items: center
-        opacity: 0
-        transition: opacity 0.5s
-        .popup__content
-          min-width: 160px
-          height: 55px
-          padding: 5px
-          font-size: 9px
-          line-height: 14px
-          color: #fff
-          text-align: center
-          background-color: #333
-        .popup__arrow
-          width: 0
-          height: 0
-          border-right: 9px solid transparent
-          border-left: 9px solid transparent
-          border-top: 8px solid #333
-
-  .contact-form__name, .contact-form__phone, .contact-form__email
-    width: 100%
-    padding: 7px 18px
-    margin-bottom: 14px
-    line-height: 40px
-    color: $grey
-    border: 1px solid $grey-light
-    border-radius: 10px
-    background-color: $grey-light
-  .contact-form__name::placeholder,
-  .contact-form__phone::placeholder,
-  .contact-form__email::placeholder
-    color: $grey
-  .contact-form__name::-webkit-input-placeholder,
-  .contact-form__phone::-webkit-input-placeholder,
-  .contact-form__email::-webkit-input-placeholder
-    color: $grey
-  .contact-form__name::-moz-placeholder,
-  .contact-form__phone::-moz-placeholder,
-  .contact-form__email::-moz-placeholder
-    color: $grey
-  .contact-form__name:hover,
-  .contact-form__phone:hover,
-  .contact-form__email:hover
-    @media (min-width: 1025px)
-      background-color: $md-grey
-  .contact-form__name:active,
-  .contact-form__phone:active,
-  .contact-form__email:active
-    border-color: $purple-main
-    background-color: $pink-light
-  .contact-form__name:focus,
-  .contact-form__phone:focus,
-  .contact-form__email:focus
-    border-color: #b8ec64
-    color: #333
-  .contact-form-field
-    position: relative
-    padding-top:14px
-  .contact-form__submit
-    width: 159px
-    padding-top: 17px
-    padding-bottom: 17px
-    // margin-bottom: 14px
-    margin-top: 14px
-  .confirm
-    display: flex
-    align-items: flex-end
-    &__check
-      display: none
-      &+.check-cust
-        position: relative
-        display: block
-        width: 14px
-        height: 14px
-        margin-right: 5px
-        background-color: $purple-main
-        border-radius: 2px
-        cursor: pointer
-        &::before,
-        &::after
-          content: ''
-          position: absolute
-          background: #fff
-          opacity: 0
-          transition: opacity 0.3s
-        &::before
-          left: 2px
-          top: 8px
-          width: 5px
-          height: 2px
-          transform: rotate(50deg)
-        &::after
-          left: 4px
-          top: 6px
-          width: 10px
-          height: 2px
-          transform: rotate(-50deg)
-    &__check:checked
-      &+.check-cust
-        &::before
-          opacity: 1
-        &::after
-          opacity: 1
-    &__desc
-      margin: 0
-      font-size: 12px
-      @media (min-width: 768px)
-        font-size: 14px
-    &__link
-      color: $purple-main
-      border-bottom: 1px solid $purple-main
-    
   &__img
     height: auto
     @media (min-width: 768px)
@@ -700,57 +574,150 @@
       @media (min-resolution: 2dppx)
         background-image: url("../images/contacts-xl-2x.png")
 
-/**/
-.modal
-  &__container
-    width: 296px
-    padding: 32px 0 0 0
-    @media (min-width: 768px)
-      width: 624px
-  .btn-reset
-    top: 16px
-    right: 16px
-    width: 16px
-    height: 16px
-    border: none
-    background-color: transparent
-    @media (min-width: 768px)
-      top: 20px
-      right: 20px
-      width: 20px
-      height: 20px
-    &::after,
-    &::before
-      content: ''
-      width: 18px
-      height: 2px
-      background-color: $grey
-      position: absolute
-      left: -1px
-      top: 7px
-      @media (min-width: 768px)
-        width: 22px
-        top: 9px
-    &::after
-      transform: rotate(45deg)
-    &::before
-      transform: rotate(-45deg)
+.tooltip
+  position: relative
+  &__marker
+    display: inline-block
+    width: 14px
+    height: 14px
+    background-image: url("../images/tooltip-transp.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
     &:hover
-      &::after,
-      &::before
-        @media (min-width: 1025px)
-          background-color: $purple-main
-    &:focus
-      background-color: $pink-violet
-      &::after,
-      &::before
-        background-color: $purple-shade
+      @media (min-width: 1025px)
+        background-image: url("../images/tooltip-orange.png")
+    &:hover,
     &:active
-      &::after,
+      &+.popup
+        opacity: 1
+  &__content
+    position: absolute
+    top: -65px
+    left: -73px
+
+.popup
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  align-items: center
+  opacity: 0
+  transition: opacity 0.5s
+  &__content
+    min-width: 160px
+    height: 55px
+    padding: 5px
+    font-size: 9px
+    line-height: 14px
+    color: #fff
+    text-align: center
+    background-color: #333
+  &__arrow
+    width: 0
+    height: 0
+    border-right: 9px solid transparent
+    border-left: 9px solid transparent
+    border-top: 8px solid #333
+
+.contact-form__name, .contact-form__phone, .contact-form__email
+  width: 100%
+  padding: 7px 18px
+  margin-bottom: 14px
+  line-height: 40px
+  color: $grey
+  border: 1px solid $grey-light
+  border-radius: 10px
+  background-color: $grey-light
+.contact-form__name::placeholder,
+.contact-form__phone::placeholder,
+.contact-form__email::placeholder
+  color: $grey
+.contact-form__name::-webkit-input-placeholder,
+.contact-form__phone::-webkit-input-placeholder,
+.contact-form__email::-webkit-input-placeholder
+  color: $grey
+.contact-form__name::-moz-placeholder,
+.contact-form__phone::-moz-placeholder,
+.contact-form__email::-moz-placeholder
+  color: $grey
+.contact-form__name:hover,
+.contact-form__phone:hover,
+.contact-form__email:hover
+  @media (min-width: 1025px)
+    background-color: $md-grey
+.contact-form__name:active,
+.contact-form__phone:active,
+.contact-form__email:active
+  border-color: $purple-main
+  background-color: $pink-light
+.contact-form__name:focus,
+.contact-form__phone:focus,
+.contact-form__email:focus
+  border-color: #b8ec64
+  color: #333
+.contact-form-field
+  position: relative
+  padding-top:14px
+.contact-form__submit
+  width: 159px
+  padding-top: 17px
+  padding-bottom: 17px
+  margin-top: 14px
+  @media (min-width: 1290px)
+    margin-top: 12px
+
+.confirm
+  display: flex
+  padding-top: 10px
+  &__check
+    display: none
+    &+.check-cust
+      position: relative
+      display: block
+      width: 14px
+      height: 14px
+      margin-right: 5px
+      background-color: $purple-main
+      border-radius: 2px
+      cursor: pointer
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        background: #fff
+        opacity: 0
+        transition: opacity 0.3s
       &::before
-        background-color: $purple-shade
-        
-  @import "src/sass/_notice-modal.sass"
+        left: 2px
+        top: 8px
+        width: 5px
+        height: 2px
+        transform: rotate(50deg)
+      &::after
+        left: 4px
+        top: 6px
+        width: 10px
+        height: 2px
+        transform: rotate(-50deg)
+  &__check:checked
+    &+.check-cust
+      &::before
+        opacity: 1
+      &::after
+        opacity: 1
+  &__desc
+    margin: 0
+    font-size: 12px
+    @media (min-width: 768px)
+      font-size: 14px
+  &__link
+    color: $purple-main
+    border-bottom: 1px solid $purple-main
+    
+/**/
+@import "src/sass/_main-styles-modal.sass"
+
+@import "src/sass/_notice-modal.sass"
 
 /**/
 .no-js

@@ -75,10 +75,10 @@ contactFormEl.addEventListener('submit', (ev) => {
   ev.preventDefault();
 
   if (contactFormEl.checkValidity()) {
-    console.log('Форма валидна');
+    // console.log('Форма валидна');
 
     const formData = new FormData(contactFormEl);
-    console.log(Array.from(formData.entries()));
+    // console.log(Array.from(formData.entries()));
 
     // let response = fetch('/resources/mailer/mail.php', {
     //   method: 'POST',

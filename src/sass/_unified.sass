@@ -80,19 +80,21 @@
   width: 36px
   height: 36px
   padding: 3px
-  svg
-    color: $grey
-    transition-property: color
-    transition-duration: 0.25s
-    transition-timing-function: ease-in-out
   &:hover
     @media (min-width: 1025px)
-      svg
+      .social-icon
         color: $purple-main
   &:focus
     background-color: $purple-light
-    svg
+    .social-icon
       color: #fff
   &:active
-    svg
+    background-color: transparent
+    .social-icon
       color: $purple-shade
+
+.social-icon
+  color: $grey
+  transition-property: color
+  transition-duration: 0.25s
+  transition-timing-function: ease-in-out
