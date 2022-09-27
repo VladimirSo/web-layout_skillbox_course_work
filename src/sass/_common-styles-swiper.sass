@@ -1,0 +1,53 @@
+// общие стили для слайдеров
+.swiper-button-prev::after, .swiper-button-next::after  
+  content: ""  
+.swiper-button-prev, .swiper-button-next
+  top: 98%
+  width:  32px
+  height: 32px
+  border: 2px solid $purple-main
+  border-radius: 50%
+  background-position: 45% 45%
+  background-repeat: no-repeat
+  @media (min-width: 768px)
+    top: 25px
+  @media (min-width: 1024px)
+    top: 22px
+
+.swiper-button-next
+  right: calc(50% - 40px)
+  background-image: url("/images/arrow-right-purple.png")
+  @media (min-width: 768px)
+    right: 0
+.swiper-button-prev
+  left: calc(50% - 40px)
+  background-image: url("/images/arrow-left-purple.png")
+  @media (min-width: 768px)
+    left: 88%
+  @media (min-width: 1024px)
+    left: 92%
+  @media (min-width: 1290px)
+    left: 94%
+
+.swiper-button-disabled, .swiper-button-disabled
+  border-color: $grey
+  filter: grayscale(100%)
+  opacity: 1
+.swiper-button-prev:active, .swiper-button-prev:focus
+  background-image: url("/images/arrow-left-white.png")
+.swiper-button-prev:hover
+  @media (min-width: 1025px)
+    background-image: url("/images/arrow-left-white.png")
+.swiper-button-next:active, .swiper-button-next:focus
+  background-image: url("/images/arrow-right-white.png")
+.swiper-button-next:hover
+  @media (min-width: 1025px)
+    background-image: url("/images/arrow-right-white.png")
+.swiper-button-prev:hover, .swiper-button-next:hover
+  @media (min-width: 1025px)
+    background-color: $purple-main
+.swiper-button-prev:focus, .swiper-button-next:focus
+  background-color: $purple-light
+.swiper-button-prev:active, .swiper-button-next:active
+  background-color: $purple-shade
+  border-color: $purple-shade

@@ -39,7 +39,7 @@ const swiper2 = new Swiper(swiperOffersElem, {
 
   breakpoints: {
     1290: {
-      slidesPerView: 3,
+      slidesPerView: 'auto',
       spaceBetween: 32,
       slidesPerGroup: 3
     },

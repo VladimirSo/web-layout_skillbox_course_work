@@ -43,8 +43,11 @@ const getCrumbName = (url) => {
   // убираем из url занчение протокола и разбиваем строку url на части
   const urlParts = url.replace(/https?:\/\//g, '').split('/');
   // берем последнюю часть url и по ней ищем в ранее созданном  списке страница/название соответствующее название для крошки
-  const urlLastEl = urlParts[urlParts.length-1];
+  let urlLastEl = urlParts[urlParts.length-1];
   // console.log('последняя часть текущего url: ' + urlLastEl);
+  // убираем все что в адресе стоит после html
+  urlLastEl = urlLastEl.indexOf('html') !== -1 ? urlLastEl.substring(0, urlLastEl.indexOf('html')+4) : '' ;
+  // console.log(urlLastEl);
   const crumbName = (crumbsTmpl.find(item => item.link == urlLastEl)).name;
   // console.log('имя для крошки: ' + crumbName);
 
@@ -63,32 +66,32 @@ const makeCrumbsList = (url, name) => {
     // после извлечения списка из sessionStorage удаляем его
     sessionStorage.removeItem('bread_crumbs');
     // console.log(arrayLiElems);
-    /* если текущий url в прежнем списке ссылок не найден, 
-      то новая крошка просто добавляется к новому списку крошек сформированному из прежнего списка;
-      в противном случае массив полученный из прежнего списка обрезается до элемента с ссылкой соответствующей текущему url,
-      и из получившегося массива формируетя новый список крошек */
-    if (arrayLiElems.find(item => item == url) === undefined) {
-      // console.log('такого еще не было');
-      for (let i=0; i<arrayLiElems.length; i++) {
-        let currentCrumbName = getCrumbName(arrayLiElems[i]);
-
-        crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${arrayLiElems[i]}">${currentCrumbName}</a></li>`);
-      }
-          
-      crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${url}">${name}</a></li>`);
-    } else {
+    /* через getCrumbName получаем имена для текущего url и для ссылок из прежнего списка
+      если будет найдено соответствие, то массив полученный из прежнего списка обрезается 
+      до элемента с ссылкой соответствующей текущему url и из получившегося массива формируетя
+      новый список крошек
+      в противном случае новая крошка просто добавляется к новому списку крошек сформированному из прежнего списка; */
+    if (arrayLiElems.find(item => getCrumbName(item) == getCrumbName(url))) {
+      // console.log('такой уже был');
       arrayLiElems.forEach(function(item, index) {
-        if (item == url) {
-          // console.log('такой уже был: ' + index);
-          /* удаляем все элементы начиная со следующего за элементом соответствующим url и до конца */
-          arrayLiElems.splice(index + 1, (arrayLiElems.length - 1 - index));
-          // console.log('новый список:' + arrayLiElems);
-
-          for (let i=0; i<arrayLiElems.length; i++) {
-            crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${arrayLiElems[i]}">${name}</a></li>`);
-          }
+        /* удаляем все элементы начиная со следующего за элементом соответствующим url и до конца */
+        arrayLiElems.splice(index + 1, (arrayLiElems.length - 1 - index));
+        // console.log('новый список:' + arrayLiElems);
+        for (let i=0; i<arrayLiElems.length; i++) {
+          crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${arrayLiElems[i]}">${name}</a></li>`);
         }
       });
+    } else {
+      if (arrayLiElems.find(item => item == url) === undefined) {
+        // console.log('такого еще не было');
+        for (let i=0; i<arrayLiElems.length; i++) {
+          let currentCrumbName = getCrumbName(arrayLiElems[i]);
+
+          crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${arrayLiElems[i]}">${currentCrumbName}</a></li>`);
+        }
+     
+        crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${url}">${name}</a></li>`);
+      }
     }
   } else {
     crumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumb-item"><a class="breadcrumb-item__link" href="${url}">${name}</a></li>`);
@@ -103,7 +106,8 @@ const getCrumbs = (url) => {
   формируем список крошек и вставляем его на страницу,
   в противном случае очищаем запись с ссылками крошек из sessionStorage
   */
-  if (urlParts[urlParts.length - 1] !== "") {
+  // if (urlParts[urlParts.length - 1] !== "") {
+  if (urlParts[urlParts.length - 1].indexOf('html') !== -1) {
     // console.log('не начальная страницa');
     makeCrumbsList(url, crumbName);
 
