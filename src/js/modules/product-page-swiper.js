@@ -41,8 +41,6 @@ const swiperProdCardElem = document.querySelector('.product-swiper');
 const swiperProdNavElem = document.querySelector('.nav-swiper');
 
 const swiper3 = new Swiper(swiperProdNavElem, {
-  // direction: 'horizontal',
-  // slidesPerView: 2.3 ,
   spaceBetween: 24,
   breakpoints: {
     0: {
