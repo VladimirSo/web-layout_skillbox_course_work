@@ -52,7 +52,7 @@ const showProducts = (ev) => {
     }
   }
   // прокручиваем страницу до начала списка
-  prodListEl.scrollIntoView({
+  prodListEl.parentNode.parentNode.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
   });

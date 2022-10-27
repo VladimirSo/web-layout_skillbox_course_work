@@ -4,7 +4,8 @@
 const modalBuyOpen = document.querySelector('.js-product-buy-btn');
 
 modalBuyOpen.addEventListener('click', () => {
-  new GraphModal().open('two');
+  // new GraphModal().open('two');
+  const modal2 = new GraphModal().open('two');
 
   const buyPhone = document.getElementById("buyPhone");
 

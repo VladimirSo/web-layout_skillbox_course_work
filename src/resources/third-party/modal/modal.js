@@ -6,7 +6,8 @@ class GraphModal {
 		}
 		this.options = Object.assign(defaultOptions, options);
 		this.modal = document.querySelector('.modal');
-		this.speed = false;
+		// this.speed = false;
+		this.speed = 300;
 		this.animation = false;
 		this._reOpen = false;
 		this._nextContainer = false;

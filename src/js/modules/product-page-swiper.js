@@ -76,19 +76,19 @@ const sliderNavItems = document.querySelectorAll('.nav-swiper__item');
 sliderNavItems.forEach((el, index) => {
   el.setAttribute('data-index', index);
 
-  el.addEventListener('click', (e) => {
-    // const index = parseInt(e.currentTarget.dataset.index);
-    // // console.log(index)
-    // swiper2.slideTo(index);
+  // el.addEventListener('click', (e) => {
+  //   // const index = parseInt(e.currentTarget.dataset.index);
+  //   // // console.log(index)
+  //   // swiper2.slideTo(index);
 
-    for (let i = 0; i < sliderNavItems.length; i++) {
-      if (sliderNavItems[i].getAttribute('data-index') != index) {
-        // console.log('NO');
-        sliderNavItems[i].classList.remove('visually-hidden');
-      } else {
-        // console.log('YES');
-        sliderNavItems[i].classList.add('visually-hidden');
-      }
-    }
-  });
+  //   for (let i = 0; i < sliderNavItems.length; i++) {
+  //     if (sliderNavItems[i].getAttribute('data-index') != index) {
+  //       // console.log('NO');
+  //       sliderNavItems[i].classList.remove('visually-hidden');
+  //     } else {
+  //       // console.log('YES');
+  //       sliderNavItems[i].classList.add('visually-hidden');
+  //     }
+  //   }
+  // });
 });

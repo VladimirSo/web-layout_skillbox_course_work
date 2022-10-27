@@ -31,12 +31,22 @@
   display: inline-block
   padding: 2px 5px
   width: 100%
+
+.choices__list--dropdown
+  opacity: 0
+  // max-height: 0
+
 /**/
 .is-open .choices__list--dropdown
   border: 2px solid $light-grey
   background-color: #fff
   width: max-content
   padding: 16px 19px 9px 16px
+  opacity: 1
+  // max-height: 150px
+  transition: max-height, opacity
+  transition-duration: 0.5s, 0.55s
+  transition-timing-function: ease-in-out
 .choices__list--dropdown .choices__item--selectable
   padding: 0
   margin-bottom: 10px

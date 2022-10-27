@@ -207,9 +207,8 @@
     .products-item
       transition: opacity, 1s, easy
   &__btn
-    width: 100%
+    width: 296px
     @media (min-width: 768px)
-      width: 296px
       margin: 0 auto
 
 /**/
@@ -628,6 +627,9 @@
   border: 1px solid $grey-light
   border-radius: 10px
   background-color: $grey-light
+  transition-property: all
+  transition-duration: 0.25s
+  transition-timing-function: ease-in-out
 .contact-form__name::placeholder,
 .contact-form__phone::placeholder,
 .contact-form__email::placeholder

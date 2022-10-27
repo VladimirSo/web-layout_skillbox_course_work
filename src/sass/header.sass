@@ -125,7 +125,7 @@
   @media (min-width: 1290px)
     justify-content: flex-start
   &__img
-    margin: 12px 0 11px 0
+    margin: 10px 0
     @media (min-width: 768px)
       margin: 32px 0 12px 0
     @media (min-width: 1024px)
@@ -318,6 +318,9 @@
   justify-content: space-between
   padding: 12px 32px
   margin-bottom: 15px
+  transition-property: all
+  transition-duration: 0.25s
+  transition-timing-function: ease-in-out
   @media (min-width: 768px)
     width: 90%
     border-radius: 10px 0 0 10px
@@ -449,7 +452,8 @@
   @media (min-width: 1024px)
     width: 31.5%
   &__list
-    display: none
+    // display: none
+    visibility: hidden
     position: absolute
     flex-wrap: wrap
     padding: 22px 10% 12px 10%
@@ -507,6 +511,7 @@
     transform: rotateX(180deg)
     transition: transform 0.5s ease-in-out
   .search-area__list
+    visibility: visible
     display: flex
     animation: open-srch-list 0.5s ease-in-out 1
     animation-fill-mode: forwards
@@ -515,8 +520,10 @@
 @keyframes open-srch-list
   from
     transform: scaleY(0)
+    opacity: 0
   to
     transform: scaleY(1)
+    opacity: 1
 
 .main-nav-open
   width: 100vw
